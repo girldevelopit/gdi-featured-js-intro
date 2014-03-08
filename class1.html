@@ -213,41 +213,40 @@ document.write('Hello World!');
             <section>
 				<h3>Naming Variables</h3>
                 <ul>
-                    <li>In PHP, you write a variable with a dollar sign followed by the name of the variable.</li>
                     <li>The variable name is case-sensitive.</li>
                     <li>A new variable needs to have a unique name.</li>
-                    <li>Variable names need to start with a letter or underscore.</li>
-                    <li>Variable names can only be made of letters and numbers.</li>
+                    <li>Variable names need to start with a letter, $, or _.</li>
+                    <li>Variable names can only be made of letters, numbers, $, or _.</li>
                 </ul>
 			</section>
             <section>
-				<h3>Creating a Variable</h3>
-                <p>To create a variable, just type a dollar sign and the variable name. PHP will create the variable for you.</p>
+				<h3>Declaring a Variable</h3>
+                <p>To declare (create) a variable, just type the word "var" and the variable name.</p>
                 <pre><code>
-&lt;?php
-    $numberOfKittens;
-?&gt;
+&lt;script&gt;
+    var numberOfKittens;
+&lt;/script&gt;
 				</code></pre>
                 <p>It is a good idea to give your variable a starting value. This is called initializing the variable.</p>
                 <pre><code>
-&lt;?php
-    $numberOfKittens = 5;
-?&gt;
+&lt;script&gt;
+    var numberOfKittens = 5;
+&lt;/script&gt;
 				</code></pre> 
 			</section>
             <section>
 				<h3>Using a Variable</h3>
-                <p>Once you have created a variable, you can use it in your code. Just type a dollar sign and the name of the variable</p>
+                <p>Once you have created a variable, you can use it in your code. Just type the name of the variable.</p>
                 <pre><code>
-&lt;?php
-    $numberOfKittens = 5;
-    echo $numberOfKittens;
-?&gt;
+&lt;script&gt;
+    numberOfKittens = 5;
+    console.log (numberOfKittens);
+&lt;/script&gt;
 				</code></pre>
 			</section>
             <section>
 				<h3>Let's Develop It</h3>
-                <p>In your PHP file, create a variable and give it a valid name and a value. Then, echo it out on the screen.</p> 
+                <p>In your JS file, create a variable and give it a valid name and a value. Then, display the value.</p> 
 			</section>
         </section>
         <!-- Variable Types and Operators-->
