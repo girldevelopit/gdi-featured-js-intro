@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Class 1 ~ PHP/MySQL ~ Girl Develop It</title>
+		<title>Class 1 ~ Intro to JavaScript ~ Girl Develop It</title>
 
-		<meta name="description" content="This is a modification of the official Girl Develop It PHP/MySQL curriculum, developed by Sylvia Richardson for the Raleigh/Durham chapter.
+		<meta name="description" content="This is an introduction to JavaScript curriculum, developed by Sylvia Richardson for the Raleigh/Durham chapter.
 
         The course is meant to be taught in 4 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
 		<meta name="author" content="Girl Develop It">
@@ -14,17 +14,17 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<link rel="stylesheet" href="reveal.js/css/reveal.css">
-		<link rel="stylesheet" href="reveal.js/css/theme/gdidefault.css" id="theme">
+		<link rel="stylesheet" href="reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/theme/gdidefault.css" id="theme">
 		<link rel="stylesheet" href="css/custom.css">
 
 		<!-- For syntax highlighting -->
 		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
-		<!-- dark editor--><link rel="stylesheet" href="reveal.js/lib/css/dark.css">
+		<!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
 
 		<!-- If use the PDF print sheet so students can print slides-->
 		
-		<link rel="stylesheet" href="reveal.js/css/print/pdf.css" type="text/css" media="print">
+		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
 
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
@@ -39,7 +39,7 @@
         <!-- Opening slide -->
             <section>
                 <img src = "images/gdi_logo_badge.png">
-                <h3>Intro to PHP and MySQL</h3>
+                <h3>Intro to JavaScript</h3>
                 <h4>Class 1</h4>
             </section>
                 
@@ -66,7 +66,7 @@
               <ul>
                 <li>Who are you?</li>
                 <li>What do you hope to get out of the class?</li>
-                <li>What is your favorite 80's song?</li>
+                <li>What is your favorite children's book?</li>
               </ul>
               </div>
             </section>
@@ -75,26 +75,18 @@
         <section id="install">
             <section>
                 <h3>Let's Develop It</h3>
-                <p>Let's get PHP running on your machine.<p>
-                <p>PCs: <a href="http://www.wampserver.com/en/download.php">http://www.wampserver.com/en/download.php</a></p>
-                <p>Macs: <a href="http://www.mamp.info/en/downloads/index.html">http://www.mamp.info/en/downloads/index.html</a></p>
-                <p>Test: <a href="http://localhost/">http://localhost/</a>
-            </section>
-            <section>
-                <h3>Let's Develop It</h3>
-                <p>Make your first page! Find your www directory. On Windows, the default is C:\wamp\www. On a Mac, it is \Applications\MAMP\www\. Create a new folder, called gdi, and then create a file inside called index.php.</p>
+                <p>Let's write your first JavaScript program. Make a folder called gdi. Inside, make a new page called index.html. Place this code inside.</p>
                 <pre><code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
         &lt;title&gt;Test Page&lt;/title&gt;
     &lt;/head&gt;
-	&lt;body&gt;
-        &lt;p&gt;
-        &lt;?php
-            echo 'Hello World';
-        ?&gt;
-        &lt;/p&gt;
+    &lt;p&gt;This page has a popup alert.&lt;/p&gt;
+    &lt;body&gt;
+        &lt;script&gt;
+            alert('Hello World!');
+        &lt;/script&gt;
     &lt;/body&gt;
 &lt;/html&gt;
 				</code></pre>
@@ -470,8 +462,8 @@
     </div><!-- Close .reveal -->
 
 
-		<script src="reveal.js/lib/js/head.min.js"></script>
-		<script src="reveal.js/js/reveal.min.js"></script>
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.min.js"></script>
 
 		<script>
 
@@ -487,12 +479,12 @@
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
-					{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
 
