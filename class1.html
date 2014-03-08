@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Class 1 ~ PHP/MySQL ~ Girl Develop It</title>
+
+		<meta name="description" content="This is a modification of the official Girl Develop It PHP/MySQL curriculum, developed by Sylvia Richardson for the Raleigh/Durham chapter.
+
+        The course is meant to be taught in 4 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
+		<meta name="author" content="Girl Develop It">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="reveal.js/css/theme/gdidefault.css" id="theme">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- For syntax highlighting -->
+		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
+		<!-- dark editor--><link rel="stylesheet" href="reveal.js/lib/css/dark.css">
+
+		<!-- If use the PDF print sheet so students can print slides-->
+		
+		<link rel="stylesheet" href="reveal.js/css/print/pdf.css" type="text/css" media="print">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+        <!-- Opening slide -->
+            <section>
+                <img src = "images/gdi_logo_badge.png">
+                <h3>Intro to PHP and MySQL</h3>
+                <h4>Class 1</h4>
+            </section>
+                
+        <!-- Welcome-->
+        <section id="welcome">
+            <section>
+              <h3>Welcome!</h3>
+              <div class = "left-align">
+              <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+              <p class ="green">Some "rules"</p>
+              <ul>
+                <li>We are here for you!</li>
+                <li>Every question is important.</li>
+                <li>Help each other.</li>
+                <li>Have fun.</li>
+              </ul>
+              </div>
+            </section>
+            
+            <section>
+              <h3>Welcome!</h3>
+              <div class = "left-align">
+              <p class = "blue">Tell us about yourself.</p>
+              <ul>
+                <li>Who are you?</li>
+                <li>What do you hope to get out of the class?</li>
+                <li>What is your favorite 80's song?</li>
+              </ul>
+              </div>
+            </section>
+         </section>
+        <!-- Install -->
+        <section id="install">
+            <section>
+                <h3>Let's Develop It</h3>
+                <p>Let's get PHP running on your machine.<p>
+                <p>PCs: <a href="http://www.wampserver.com/en/download.php">http://www.wampserver.com/en/download.php</a></p>
+                <p>Macs: <a href="http://www.mamp.info/en/downloads/index.html">http://www.mamp.info/en/downloads/index.html</a></p>
+                <p>Test: <a href="http://localhost/">http://localhost/</a>
+            </section>
+            <section>
+                <h3>Let's Develop It</h3>
+                <p>Make your first page! Find your www directory. On Windows, the default is C:\wamp\www. On a Mac, it is \Applications\MAMP\www\. Create a new folder, called gdi, and then create a file inside called index.php.</p>
+                <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Test Page&lt;/title&gt;
+    &lt;/head&gt;
+	&lt;body&gt;
+        &lt;p&gt;
+        &lt;?php
+            echo 'Hello World';
+        ?&gt;
+        &lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+				</code></pre>
+            </section>
+        </section>         
+         <!-- What is PHP-->
+         <section id="whatis">
+            <section>
+                <h3>PHP is a server-side language</h3>
+                <img src="images/client-server.jpg" alt="Laptop and server connected via the internet"/>
+				<p class="credit">Photo credits: <a href="http://www.flickr.com/photos/papalars/5210226441/" target="_blank">Andrew E. Larson</a> and <a href="http://www.flickr.com/photos/johnseb/3425464/" target="_blank">John Seb Barber</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+            </section>
+            <section>
+                <h3>PHP can talk to databases</h3>
+                <img src="images/elephants.jpg" alt="Two elephants interacting"/>
+				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/ginable/325235488/">Ginable</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
+            </section>
+            <section>
+                <h3>PHP lets you reuse code</h3>
+                <img src="images/desert-landscape.jpg" alt="Desert landscape"/>
+				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/philsnyder/4216356826/" target="_blank">Phil Synder</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+            </section>
+            <section>
+                <h3>What is PHP?</h3>
+                <ul>
+                    <li>Originally, PHP stood for Personal Home Page. The acronym doesn't mean much anymore, but officially it is called PHP: Hypertext Processor</li>
+                    <li>PHP is a server-side processing language. The server reads the PHP code and outputs browser-friendly HTML</li>
+                    <li>PHP has simple support for databases like MySQL.</li>
+                    <li>With PHP, you can write code once and use it everywhere. Remember, you want DRY code (Don't Repeat Yourself).</li>
+                    <li>PHP lets you build dynamic webpages that respond to input from users.</li>
+                </ul>
+            </section>
+        </section>
+
+        <!-- Basics -->
+        <section id="basics">
+            <section>
+				<h3>Computers need simple, clear instructions</h3>
+				<img src="images/confusedrobot.jpg" alt="Confused robot"/>
+				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/baboon/3946055/" target="_blank">baboon</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+			</section>
+            <section>
+                <h3>PHP Tags</h3>
+                <p>You can mix PHP and HTML. When a PHP server looks at a page, it only pays attention to code within the PHP tags.</p>
+                <pre><code>
+&lt;?php CODE GOES HERE  ?&gt;
+				</code></pre>
+            </section>
+            <section>
+                <h3>Separating Instructions</h3>
+                <p>After each individual statement, you must add a semicolon.</p>
+                <pre><code>
+&lt;?php
+    echo 'Hello World!';
+    echo 'I am glad to meet you';
+    echo 'I am fuzzy';
+?&gt;
+				</code></pre>
+            </section>
+            <section>
+                <h3>Comments</h3>
+                <p>You can leave comments in your code&mdash;notes that people can read and computers will ignore.</p>
+                <pre><code>
+&lt;?php
+    /*I can wrap long comments 
+    with multiple lines 
+    like this*/
+    echo 'Hello World!'; //Or mark short comments like this
+?&gt;
+				</code></pre>
+            </section>
+        </section>
+        <!-- Variables -->
+        <section>
+            <section>
+				<h3>Variables</h3>
+                <p>A variable is a place to store values</p>
+				<img src="images/empty-glass.jpg" alt="Empty glass"/>
+				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/giuliag/3570562404/" target="_blank">giulia gasparro</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+			</section>
+            <section>
+				<h3>Variable Values</h3>
+                <ul>
+                    <li>When you first create a variable, it does not have a value (it is null).</li>
+                    <li>You can set a value for a variable.</li>
+                    <li>Variables can hold different types of information, like words, numbers, and collections of data.</li>
+                    <li>The value of a variable can change over time.</li>
+                </ul>
+			</section>
+            <section>
+				<h3>Naming Variables</h3>
+                <ul>
+                    <li>In PHP, you write a variable with a dollar sign followed by the name of the variable.</li>
+                    <li>The variable name is case-sensitive.</li>
+                    <li>A new variable needs to have a unique name.</li>
+                    <li>Variable names need to start with a letter or underscore.</li>
+                    <li>Variable names can only be made of letters and numbers.</li>
+                </ul>
+			</section>
+            <section>
+				<h3>Creating a Variable</h3>
+                <p>To create a variable, just type a dollar sign and the variable name. PHP will create the variable for you.</p>
+                <pre><code>
+&lt;?php
+    $numberOfKittens;
+?&gt;
+				</code></pre>
+                <p>It is a good idea to give your variable a starting value. This is called initializing the variable.</p>
+                <pre><code>
+&lt;?php
+    $numberOfKittens = 5;
+?&gt;
+				</code></pre> 
+			</section>
+            <section>
+				<h3>Using a Variable</h3>
+                <p>Once you have created a variable, you can use it in your code. Just type a dollar sign and the name of the variable</p>
+                <pre><code>
+&lt;?php
+    $numberOfKittens = 5;
+    echo $numberOfKittens;
+?&gt;
+				</code></pre>
+			</section>
+            <section>
+				<h3>Let's Develop It</h3>
+                <p>In your PHP file, create a variable and give it a valid name and a value. Then, echo it out on the screen.</p> 
+			</section>
+        </section>
+        <!-- Variable Types and Operators-->
+        <!-- Numbers-->
+        <section>
+            <section>
+				<h3>Numbers!</h3>
+				<img src="images/kitten-basket.jpg" alt="Cat jumping on another cat."/>
+				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/tom-poes/2159348460/" target="_blank">WJ van den Eijkhof</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+			</section>
+            <section>
+				<h3>Numbers</h3>
+                <p>Variable can be numbers, either integers or floats (decimals).</p>
+                <pre><code>
+&lt;?php
+    $numberOfKittens = 5;
+    $cutenessRating = 9.6;
+?&gt;
+				</code></pre>
+                <p>PHP will automatically convert integers to floats if needed</p>
+			</section>
+            
+            <section>
+				<h3>Arithmetic Operators</h3>
+                <p>Once you have numbers, you can do math with them!</p>
+                <pre><code>
+&lt;?php
+    $numberOfKittens = 5;
+    $numberOfPuppies = 4;
+    $numberOfAnimals = $numberOfKittens + $numberOfPuppies;
+?&gt;
+				</code></pre>
+			</section>
+            <section>
+				<h3>Arithmetic Operators</h3>
+                <table>                
+                    <thead>
+                      <tr>
+                       <th>Example</th>
+                       <th>Name</th>
+                       <th>Result</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                       <td>-$a</td>
+                       <td>Negation</td>
+                       <td>Opposite of $a.</td>
+                      </tr>
+                      <tr>
+                       <td>$a + $b</td>
+                       <td>Addition</td>
+                       <td>Sum of $a and $b.</td>
+                      </tr>
+                      <tr>
+                       <td>$a - $b</td>
+                       <td>Subtraction</td>
+                       <td>Difference of $a and $b.</td>
+                      </tr>
+                      <tr>
+                       <td>$a * $b</td>
+                       <td>Multiplication</td>
+                       <td>Product of $a and $b.</td>
+                      </tr>
+                      <tr>
+                       <td>$a / $b</td>
+                       <td>Division</td>
+                       <td>Quotient of $a and $b.</td>
+                      </tr>
+                      <tr>
+                       <td>$a % $b</td>
+                       <td>Modulus</td>
+                       <td>Remainder of $a divided by $b.</td>
+                      </tr>
+                    </tbody>                
+                </table>
+			</section>
+            <section>
+				<h3>Let's Develop It</h3>
+                <p>Create two variables and try some arithmetic operators. Don't forget to echo your results!</p> 
+			</section>
+        </section>
+        <!-- Strings -->
+        <section>
+            <section>
+                <h3>Strings</h3>
+                <p>Variable can be strings, groups of characters. You put your string in quotes.</p>
+                <pre><code>
+&lt;?php
+    $kittensName = 'Fluffy';
+?&gt;
+				</code></pre>
+                <p>If you want to use a quote in your string, you'll need to "escape" it with a backslash.</p>
+                <pre><code>
+&lt;?php
+    echo 'I\'d like to use an apostrophe';
+?&gt;
+				</code></pre>                
+            </section>
+            <section>
+				<h3>Playing with Strings</h3>
+				<img src="images/kitten-string.jpg" alt="Cat playing with string"/>
+				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/dirtbikedba/5796961878/" target="_blank">Mike Lawson</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+			</section>
+            <section>
+                <h3>String Operators</h3>
+                <p>You can put strings together with a period, the concatenation operator.</p>
+                <pre><code>
+&lt;?php
+    $kittensName = 'Fluffy';
+    $fullName = $kittensName . ' McDougle';
+    echo $fullName; //Outputs 'Fluffy McDougle'
+?&gt;
+				</code></pre>
+            </section>
+            <section>
+                <h3>String Operators</h3>
+                <p>You can also use .= to add things to the end of a string.</p>
+                <pre><code>
+&lt;?php
+    $kittensName = 'Admiral';
+    $kittensName .= ' Snuggles';
+    echo $kittensName; //Outputs 'Admiral Snuggles'
+?&gt;
+				</code></pre>
+            </section>
+            <section>
+				<h3>Concatenate!</h3>
+				<img src="images/concatenate.jpg" alt="Cat jumping on another cat."/>
+				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/furlined/8191032061/" target="_blank">Matt</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+			</section>
+            <section>
+				<h3>Let's Develop It</h3>
+                <p>Create two variables, a first name and a last name, and then put them together to make a full name. Don't forget to echo your results!</p> 
+			</section>
+        </section>
+        <!-- Functions -->
+        <section id="functions">
+            <section>
+                <h3>Functions</h3>
+                <p>Functions are separable, reusable pieces of code. 
+                <img src="images/legos.jpg" alt="Pile of legos"/>
+				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/catzrule/9940388305/">Rick Payette</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
+            </section>
+            <section>
+                <h3>Using Functions</h3>
+                <p>First, declare the function.</p>
+                <pre><code>
+&lt;?php
+    function turtleFact() {
+        echo 'A turtle\'s lower shell is called plastron.';
+    }
+?&gt;
+				</code></pre>
+                <p>Then, use it as many times as you want!</p>
+                <pre><code>
+&lt;?php
+    turtleFact();
+?&gt;
+				</code></pre>                
+            </section>
+            <section>
+                <h3>Arguments</h3>
+                <p>Functions can accept input values, called arguments.</p>
+                <pre><code>
+&lt;?php
+    function callKitten ($kittenName){
+        echo 'Come here, ' . $kittenName . '!';
+    }
+    callKitten ('Fluffy'); //outputs 'Come here, Fluffy!'
+    
+    function addNumbers($a, $b) {
+        echo $a + $b;
+    }
+    addNumbers(5,7); //outputs 12
+    addNumbers(9,12); //outputs 21
+?&gt;
+				</code></pre>             
+            </section>
+            <section>
+                <h3>Arguments</h3>
+                <p>You can also pass variables into functions. These variables do not need to have the same name as the function arguments.</p>
+                <pre><code>
+&lt;?php
+    function addOne($inputNumber){
+        $newNumber = $inputNumber + 1;
+        echo '&lt;p&gtYou now have ' . $newNumber . '&lt;/p&gt';
+    }
+    //Declare variables
+    $numberOfKittens = 5;
+    $numberOfPuppies = 4;
+    //Use them in functions
+    addOne($numberOfKittens);
+    addOne($numberOfPuppies);    
+?&gt;
+				</code></pre>             
+            </section>
+            <section>
+				<h3>Let's Develop It</h3>
+                <p>Turn the code you wrote to output someone's full name into a function, then use it.</p> 
+			</section>
+            <section>
+                <h3>Returning Values</h3>
+                <p>You can have a function give you back a value, to use later.</p>
+                <pre><code>
+&lt;?php
+    function square($num) {
+        return $num * $num;
+    }
+    echo square(4);   // outputs '16'.
+    $squareOfFive = square(5); // will make $squareOfFive equal 25.
+?&gt;
+				</code></pre>
+                <p>Return will immediately end a function.</p>
+            </section>
+            <section>
+				<h3>Let's Develop It</h3>
+                <p>Add a return statement to your name function. Use that function to set the value of a variable.</p> 
+			</section>
+        </section>
+        
+        <!-- Final slides-->
+		<section id="final">
+			<section>
+				<h3>You did it!</h3>
+				<img src="images/celebration.jpg" alt="People celebrating"/>
+				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/morphomir/2407451929/" target="_blank">Mircea</a> <a href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">cc</a></p>
+			</section>
+			
+			<section>
+				<h3>Resources</h3>
+					<ul>
+						<li><a href="http://www.php.net/manual/en/" target="_blank">PHP Manual</a>, the official PHP documentation. Check the comments; they are useful.</li>
+						<li><a href="http://www.codecademy.com/tracks/php" target="_blank">Code Academy</a>, with interactive PHP lessons to help you review.</li>
+					</ul>
+			</section>
+		</section>
+ 
+			</div><!-- Close .slides -->
+  		<footer>
+        <div class="copyright">
+          HTML/CSS ~ Girl Develop It ~
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+        </div><!-- Close .copyright -->
+      </footer>
+    </div><!-- Close .reveal -->
+
+
+		<script src="reveal.js/lib/js/head.min.js"></script>
+		<script src="reveal.js/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
