@@ -112,7 +112,7 @@
     &lt;head&gt;
         &lt;title&gt;Test Page&lt;/title&gt;
     &lt;/head&gt;
-    &lt;p&gt;This page has a popup alert.&lt;/p&gt;
+    &lt;p&gt;This is my awesome JavaScript code.&lt;/p&gt;
     &lt;body&gt;
         &lt;script&gt;
             alert('Hello World!');
@@ -131,34 +131,66 @@
 				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/baboon/3946055/" target="_blank">baboon</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
 			</section>
             <section>
-                <h3>PHP Tags</h3>
-                <p>You can mix PHP and HTML. When a PHP server looks at a page, it only pays attention to code within the PHP tags.</p>
+                <h3>Script Tags</h3>
+                <p>You can mix JavaScript and HTML. The script tag tells your browser the stuff inside is code, not content.</p>
                 <pre><code>
-&lt;?php CODE GOES HERE  ?&gt;
+&lt;script&gt;
+    CODE GOES HERE
+&lt;/script&gt;
+				</code></pre>
+            </section>
+            <section>
+                <h3>JavaScript Files</h3>
+                <p>Just like CSS, you can split a long block of JavaScript into its own file. </p>
+                <pre><code>
+&lt;script src="path/to/file.js"&gt;&lt;/script&gt;
 				</code></pre>
             </section>
             <section>
                 <h3>Separating Instructions</h3>
                 <p>After each individual statement, you must add a semicolon.</p>
                 <pre><code>
-&lt;?php
-    echo 'Hello World!';
-    echo 'I am glad to meet you';
-    echo 'I am fuzzy';
-?&gt;
+&lt;script&gt;
+    console.log('Hello World!');
+    console.log('I am glad to meet you');
+    console.log('I am fuzzy');
+&lt;/script&gt;
 				</code></pre>
             </section>
             <section>
                 <h3>Comments</h3>
                 <p>You can leave comments in your code&mdash;notes that people can read and computers will ignore.</p>
                 <pre><code>
-&lt;?php
+&lt;script&gt;
     /*I can wrap long comments 
     with multiple lines 
     like this*/
-    echo 'Hello World!'; //Or mark short comments like this
-?&gt;
+    console.log('Hello World!'); //Or mark short comments like this
+&lt;/script&gt;
 				</code></pre>
+            </section>
+            <section>
+                <h3>Getting results onto your screen</h3>
+                <p>Open a popup box.</p>
+                <pre><code>
+alert('Hello World!');
+				</code></pre>
+                <p>Add a hidden message to your console.</p>
+                <pre><code>
+console.log('Hello World!');
+				</code></pre>
+                <p>Add something to the page.</p>
+                <pre><code>
+document.write('Hello World!');
+				</code></pre>
+            </section>
+            <section>
+                <h3>Let's Develop It</h3>
+                <ul>
+                    <li>Open index.html. Add a comment to the code.</li>
+                    <li>Try different ways of printing your message.</li>
+                    <li>Create a new file called mycode.js. Move your code to this file and link it to your page.</li>
+                </ul>
             </section>
         </section>
         <!-- Variables -->
