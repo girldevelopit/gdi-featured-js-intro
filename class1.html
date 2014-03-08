@@ -254,30 +254,30 @@ document.write('Hello World!');
         <section>
             <section>
 				<h3>Numbers!</h3>
-				<img src="images/kitten-basket.jpg" alt="Cat jumping on another cat."/>
+				<img src="images/kitten-basket.jpg" alt="Cats in a basket"/>
 				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/tom-poes/2159348460/" target="_blank">WJ van den Eijkhof</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
 			</section>
             <section>
 				<h3>Numbers</h3>
                 <p>Variable can be numbers, either integers or floats (decimals).</p>
                 <pre><code>
-&lt;?php
-    $numberOfKittens = 5;
-    $cutenessRating = 9.6;
-?&gt;
+&lt;script&gt;
+    var numberOfKittens = 5;
+    var cutenessRating = 9.6;
+&lt;/script&gt;
 				</code></pre>
-                <p>PHP will automatically convert integers to floats if needed</p>
+                <p>The browser will automatically convert integers to floats if needed</p>
 			</section>
             
             <section>
 				<h3>Arithmetic Operators</h3>
                 <p>Once you have numbers, you can do math with them!</p>
                 <pre><code>
-&lt;?php
-    $numberOfKittens = 5;
-    $numberOfPuppies = 4;
-    $numberOfAnimals = $numberOfKittens + $numberOfPuppies;
-?&gt;
+&lt;script&gt;
+    var numberOfKittens = 5;
+    var numberOfPuppies = 4;
+    var numberOfAnimals = numberOfKittens + numberOfPuppies;
+&lt;/script&gt;
 				</code></pre>
 			</section>
             <section>
@@ -326,7 +326,7 @@ document.write('Hello World!');
 			</section>
             <section>
 				<h3>Let's Develop It</h3>
-                <p>Create two variables and try some arithmetic operators. Don't forget to echo your results!</p> 
+                <p>Create two variables and try some arithmetic operators. Don't forget to display your results!</p> 
 			</section>
         </section>
         <!-- Strings -->
@@ -335,15 +335,15 @@ document.write('Hello World!');
                 <h3>Strings</h3>
                 <p>Variable can be strings, groups of characters. You put your string in quotes.</p>
                 <pre><code>
-&lt;?php
+&lt;script&gt;
     $kittensName = 'Fluffy';
-?&gt;
+&lt;/script&gt;
 				</code></pre>
                 <p>If you want to use a quote in your string, you'll need to "escape" it with a backslash.</p>
                 <pre><code>
-&lt;?php
+&lt;script&gt;
     echo 'I\'d like to use an apostrophe';
-?&gt;
+&lt;/script&gt;
 				</code></pre>                
             </section>
             <section>
@@ -355,22 +355,22 @@ document.write('Hello World!');
                 <h3>String Operators</h3>
                 <p>You can put strings together with a period, the concatenation operator.</p>
                 <pre><code>
-&lt;?php
+&lt;script&gt;
     $kittensName = 'Fluffy';
     $fullName = $kittensName . ' McDougle';
     echo $fullName; //Outputs 'Fluffy McDougle'
-?&gt;
+&lt;/script&gt;
 				</code></pre>
             </section>
             <section>
                 <h3>String Operators</h3>
                 <p>You can also use .= to add things to the end of a string.</p>
                 <pre><code>
-&lt;?php
+&lt;script&gt;
     $kittensName = 'Admiral';
     $kittensName .= ' Snuggles';
     echo $kittensName; //Outputs 'Admiral Snuggles'
-?&gt;
+&lt;/script&gt;
 				</code></pre>
             </section>
             <section>
@@ -395,24 +395,24 @@ document.write('Hello World!');
                 <h3>Using Functions</h3>
                 <p>First, declare the function.</p>
                 <pre><code>
-&lt;?php
+&lt;script&gt;
     function turtleFact() {
         echo 'A turtle\'s lower shell is called plastron.';
     }
-?&gt;
+&lt;/script&gt;
 				</code></pre>
                 <p>Then, use it as many times as you want!</p>
                 <pre><code>
-&lt;?php
+&lt;script&gt;
     turtleFact();
-?&gt;
+&lt;/script&gt;
 				</code></pre>                
             </section>
             <section>
                 <h3>Arguments</h3>
                 <p>Functions can accept input values, called arguments.</p>
                 <pre><code>
-&lt;?php
+&lt;script&gt;
     function callKitten ($kittenName){
         echo 'Come here, ' . $kittenName . '!';
     }
@@ -423,14 +423,14 @@ document.write('Hello World!');
     }
     addNumbers(5,7); //outputs 12
     addNumbers(9,12); //outputs 21
-?&gt;
+&lt;/script&gt;
 				</code></pre>             
             </section>
             <section>
                 <h3>Arguments</h3>
                 <p>You can also pass variables into functions. These variables do not need to have the same name as the function arguments.</p>
                 <pre><code>
-&lt;?php
+&lt;script&gt;
     function addOne($inputNumber){
         $newNumber = $inputNumber + 1;
         echo '&lt;p&gtYou now have ' . $newNumber . '&lt;/p&gt';
@@ -441,7 +441,7 @@ document.write('Hello World!');
     //Use them in functions
     addOne($numberOfKittens);
     addOne($numberOfPuppies);    
-?&gt;
+&lt;/script&gt;
 				</code></pre>             
             </section>
             <section>
@@ -452,13 +452,13 @@ document.write('Hello World!');
                 <h3>Returning Values</h3>
                 <p>You can have a function give you back a value, to use later.</p>
                 <pre><code>
-&lt;?php
+&lt;script&gt;
     function square($num) {
         return $num * $num;
     }
     echo square(4);   // outputs '16'.
     $squareOfFive = square(5); // will make $squareOfFive equal 25.
-?&gt;
+&lt;/script&gt;
 				</code></pre>
                 <p>Return will immediately end a function.</p>
             </section>
