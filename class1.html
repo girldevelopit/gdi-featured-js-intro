@@ -336,13 +336,13 @@ document.write('Hello World!');
                 <p>Variable can be strings, groups of characters. You put your string in quotes.</p>
                 <pre><code>
 &lt;script&gt;
-    $kittensName = 'Fluffy';
+    var kittensName = 'Fluffy';
 &lt;/script&gt;
 				</code></pre>
                 <p>If you want to use a quote in your string, you'll need to "escape" it with a backslash.</p>
                 <pre><code>
 &lt;script&gt;
-    echo 'I\'d like to use an apostrophe';
+    console.log('I\'d like to use an apostrophe');
 &lt;/script&gt;
 				</code></pre>                
             </section>
@@ -353,23 +353,23 @@ document.write('Hello World!');
 			</section>
             <section>
                 <h3>String Operators</h3>
-                <p>You can put strings together with a period, the concatenation operator.</p>
+                <p>You can put strings together with a +, the concatenation operator.</p>
                 <pre><code>
 &lt;script&gt;
-    $kittensName = 'Fluffy';
-    $fullName = $kittensName . ' McDougle';
-    echo $fullName; //Outputs 'Fluffy McDougle'
+    var kittensName = 'Fluffy ';
+    var fullName = kittensName + ' McDougle';
+    console.log(fullName); //Outputs 'Fluffy McDougle'
 &lt;/script&gt;
 				</code></pre>
             </section>
             <section>
                 <h3>String Operators</h3>
-                <p>You can also use .= to add things to the end of a string.</p>
+                <p>You can also use += to add things to the end of a string.</p>
                 <pre><code>
 &lt;script&gt;
-    $kittensName = 'Admiral';
-    $kittensName .= ' Snuggles';
-    echo $kittensName; //Outputs 'Admiral Snuggles'
+    var kittensName = 'Admiral ';
+    kittensName += ' Snuggles';
+    console.log(kittensName); //Outputs 'Admiral Snuggles'
 &lt;/script&gt;
 				</code></pre>
             </section>
