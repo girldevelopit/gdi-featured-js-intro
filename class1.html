@@ -380,7 +380,7 @@ document.write('Hello World!');
 			</section>
             <section>
 				<h3>Let's Develop It</h3>
-                <p>Create two variables, a first name and a last name, and then put them together to make a full name. Don't forget to echo your results!</p> 
+                <p>Create two variables, a first name and a last name, and then put them together to make a full name. Don't forget to display your results!</p> 
 			</section>
         </section>
         <!-- Functions -->
@@ -397,7 +397,7 @@ document.write('Hello World!');
                 <pre><code>
 &lt;script&gt;
     function turtleFact() {
-        echo 'A turtle\'s lower shell is called plastron.';
+        console.log('A turtle\'s lower shell is called a plastron.');
     }
 &lt;/script&gt;
 				</code></pre>
@@ -413,13 +413,13 @@ document.write('Hello World!');
                 <p>Functions can accept input values, called arguments.</p>
                 <pre><code>
 &lt;script&gt;
-    function callKitten ($kittenName){
-        echo 'Come here, ' . $kittenName . '!';
+    function callKitten (kittenName){
+        console.log('Come here, ' + kittenName + '!');
     }
     callKitten ('Fluffy'); //outputs 'Come here, Fluffy!'
     
-    function addNumbers($a, $b) {
-        echo $a + $b;
+    function addNumbers(a, b) {
+        console.log(a + b);
     }
     addNumbers(5,7); //outputs 12
     addNumbers(9,12); //outputs 21
@@ -431,16 +431,16 @@ document.write('Hello World!');
                 <p>You can also pass variables into functions. These variables do not need to have the same name as the function arguments.</p>
                 <pre><code>
 &lt;script&gt;
-    function addOne($inputNumber){
-        $newNumber = $inputNumber + 1;
-        echo '&lt;p&gtYou now have ' . $newNumber . '&lt;/p&gt';
+    function addOne(inputNumber){
+        var newNumber = inputNumber + 1;
+        console.log('&lt;p&gtYou now have ' + newNumber);
     }
     //Declare variables
-    $numberOfKittens = 5;
-    $numberOfPuppies = 4;
+    var numberOfKittens = 5;
+    var numberOfPuppies = 4;
     //Use them in functions
-    addOne($numberOfKittens);
-    addOne($numberOfPuppies);    
+    addOne(numberOfKittens);
+    addOne(numberOfPuppies);    
 &lt;/script&gt;
 				</code></pre>             
             </section>
@@ -453,11 +453,11 @@ document.write('Hello World!');
                 <p>You can have a function give you back a value, to use later.</p>
                 <pre><code>
 &lt;script&gt;
-    function square($num) {
-        return $num * $num;
+    function square(num) {
+        return num * num;
     }
-    echo square(4);   // outputs '16'.
-    $squareOfFive = square(5); // will make $squareOfFive equal 25.
+    console.log(square(4));   // outputs '16'.
+    var squareOfFive = square(5); // will make squareOfFive equal 25.
 &lt;/script&gt;
 				</code></pre>
                 <p>Return will immediately end a function.</p>
