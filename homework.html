@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Puzzles | Girl Develop It</title>
+    <link rel="stylesheet" href="classexercises.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript">    
+        // Powers show/hide buttons.
+        $( document ).ready(function() {
+            $("div.codebox").hide();
+        });
+        function showSolution(num) {
+            $("div#example" + num + "Code").toggle();
+        }
+    </script> 
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h1>JavaScript Puzzles</h1>
+        </div>
+        <div id="sidebar">
+            <ul>
+                <li><a href="#class1">Class 1</a></li>
+                <li><a href="#class2">Class 2</a></li>
+                <li><a href="#class3">Class 3</a></li>
+                <li><a href="#class4">Class 4</a></li>
+            </ul>
+        </div>
+        <div id="main">
+            <p>Welcome! These are some bonus puzzles to accompany the Girl Develop It <a href="http://www.meetup.com/Girl-Develop-It-RDU/events/161864322/">JavaScript for Beginners</a> class. Please take a look at the puzzles, and work on one that looks challenging but not completely overwhelming. You can always reference <a href="http://www.platypoda.com/js-intro/">the slides</a> if you get stuck. Commit to spend at least 20 minutes trying to figure out a problem before you look at the answers. It helps you learn!</p>
+            
+            <h2 id="class1">Class 1</h2>
+            <h3>The Fortune Teller</h3>
+            <p><em>Why pay a fortune teller when you can just program your fortune yourself?</em></p>
+            <ul>
+                <li>Store the following into variables: number of children, partner's name, geographic location, job title.</li>
+                <li>Output your fortune to the screen like so: "You will be a X in Y, and married to Z with N kids."</li>
+            </ul>
+           
+            <button onclick="showSolution(1)">Show/Hide Solution</button>
+            <div class="codebox" id="example1Code">
+                <pre><code>
+var numKids  = 5;
+var partner  = 'David Beckham';
+var location = 'Costa Rica';
+var jobTitle = 'web developer';
+
+var future = 'You will be a ' + jobTitle + ' in ' + location + ', and married to ' +
+   partner + ' ' + ' with ' + numKids + ' kids.';
+console.log(future);
+                </code></pre>
+            </div>
+            
+            <h3>The Calculator</h3>
+            <ul>
+                 <li>Write a function called <code>squareNumber</code> that will take one argument (a number), square that number, and return the result. It should also log a string like "The result of squaring the number 3 is 9." </li>
+                 <li>Write a function called <code>halfNumber</code> that will take one argument (a number), divide it by 2, and return the result. It should also log a string like "Half of  5 is 2.5.".</li>
+                 <li>Write a function called <code>percentOf</code> that will take two numbers, figure out what percent the first number represents of the second number, and return the result. It should also log a string like "2 is 50% of 4."</li>
+                 <li>Write a function called <code>areaOfCircle</code> that will take one argument (the radius), calculate the area based on that, and return the result. It should also log a string like "The area for a circle with radius 2 is 12.566370614359172."
+                    <ul><li>Bonus: Round the result so there are only two digits after the decimal.</li></ul>
+                 </li>
+                 <li>Write a function that will take one argument (a number) and perform the following operations, using the functions
+                 you wrote earlier:
+                      <ol>
+                       <li>Take half of the number and store the result.</li>
+                       <li>Square the result of #1 and store that result.</li>
+                       <li>Calculate the area of a circle with the result of #2 as the radius.</li>
+                       <li>Calculate what percentage that area is of the squared result (#3).</li>
+                      </ol>
+                </li>
+            </ul>
+            
+            <button onclick="showSolution(2)">Show/Hide Solution</button>
+            <div class="codebox" id="example2Code">
+                <pre><code>
+            
+function squareNumber(num) {
+    var squaredNumber = num * num;
+    console.log('The result of squaring the number ' + num + ' is ' + squaredNumber);
+    return squaredNumber;
+}
+
+squareNumber(3);
+
+function halfOf(num) {
+    var half = num / 2;
+    console.log('Half of ' + num + ' is ' +  half);
+    return half;
+}
+
+halfOf(5);
+
+function percentOf(num1, num2) {
+    var percent = (num1/num2) * 100;
+    console.log(num1 + ' is ' + percent + '% of ' + num2);
+    return percent;
+}
+
+percentOf(5, 10);
+
+function areaOfCircle(radius) {
+    var area = Math.PI * squareNumber(radius);
+    console.log('The area of circle with radius ' + radius + ' is ' + area);
+    return area;
+}
+
+areaOfCircle(2);
+
+function doCrazyStuff(num) {
+    var half    = halfOf(num);
+    var squared = squareNumber(half);
+    var area    = areaOfCircle(squared);
+    var result  = percentOf(squared, area);
+}
+
+doCrazyStuff(5);
+                </code></pre>
+            </div>
+            
+            <h2 id="class2">Class 2</h2>
+            <p>Coming Soon!</p>
+            
+            <h2 id="class3">Class 3</h2>
+            <p>Coming Soon!</p>
+            
+            <h2 id="class4">Class 4</h2>
+            <p>Coming Soon!</p>
+          
+        </div>
+        <div id="footer">
+            <p>Puzzle and code Sylvia Richardson and Pamela Fox. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</p>
+        </div>
+    </div>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-39435329-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

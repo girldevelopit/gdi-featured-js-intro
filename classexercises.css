@@ -1,0 +1,109 @@
+/* Pretty code box */
+
+.codebox {
+    border:1px solid black;
+    background-color:#EEEEFF;
+    width:100%;
+    overflow:auto;    
+    padding:10px;
+}
+
+pre {
+	margin: 0;
+}
+
+code{
+	word-wrap: break-word;
+}
+
+/*More readable forms*/
+form label {
+display:	block;
+float:	left;
+clear:	left;
+width:	10%;
+margin-right:	10px;
+text-align:	right;
+}
+form textarea, input, select, label, button, optgroup {
+margin-top:	5px;
+} 
+
+/*Overall Design*/
+
+body{
+	background-color: #D3C7B1;
+	font-family: Sans-Serif;	
+}
+
+#wrapper{
+	width: 75em;
+	margin: 2em auto;
+	background-color: #fff;	
+}
+
+#header{
+	background-color: #3B597D;
+	margin: 0;
+	padding: 1em;
+	color: #fff;
+}
+
+#main{
+	background-color: #fff;
+	padding: 1em;
+	width: 58em;
+	float: left;
+}
+
+#sidebar{
+	background-color: #D68051;
+	padding: 1em;
+	width: 13em;
+	float: right;
+}
+
+#footer{
+	background-color: #3B597D;
+	margin: 0;
+	padding: 1em;
+	color: #fff;
+	clear: both;
+}
+
+div#footer a{
+	color: #fff;
+}
+
+/*Sidebar links*/
+
+#sidebar ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 5px;
+}
+
+#sidebar ul li {
+	display: inline-block;
+	width: 95%;
+	height: 40px;	
+	line-height: 40px;
+	font-size: 130%;
+	padding: 5px;
+	margin-bottom: 5px;
+	background: #3B597D;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#1d2c3e), to(#3B597D));
+	background: -webkit-linear-gradient(#1d2c3e, #3B597D);
+	background: -moz-linear-gradient(#1d2c3e, #3B597D);
+	background: -ms-linear-gradient(#1d2c3e, #3B597D);
+	background: -o-linear-gradient(#1d2c3e, #3B597D);
+	background: linear-gradient(#1d2c3e, #3B597D);
+	border: 1px solid #1d2c3e;
+	border-radius: 2px;
+	font-weight: bold;
+}
+
+#sidebar ul li a{
+	text-decoration: none;
+	color: #ffffff;
+}
