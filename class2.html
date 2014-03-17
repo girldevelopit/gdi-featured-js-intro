@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Class 1 ~ JavaScript for Beginners ~ Girl Develop It</title>
+		<title>Class 2 ~ JavaScript for Beginners ~ Girl Develop It</title>
 
 		<meta name="description" content="This is an introduction to JavaScript curriculum, developed by Sylvia Richardson for the Raleigh/Durham chapter.
 
@@ -69,7 +69,40 @@ console.log(receipt);
             </section>
         </section>
         
-        
+        <!-- Variable Scope -->
+        <section id="scope">
+            <section>
+                <h3>Variable Scope</h3>
+                <p>The scope of a variable is how long the computer will remember it.</p>
+                <img src="images/footprints.jpg" alt="Footprints being washed away"/>
+				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/heyvikram/187950111/" target="_blank">_vikram</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+                
+            </section>
+            <section>
+                <h3>Global Scope</h3>
+                <p>A variable declared outside a function has a <span class="yellow">global</span> scope and can be accessed anywhere, even in a function.</p>
+                  <pre><code>
+var awesomeGroup = 'Girl Develop It'; //Global scope
+function whatIsAwesome() {
+    console.log (awesomeGroup + ' is pretty awesome.'); //Will work
+}
+whatIsAwesome();
+
+				</code></pre>
+            </section>
+            <section>
+                <h3>Local Scope</h3>            
+                <p>A variable declared within a function has a <span class="yellow">local</span> scope and can only be accessed within that function.</p>
+                <pre><code>
+function whatIsAwesome() {
+    var awesomeGroup = 'Girl Develop It'; //Local scope
+    console.log ('I made a variable called awesomeGroup with a value of ' + awesomeGroup); //Will work
+}
+whatIsAwesome();
+console.log (awesomeGroup + ' is pretty awesome.'); //Won't work
+				</code></pre>
+            </section>
+        </section>
                 
        
         
