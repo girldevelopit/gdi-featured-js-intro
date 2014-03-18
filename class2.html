@@ -211,6 +211,99 @@ if (bananas &gt; 0) {
                 <p>Make a variable called "temperature." Write some code that tells you to put on a coat if it is below 50 degrees.</p> 
 			</section>
         </section>
+        
+        <!--If/else -->
+        <section id="if-else">
+            <section>
+				<h3>Even more control flow</h3>
+				<img src="images/toomanysigns.jpg" alt="Sign post with multiple signs"/>
+				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/thomashawk/2402598275/" target="_blank">Thomas Hawk</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+			</section>
+            <section>
+                <h3>The if/else statement</h3>
+                <p>Use else to provide an alternate set of instructions.</p>
+                <pre><code>
+var age = 28;
+if (age &gt;= 16) {
+    console.log ('Yay, you can drive!');
+} else {
+    console.log ('Sorry, but you have ' + (16 - age) + 
+    ' years until you can drive.');
+}
+				</code></pre>
+            </section>
+            <section>
+                <h3>The if/else if/else statement</h3>
+                <p>If you have multiple conditions, you can use else if.</p>
+                <pre><code>
+var age = 20;
+if (age >= 35) {
+    console.log('You can vote AND hold any place in government!');
+} else if (age >= 25) {
+    console.log('You can vote AND run for the Senate!');
+} else if (age >= 18) {
+    console.log('You can vote!');
+} else {
+    console.log('You can\'t vote, but you can 
+    still write your representatives.');
+}
+				</code></pre>
+            </section>
+             <section>
+				<h3>Let's Develop It</h3>
+                <p>Modify your "wear a coat" code for these conditions:</p>
+                <ol>
+                    <li>If it is less than 50 degrees, wear a coat.</li>
+                    <li>If it is less than 30 degrees, wear a coat and a hat.</li>
+                    <li>If it is less than 0 degrees, stay inside.</li>
+                    <li>Otherwise, wear whatever you want.</li>
+                </ol>
+			</section>
+            <section>
+				<h3>Logical Operators</h3>
+                <table>
+                    <thead>
+                      <tr>
+                        <th width="200px">Example</th>
+                        <th width="150px">Name</th>
+                        <th>Result</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                       <td>$a &amp;&amp; $b</td>
+                       <td>And</td>
+                       <td><strong><code>TRUE</code></strong> if both $a and $b are <strong><code>TRUE</code></strong>.</td>
+                      </tr>
+                      <td>$a || $b</td>
+                       <td>Or</td>
+                       <td><strong><code>TRUE</code></strong> if either $a or $b is <strong><code>TRUE</code></strong>.</td>
+                      </tr>
+                      <tr>
+                       <td>! $a</td>
+                       <td>Not</td>
+                       <td><strong><code>TRUE</code></strong> if $a is not <strong><code>TRUE</code></strong>.</td>
+                      </tr>
+                     </tbody>    
+                </table>          
+			</section>
+            <section>
+                <h3>Using logical operators</h3>
+                <p>You can use these operators to combine conditions.</p>
+                <pre><code>
+var bananas = 5;
+if (bananas &gt;=2 &amp;&amp; bananas &lt;7) {
+    console.log ('You have a reasonable number of bananas');
+} else {
+    console.log ('Check your banana supply');
+}
+				</code></pre>
+            </section>
+            <section>
+				<h3>Let's Develop It</h3>
+                <p>Add a logical operator to your what to wear program.</p> 
+			</section>
+        </section>
                 
        
         
