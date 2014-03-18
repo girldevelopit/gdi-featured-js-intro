@@ -358,6 +358,21 @@ for (i = 1; i &lt;= 50; i++) {
 				</code></pre>
             </section>
             <section>
+                <h3>Break</h3>
+                <p>To exit a loop, use the break statement.</p>
+                <pre><code>
+//Count from 100 to 200              
+for (i = 100; i &lt;= 200; i++) {
+    console.log('Testing ' + i);
+    //Stop at the first multiple of 7
+    if (i % 7 == 0) {
+        console.log('Found it! ' + i);
+    break;
+    }
+}
+				</code></pre>
+            </section>
+            <section>
 				<h3>Let's Develop It</h3>
                 <p>Write a loop that gives you the 9's times table,<br /> from 9 x 1 = 9 to 9 x 12 = 108.</p>
                 <p>Finish early? Try using a loop inside a loop to write all the times tables, from 1 to 12.</p>
