@@ -121,6 +121,96 @@ var dogsRule = false;
                 <p>If you try to use another variable as a boolean, JavaScript will guess. The number 0, the empty string '', undefined, and null are considered false, everything else reads as true.</p>
             </section>
         </section>
+        
+        <!--If/Then-->
+        <section id="if-then">
+            <section>
+                <h3>Control Flow</h3>
+                <img src="images/fork-path.jpg" alt="Forked path"/>
+				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/dennism2/1504087870/" target="_blank">DennisM2</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+            </section>
+            <section>
+                <h3>The if statement</h3>
+                <p>Use if to decide which lines of code to execute, based on a condition.</p>
+                <pre><code>
+if (condition) {
+  // statements to execute
+}
+				</code></pre>
+                <pre><code>
+var bananas = 5;
+if (bananas &gt; 0) {
+  console.log ('You have some bananas!');
+}
+				</code></pre>
+            </section>
+            <section>
+				<h3>Comparison Operators</h3>
+                <table class="smalltext">
+                    <thead>
+                      <tr>
+                        <th width="150px">Example</th>
+                        <th width="250px">Name</th>
+                        <th>Result</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                       <td>$a == $b</td>
+                       <td>Equal</td>
+                       <td><strong><code>TRUE</code></strong> if $a is equal to $b (can be different types).</td>
+                      </tr>
+                      <tr>
+                       <td>$a === $b</td>
+                       <td>Identical</td>
+                       <td>
+                        <strong><code>TRUE</code></strong> if $a is equal to $b, and the same type. </td>
+                      </tr>
+                      <tr>
+                       <td>$a != $b</td>
+                       <td>Not equal</td>
+                       <td><strong><code>TRUE</code></strong> if $a is not equal to $b (can be different types).</td>
+                      </tr>
+                      <tr>
+                       <td>$a !== $b</td>
+                       <td>Not identical</td>
+                       <td>
+                        <strong><code>TRUE</code></strong> if $a is not equal to $b, or they are not the same type.</td>
+                      </tr>
+                      <tr>
+                       <td>$a &lt; $b</td>
+                       <td>Less than</td>
+                       <td><strong><code>TRUE</code></strong> if $a is strictly less than $b.</td>
+                      </tr>
+                      <tr>
+                       <td>$a &gt; $b</td>
+                       <td>Greater than</td>
+                       <td><strong><code>TRUE</code></strong> if $a is strictly greater than $b.</td>
+                      </tr>
+                      <tr>
+                       <td>$a &lt;= $b</td>
+                       <td>Less than or equal to </td>
+                       <td><strong><code>TRUE</code></strong> if $a is less than or equal to $b.</td>
+                      </tr>
+                      <tr>
+                       <td>$a &gt;= $b</td>
+                       <td>Greater than or equal to </td>
+                       <td><strong><code>TRUE</code></strong> if $a is greater than or equal to $b.</td>
+                      </tr>
+                    </tbody>    
+                </table>          
+			</section>
+            <section>
+                <h3>Watch out!</h3>
+                <p>Don't mix up = and ==</p>
+                <img src="images/caution.jpg" alt="Caution Tape"/>
+				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/pictureperfectpose/76138988/" target="_blank">Eugene Zemlyanskiy</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+            </section>
+            <section>
+				<h3>Let's Develop It</h3>
+                <p>Make a variable called "temperature." Write some code that tells you to put on a coat if it is below 50 degrees.</p> 
+			</section>
+        </section>
                 
        
         
