@@ -304,7 +304,65 @@ if (bananas &gt;=2 &amp;&amp; bananas &lt;7) {
                 <p>Add a logical operator to your what to wear program.</p> 
 			</section>
         </section>
-                
+         
+        <!-- Loops -->
+        <section id="loops">
+            <section>
+                <h3>Loops</h3>
+                <img src="images/hula-hoop.jpg" alt="Lego stormtrooper inside key ring"/>
+				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/steve_pires/8430087504/" target="_blank">Steve Pires</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+            </section>
+            <section>
+                <h3>While loops</h3>
+                <p>While will repeat the same code over and over until some condition is met.</p>
+                <pre><code>
+var bottlesOfBeer = 99;
+while (bottlesOfBeer &gt;= 1) {
+    console.log (bottlesOfBeer + ' bottles of beer on the wall');
+    bottlesOfBeer = bottlesOfBeer - 9;
+}
+				</code></pre>
+            </section>
+            <section>
+				<h3>Infinite Loops</h3>
+                <p>Make sure something changes in the loop, or your loop will go on forever...</p>
+				<img src="images/infinite-loop.jpg" alt="Spiral that goes on toward infinity"/>
+				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/samueljohn/5348462863/" target="_blank">Samuel John</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+			</section>
+            <section>
+                <h3>For loops</h3>
+                <p>For loops are very similar, but you declare a counter in the statement.</p>
+                <pre><code>
+//will count 1 to 10
+for (i = 1; i &lt;= 10; i++) {
+    console.log (i); 
+}
+				</code></pre>
+            </section>
+            <section>
+                <h3>Loops and logic</h3>
+                <p>You can add other statements or logical operators inside the loops.</p>
+                <pre><code>
+//Count from 1 to 50
+for (i = 1; i &lt;= 50; i++) {
+    console.log (i);       
+    //Says 'Buzz' after multiples of three
+    if (i%3 == 0) {
+        console.log (' Buzz');
+    }        
+    //Says 'Bang' after multiples of five
+    if (i%5 == 0) {
+        console.log (' Bang');
+    }
+}
+				</code></pre>
+            </section>
+            <section>
+				<h3>Let's Develop It</h3>
+                <p>Write a loop that gives you the 9's times table,<br /> from 9 x 1 = 9 to 9 x 12 = 108.</p>
+                <p>Finish early? Try using a loop inside a loop to write all the times tables, from 1 to 12.</p>
+			</section>
+        </section>
        
         
         <!-- Final slides-->
