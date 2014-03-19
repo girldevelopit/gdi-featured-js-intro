@@ -119,9 +119,51 @@ doCrazyStuff(5);
                 </code></pre>
             </div>
             
+            <h3>Challenge Questions: String Manipulation</h3>
+            <p>If you feel comfortable with the other exercises, it's time to expand your knowledge! These puzzles involve manipulating strings; to try them out, you'll need to use some of the <a href="http://www.w3schools.com/jsref/jsref_obj_string.asp">built-in JavaScript methods for strings</a>. Methods are pre-written functions that are built into the language.</p>
+            
+            <p>These questions are not as straightforward as the others. They challenge you to really think like a programmer. Really try to solve them before you peek at the answer.</p>
+            
+            <h4>MixUp</h4>
+            <p>Create a function called <code>mixUp</code>. It should take in two strings, and return the concatenation of the two strings (separated by a space) slicing out and swapping the first 2 characters of each. You can assume that the strings are at least 2 characters long. For example:</p>
+            <pre>
+mixUp('mix', pod'): 'pox mid'
+mixUp('dog', 'dinner'): 'dig donner'
+            </pre>
+           
+            <button onclick="showSolution(3)">Show/Hide Solution</button>
+            <div class="codebox" id="example3Code">
+                <pre><code>
+//This function uses the slice() method. It extracts a part of a string and returns a new string
+function mixUp(string1, string2) {
+  return string1.slice(0, 2) + string2.slice(2) + " " + string2.slice(0, 2) + string1.slice(2);
+}
+                </code></pre>
+            </div>
+            
+            <h4>FixStart</h4>
+            <p>Create a function called <code>fixStart</code>. It should take a single argument, a string, and return a version where all occurrences of its first character have been replaced with '*', except for the first character itself. You can assume that the string is at least one character long. For example:</p>
+            <pre>
+fixStart('babble'): 'ba**le'
+fixStart('turtle'): 'tur*le'
+            </pre>
+            
+            <button onclick="showSolution(4)">Show/Hide Solution</button>
+            <div class="codebox" id="example4Code">
+                <pre><code>
+//This function uses a few new methods and regular expressions
+function fixStart(inputString) {
+  var firstChar = inputString.charAt(0);
+  return firstChar + inputString.slice(1).replace(new RegExp(firstChar, 'g'), '*');
+}
+                </code></pre>
+            </div>
+
+
+            
             <h2 id="class2">Class 2</h2>
             <p>Coming Soon!</p>
-            
+         
             <h2 id="class3">Class 3</h2>
             <p>Coming Soon!</p>
             
