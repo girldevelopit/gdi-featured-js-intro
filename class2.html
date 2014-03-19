@@ -156,46 +156,46 @@ if (bananas &gt; 0) {
                     </thead>
                     <tbody>
                       <tr>
-                       <td>$a == $b</td>
+                       <td>a == b</td>
                        <td>Equal</td>
-                       <td><strong><code>TRUE</code></strong> if $a is equal to $b (can be different types).</td>
+                       <td><strong><code>TRUE</code></strong> if a is equal to b (can be different types).</td>
                       </tr>
                       <tr>
-                       <td>$a === $b</td>
+                       <td>a === b</td>
                        <td>Identical</td>
                        <td>
-                        <strong><code>TRUE</code></strong> if $a is equal to $b, and the same type. </td>
+                        <strong><code>TRUE</code></strong> if a is equal to b, and the same type. </td>
                       </tr>
                       <tr>
-                       <td>$a != $b</td>
+                       <td>a != b</td>
                        <td>Not equal</td>
-                       <td><strong><code>TRUE</code></strong> if $a is not equal to $b (can be different types).</td>
+                       <td><strong><code>TRUE</code></strong> if a is not equal to b (can be different types).</td>
                       </tr>
                       <tr>
-                       <td>$a !== $b</td>
+                       <td>a !== b</td>
                        <td>Not identical</td>
                        <td>
-                        <strong><code>TRUE</code></strong> if $a is not equal to $b, or they are not the same type.</td>
+                        <strong><code>TRUE</code></strong> if a is not equal to b, or they are not the same type.</td>
                       </tr>
                       <tr>
-                       <td>$a &lt; $b</td>
+                       <td>a &lt; b</td>
                        <td>Less than</td>
-                       <td><strong><code>TRUE</code></strong> if $a is strictly less than $b.</td>
+                       <td><strong><code>TRUE</code></strong> if a is strictly less than b.</td>
                       </tr>
                       <tr>
-                       <td>$a &gt; $b</td>
+                       <td>a &gt; b</td>
                        <td>Greater than</td>
-                       <td><strong><code>TRUE</code></strong> if $a is strictly greater than $b.</td>
+                       <td><strong><code>TRUE</code></strong> if a is strictly greater than b.</td>
                       </tr>
                       <tr>
-                       <td>$a &lt;= $b</td>
+                       <td>a &lt;= b</td>
                        <td>Less than or equal to </td>
-                       <td><strong><code>TRUE</code></strong> if $a is less than or equal to $b.</td>
+                       <td><strong><code>TRUE</code></strong> if a is less than or equal to b.</td>
                       </tr>
                       <tr>
-                       <td>$a &gt;= $b</td>
+                       <td>a &gt;= b</td>
                        <td>Greater than or equal to </td>
-                       <td><strong><code>TRUE</code></strong> if $a is greater than or equal to $b.</td>
+                       <td><strong><code>TRUE</code></strong> if a is greater than or equal to b.</td>
                       </tr>
                     </tbody>    
                 </table>          
@@ -271,18 +271,18 @@ if (age >= 35) {
                     </thead>
                     <tbody>
                       <tr>
-                       <td>$a &amp;&amp; $b</td>
+                       <td>a &amp;&amp; b</td>
                        <td>And</td>
-                       <td><strong><code>TRUE</code></strong> if both $a and $b are <strong><code>TRUE</code></strong>.</td>
+                       <td><strong><code>TRUE</code></strong> if both a and b are <strong><code>TRUE</code></strong>.</td>
                       </tr>
-                      <td>$a || $b</td>
+                      <td>a || b</td>
                        <td>Or</td>
-                       <td><strong><code>TRUE</code></strong> if either $a or $b is <strong><code>TRUE</code></strong>.</td>
+                       <td><strong><code>TRUE</code></strong> if either a or b is <strong><code>TRUE</code></strong>.</td>
                       </tr>
                       <tr>
-                       <td>! $a</td>
+                       <td>! a</td>
                        <td>Not</td>
-                       <td><strong><code>TRUE</code></strong> if $a is not <strong><code>TRUE</code></strong>.</td>
+                       <td><strong><code>TRUE</code></strong> if a is not <strong><code>TRUE</code></strong>.</td>
                       </tr>
                      </tbody>    
                 </table>          
@@ -334,7 +334,7 @@ while (bottlesOfBeer &gt;= 1) {
                 <p>For loops are very similar, but you declare a counter in the statement.</p>
                 <pre><code>
 //will count 1 to 10
-for (i = 1; i &lt;= 10; i++) {
+for (var i = 1; i &lt;= 10; i++) {
     console.log (i); 
 }
 				</code></pre>
@@ -344,7 +344,7 @@ for (i = 1; i &lt;= 10; i++) {
                 <p>You can add other statements or logical operators inside the loops.</p>
                 <pre><code>
 //Count from 1 to 50
-for (i = 1; i &lt;= 50; i++) {
+for (var i = 1; i &lt;= 50; i++) {
     console.log (i);       
     //Says 'Buzz' after multiples of three
     if (i % 3 == 0) {
@@ -362,12 +362,12 @@ for (i = 1; i &lt;= 50; i++) {
                 <p>To exit a loop, use the break statement.</p>
                 <pre><code>
 //Count from 100 to 200              
-for (i = 100; i &lt;= 200; i++) {
+for (var i = 100; i &lt;= 200; i++) {
     console.log('Testing ' + i);
     //Stop at the first multiple of 7
     if (i % 7 == 0) {
         console.log('Found it! ' + i);
-    break;
+        break;
     }
 }
 				</code></pre>
@@ -453,7 +453,7 @@ myFavoriteThings.push('Dancing');
                 <p>Use a for loop to easily process each item in an array.</p>
                 <pre><code>
 var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
-for (i = 0; i &lt; rainbowColors.length; i++) {
+for (var i = 0; i &lt; rainbowColors.length; i++) {
   console.log(rainbowColors[i]);
 }              
                 </code></pre>
