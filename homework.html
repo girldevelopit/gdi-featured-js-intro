@@ -75,7 +75,6 @@ console.log(future);
             <button onclick="showSolution(2)">Show/Hide Solution</button>
             <div class="codebox" id="example2Code">
                 <pre><code>
-            
 function squareNumber(num) {
     var squaredNumber = num * num;
     console.log('The result of squaring the number ' + num + ' is ' + squaredNumber);
@@ -173,9 +172,9 @@ function greaterNum(num1, num2) {
     if (num1 === num2) {
         console.log ('Those numbers are equal');
         return num1;
-    } else if (num1 > num2) {
+    } else if (num1 &gt; num2) {
         return num1;
-    } else if (num2 > num1) {
+    } else if (num2 &gt; num1) {
         return num2;
     } else {
         console.log ('Those are simply incomparable!');
@@ -203,7 +202,7 @@ pluralize(7, 'turtle'): '7 cats'
             <div class="codebox" id="example6Code">
                 <pre><code>
 function pluralize(number, noun) {
-    if (number != 1 && noun != 'sheep' && noun != 'geese') {
+    if (number != 1 &amp;&amp; noun != 'sheep' &amp;&amp; noun != 'geese') {
         return number + ' ' + noun + 's';
     } else {
         return number + ' ' + noun;
@@ -222,7 +221,7 @@ console.log('I have ' + pluralize(3, 'geese'));
             <button onclick="showSolution(7)">Show/Hide Solution</button>
             <div class="codebox" id="example7Code">
                 <pre><code>
-for (var i = 0; i <= 20; i++) {
+for (var i = 0; i &lt;= 20; i++) {
     if (i % 2 === 0) {
         console.log(i + ' is even');
     } else {
@@ -239,11 +238,11 @@ for (var i = 0; i <= 20; i++) {
             <div class="codebox" id="example8Code">
                 <pre><code>
 var choices = ['red', 'orange', 'pink', 'yellow'];
-for (var i = 0; i < choices.length; i++) {
+for (var i = 0; i &lt; choices.length; i++) {
     console.log('My #' + (i + 1) + ' choice is ' + choices[i]);
 }
 
-for (var i = 0; i < choices.length; i++) {
+for (var i = 0; i &lt; choices.length; i++) {
     var choiceNum = i + 1;
     var choiceNumSuffix;
     if (choiceNum == 1) {
