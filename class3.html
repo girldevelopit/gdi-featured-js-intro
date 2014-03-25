@@ -44,7 +44,84 @@
             </section>
         
 
+        <!-- Review: Role of HTML v. CSS-->
+		<section>
+			<section>
+			  <h3>Let's Review</h3>
+			  <img src="images/elephants.jpg" alt="Two elephants interacting"/>
+				<p class="credit">Photo credit:  <a href="http://www.flickr.com/photos/ginable/325235488/">Ginable</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
+			</section>
+			<section>
+			  <h3>Anatomy of a website</h3>
+			  <div class = "blue"> Your Content</div>
+			  <div><span class = "blue">+ HTML: </span>Structure</div>
+			  <div><span class = "blue">+ CSS: </span>Presentation</div>
+			  <div class = "blue">= Your Website</div>
+			  <p>A website is a way to present your content to the world, using HTML and CSS to present that content &amp; make it look good.</p>
+			</section>
+			<section>
+			  <h3>HTML is Markup</h3>
+			  <img src="images/markup.jpg" alt="Printed document covered in ink marks"/>
+				<p class="credit">Photo credit:  <a href="http://www.flickr.com/photos/nics_events/2349630241/">Nic's events</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
+			</section>			
+			<section>
+			  <h3>CSS is Style</h3>
+			  <img src="images/fingernails.jpg" alt="Fingernails with polka-dot paint job"/>
+				<p class="credit">Photo credit:  <a href="http://www.flickr.com/photos/pumpkincat210/4778025555/">pumpkincat210</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
+			</section>
+            <section>
+			<h3>IDs vs. Classes</h3>
+				<div class = "left-align">
+				  <span class = "yellow">ID</span> -- Should only apply to one element on a webpage, e.g., A webpage only has one footer.
+				  <p>The "#" is how you tell CSS "this is an id."</p>
+				</div>
+				<div class = "left-align">
+				  <span class = "yellow">Class</span> -- Lots of elements can have the same class, e.g., There can be many warnings on one webpage.
+				  <p>The "." is how you tell CSS "this is a class name."</p>
+				</div>
+			</section>
+		</section>
         
+        <!--The DOM-->
+        <section>
+            <section>
+              <h3>Nesting</h3>
+              <p>HTML elements "nest" inside one another</p>
+              <img src="images/nesting-dolls.jpg" alt="Printed document covered in ink marks"/>
+              <p class="credit">Photo credit:  <a href="http://www.flickr.com/photos/johnkay/3539939004/">John K</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
+            </section>
+            <section>
+              <h3>The DOM Tree</h3>
+              <p>We model the nested structure of an HTML page with the DOM (Document Object Model) Tree. The browser makes a "map" of all the elements on a page.</p>
+            </section>
+            <section>
+              <h3>The DOM: Code</h3>
+                <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Test Page&lt;/title&gt;
+        &lt;style&gt;
+            h1 {
+             color: red;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;My Page&lt;/h1&gt;
+        &lt;p&gt;Hello World!&lt;/p&gt;
+        &lt;img src="http://placekitten.com/200/300" alt="kitten"/&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+				</code></pre>
+            </section>
+            <section>
+              <h3>The DOM: Model</h3>
+              <img src="images/dom-tree.png" alt="Simple DOM Tree"/>
+            </section>
+        </section>
+
+                
         <!-- Final slides-->
 		<section id="final">
 			<section>
