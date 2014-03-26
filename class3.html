@@ -43,7 +43,109 @@
                 <h4>Class 3</h4>
             </section>
         
+        <!-- Objects -->
+		<section>
+            <section>
+			  <h3>Objects</h3>
+			  <img src="images/matches.jpg" alt="Collection of matches"/>
+				<p class="credit">Photo credit:  <a href="https://flic.kr/p/8RnSsa">Jir&iacute; Volejn&iacute;k</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
+			</section>
+            <section>
+			  <h3>Objects</h3>
+			  <p>Objects let us store a collection of properties (values) and methods (functions).</p>
+              <pre><code>
+var objectName = { 
+  propertyName: propertyValue,
+  propertyName: propertyValue,
+  ...
+};
+			  </code></pre>
+              <pre><code>
+var aboutMe = {
+  hometown: "Atlanta, GA",
+  hair: "Auburn"
+  likes: ["knitting", "code"],
+  birthday: {"month": 10, "day": 17}
+}; 
+			  </code></pre>
+			</section>
+            <section>
+			  <h3>Accessing Objects</h3>
+			  <p>You can retrieve values using "dot notation"</p>
+              <pre><code>
+var aboutMe = {
+  hometown: "Atlanta, GA",
+  hair: "Auburn"
+}; 
+var myHometown = aboutMe.hometown;
+			  </code></pre>
+              <p>Or using "bracket notation" (like arrays)</p>
+              <pre><code>
+var myHair = aboutMe["hair"];
+			  </code></pre>
+			</section>
+            <section>
+			  <h3>Changing Objects</h3>
+			  <p>You can use dot or bracket notation to change properties</p>
+              <pre><code>
+var aboutMe = {
+  hometown: "Atlanta, GA",
+  hair: "Auburn"
+}; 
+aboutMe.hair = "blue";
+			  </code></pre>
+              <p>Add new properties</p>
+              <pre><code>
+aboutMe.gender = "female";
+			  </code></pre>
+              <p>Or delete them</p>
+              <pre><code>
+delete aboutMe.gender;
+			  </code></pre>
+			</section>
+            <section>
+			  <h3>Arrays of Objects</h3>
+			  <p>Since arrays can hold any data type, they can also hold objects</p>
+              <pre><code>
+var myCats = [
+  {name: "Lizzie", 
+   age: 18},
+  {name: "Daemon",
+   age: 1}
+];
 
+for (var i = 0; i &lt; myCats.length; i++) {
+  var myCat = myCats[i];
+  console.log(myCat.name + ' is ' + myCat.age + ' years old.');
+}
+			  </code></pre>
+			</section>
+            <section>
+			  <h3>Arrays of Objects</h3>
+			  <p>Just like other data types, objects can be passed into functions:</p>
+              <pre><code>
+var lizzieTheCat = {
+  age: 18,
+  furColor: "grey",
+  likes: ["catnip", "milk"],
+  birthday: {"month": 7, "day": 17, year: 1996}
+}
+
+function describeCat(cat) {
+  console.log("This cat is " + cat.age + " years old with " + cat.furColor + " fur.");
+}
+
+describeCat(lizzieTheCat);
+			  </code></pre>
+			</section>
+            <section>
+				<h3>Let's Develop It</h3>
+                <p>Create an object to hold information on your favorite recipe. It should have properties for recipeTitle (a string), servings (a number), and ingredients (an array of strings).</p>
+                <p>Try displaying some information about your recipe.</p>
+                <p>Bonus: Create a loop to list all the ingredients.</p>
+			</section> 
+        </section>
+        
         <!-- Review: Role of HTML v. CSS-->
 		<section>
 			<section>
