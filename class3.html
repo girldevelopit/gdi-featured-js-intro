@@ -52,7 +52,7 @@
 			</section>
             <section>
 			  <h3>Objects</h3>
-			  <p>Objects let us store a collection of properties (values) and methods (functions).</p>
+			  <p>Objects let us store a collection of properties.</p>
               <pre><code>
 var objectName = { 
   propertyName: propertyValue,
@@ -144,6 +144,44 @@ describeCat(lizzieTheCat);
                 <p>Try displaying some information about your recipe.</p>
                 <p>Bonus: Create a loop to list all the ingredients.</p>
 			</section> 
+        </section>
+        
+        <!-- Object Methods -->
+		<section>
+            <section>
+              <h3>Object methods</h3>
+			  <p>Objects can also hold functions.</p>
+              <pre><code>
+var lizzieTheCat = {
+  age: 18,
+  furColor: 'grey',
+  meow: function() {
+    console.log('meowww');
+  },
+  eat: function(food) {
+    console.log('Yum, I love ' + food);  
+  },
+};
+			  </code></pre>
+              <p>Call object methods using dot notation:</p>
+              <pre><code>
+lizzieTheCat.meow();
+lizzieTheCat.eat('brown mushy stuff');
+			  </code></pre>
+            </section>            
+            <section>
+              <h3>Built-in methods</h3>
+              <p>JS provides several built-in objects:</p>
+              <ul>
+                  <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array">Array</a></code></li>
+                  <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></code></li>
+                  <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number">Number</a></code></li>
+                  <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String">String</a></code></li>
+                  <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/RegExp">RegExp</a></code></li>
+                  <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Date">Date</a></code></li>
+                  <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Math">Math</a></code></li>
+              </ul>
+     </section>
         </section>
         
         <!-- Review: Role of HTML v. CSS-->
