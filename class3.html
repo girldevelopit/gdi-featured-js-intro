@@ -62,10 +62,10 @@ var objectName = {
 			  </code></pre>
               <pre><code>
 var aboutMe = {
-  hometown: "Atlanta, GA",
-  hair: "Auburn"
-  likes: ["knitting", "code"],
-  birthday: {"month": 10, "day": 17}
+  hometown: 'Atlanta, GA',
+  hair: 'Auburn',
+  likes: ['knitting', 'code'],
+  birthday: {month: 10, day: 17}
 }; 
 			  </code></pre>
 			</section>
@@ -74,14 +74,14 @@ var aboutMe = {
 			  <p>You can retrieve values using "dot notation"</p>
               <pre><code>
 var aboutMe = {
-  hometown: "Atlanta, GA",
-  hair: "Auburn"
+  hometown: 'Atlanta, GA',
+  hair: 'Auburn'
 }; 
 var myHometown = aboutMe.hometown;
 			  </code></pre>
               <p>Or using "bracket notation" (like arrays)</p>
               <pre><code>
-var myHair = aboutMe["hair"];
+var myHair = aboutMe['hair'];
 			  </code></pre>
 			</section>
             <section>
@@ -89,14 +89,14 @@ var myHair = aboutMe["hair"];
 			  <p>You can use dot or bracket notation to change properties</p>
               <pre><code>
 var aboutMe = {
-  hometown: "Atlanta, GA",
-  hair: "Auburn"
+  hometown: 'Atlanta, GA',
+  hair: 'Auburn'
 }; 
-aboutMe.hair = "blue";
+aboutMe.hair = 'blue';
 			  </code></pre>
               <p>Add new properties</p>
               <pre><code>
-aboutMe.gender = "female";
+aboutMe.gender = 'female';
 			  </code></pre>
               <p>Or delete them</p>
               <pre><code>
@@ -108,9 +108,9 @@ delete aboutMe.gender;
 			  <p>Since arrays can hold any data type, they can also hold objects</p>
               <pre><code>
 var myCats = [
-  {name: "Lizzie", 
+  {name: 'Lizzie', 
    age: 18},
-  {name: "Daemon",
+  {name: 'Daemon',
    age: 1}
 ];
 
@@ -126,13 +126,13 @@ for (var i = 0; i &lt; myCats.length; i++) {
               <pre><code>
 var lizzieTheCat = {
   age: 18,
-  furColor: "grey",
-  likes: ["catnip", "milk"],
-  birthday: {"month": 7, "day": 17, year: 1996}
+  furColor: 'grey',
+  likes: ['catnip', 'milk'],
+  birthday: {month: 7, day: 17, year: 1996}
 }
 
 function describeCat(cat) {
-  console.log("This cat is " + cat.age + " years old with " + cat.furColor + " fur.");
+  console.log('This cat is ' + cat.age + ' years old with ' + cat.furColor + ' fur.');
 }
 
 describeCat(lizzieTheCat);
@@ -321,6 +321,18 @@ document.getElementsByClassName(className);
               <pre><code>
 document.querySelector(cssQuery);
 document.querySelectorAll(cssQuery);
+			  </code></pre>
+            </section>
+            <section>
+              <h3>getElement vs. getElements</h3>
+              <p>Any method that starts with "getElement" will return a <span class = "blue">single</span> node.</p>
+              <pre><code>
+document.getElementById('uniqueID'); //returns a single node
+			  </code></pre>
+              <p>Any method that starts with "getElements" will return a <span class = "blue">array</span> of nodes. To modify a single node, you will need to use bracket notation to select the correct one.</p>
+              <pre><code>
+document.getElementsByTagName('p'); //returns multiple nodes
+var specficParagraph = document.getElementsByTagName('p')[2];
 			  </code></pre>
             </section>
         </section>
