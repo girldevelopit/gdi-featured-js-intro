@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Class Slides ~ JavaScript for Beginners ~ Girl Develop It</title>
+		<title>Class 4 ~ JavaScript for Beginners ~ Girl Develop It</title>
 
 		<meta name="description" content="This is an introduction to JavaScript curriculum, developed by Sylvia Richardson for the Raleigh/Durham chapter.
 
@@ -34,33 +34,40 @@
 	<body>
 
 		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-			  <!-- Opening slide -->
-        <section>
-          <img src = "images/gdi_logo_badge.png">
-          <h3>JavaScript for Beginners</h3>
-        </section>
-		<section>
-			<h3>Class Slides</h3>
-			<ul>
-				<li><a href="class1.html">Class 1</a></li>
-				<li><a href="class2.html">Class 2</a></li>
-				<li><a href="class3.html">Class 3</a></li>
-				<li><a href="class4.html">Class 4</a></li>
-			</ul>
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+        <!-- Opening slide -->
+            <section>
+                <img src = "images/gdi_logo_badge.png">
+                <h3>JavaScript for Beginners</h3>
+                <h4>Class 4</h4>
+            </section>
+        
+        <!-- Final slides-->
+		<section id="final">
+			<section>
+				<h3>You did it!</h3>
+                <img src="images/jumping-man.jpg" alt="Man jumping in air"/>
+				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/sunface13/988453859/" target="_blank">sunface13</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>		
+			</section>
+			
+			<section>
+				<h3>Resources</h3>
+					<ul>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">JavaScript Guide</a>, from the Mozilla Developers Network.</li>
+						<li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Code Academy</a>, with interactive JavaScript lessons to help you review.</li>
+					</ul>
+			</section>
 		</section>
-        
-        
-			</div>
+ 
+			</div><!-- Close .slides -->
   		<footer>
         <div class="copyright">
           JavaScript for Beginners ~ Girl Develop It ~
           <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
-        </div>
+        </div><!-- Close .copyright -->
       </footer>
-		</div>
+    </div><!-- Close .reveal -->
 
 
 		<script src="reveal/lib/js/head.min.js"></script>
@@ -74,6 +81,7 @@
 				controls: true,
 				progress: true,
 				history: true,
+                touch: true,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
