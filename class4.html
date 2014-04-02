@@ -114,8 +114,7 @@ myTarget.onclick=function(){
                 <p>Download <a href="files/class4.zip">this week's sample code</a>.</p>
                 <p>Make some JavaScript code fire after an <code>onmouseover</code> event. Try adding the event to the HTML and adding a listening function.</p>
 
-			</section> 
-            
+			</section>            
 		</section>
         
         
@@ -161,8 +160,65 @@ element.onclick = function (event) {
 &lt;a href="http://girldevelopit.com/" id="gdiLink"&gt;Girl Develop It&lt;/a&gt;
 				</code></pre>
                 <p>When a user clicks the link, the page should display an error message instead of going to the Girl Develop It homepage.</a>
-			</section> 
-            
+			</section>            
+		</section>
+        
+        <!-- User input -->
+		<section id="input">
+			<section>
+				<h3>User Input</h3>
+                <img src="images/comment-box.jpg" alt="Comment box"/>
+				<p class="credit">Photo credit: <a href="https://flic.kr/p/fnZ4RT" target="_blank">Rym DeCoster</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>		
+			</section>			
+			<section>
+                <h3>Forms</h3>
+                <p>You can collect information from users to use in functions. The most common method is an HTML form</p>
+                <pre><code>
+&lt;form id="temperatureForm"&gt;
+    &lt;label for="temp"&gt;Temperature:&lt;/label&gt; &lt;input type="text" id="temp" size="3"/&gt; degrees in 
+    &lt;input type="radio" name="tempFormat" value="F" checked /&gt;Fahrenheit 
+    &lt;input type="radio" name="tempFormat" value="C" /&gt;Celsius &lt;br /&gt;
+    &lt;label for="submitButton"&gt;&lt;/label&gt; &lt;input id="tempSubmitButton" type="submit" value="Submit" /&gt;
+&lt;/form&gt;
+				</code></pre>
+			</section>
+            <section>
+                <h3>Retrieving Form Data</h3>
+                <p>You retrieve the values of form elements using the <code>value</code> method.</p>
+                <pre><code>
+var temperature = document.getElementById('temp').value;
+console.log (temperature);
+				</code></pre>
+                <p>You can retrieve the value of a form at any time. Try <code>onblur</code> (when a form element loses focus).</p>
+			</section>
+            <section>
+                <h3>Radio Buttons</h3>
+                <p>Radio buttons usually do not have IDs, so you will need to use an array:</p>
+                <pre><code>
+var radios = document.getElementsByName('tempFormat');
+
+for (var i = 0, length = radios.length; i &lt; length; i++) {
+    if (radios[i].checked) {
+        var radioButtonValue = radios[i].value;
+        // only one radio can be checked, so stop now
+        break;
+    }
+}
+				</code></pre>
+			</section>
+             <section>
+                <h3>Submit buttons</h3>
+                <p>If you are going to retrieve form values with the submit button, be sure to prevent the default action!</p>
+                <pre><code>
+var submitButton = document.getElementById('tempSubmitButton');
+submitButton.onclick = function () {
+    event.preventDefault();
+    var temperature = document.getElementById('temp').value;
+    console.log (temperature);
+    return false;
+}
+				</code></pre>
+			</section>
 		</section>
         
         
