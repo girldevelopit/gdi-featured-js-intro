@@ -390,6 +390,22 @@ document.body.appendChild(bookList);
                 </code></pre>
             </div>
             
+            <h3>Challenge Question: The Counter</h3>
+            <p>Write a function that takes a certain type of tag and counts the number of elements with that tag. The function should return "There a X tags of type y on the page.For example:</p>
+            <pre>
+countTags('p'): 'There are 3 tags of type p on the page'
+            </pre>
+
+            <button onclick="showSolution(12)">Show/Hide Solution</button>
+            <div class="codebox" id="example12Code">
+                <pre><code>
+function countTags (tagType) {
+    var tagArray = document.getElementsByTagName(tagType);
+    console.log ('There are ' + tagArray.length + ' tags of type ' + tagType + ' on the page.');
+}
+                </code></pre>
+            </div>
+            
             <h2 id="class4">Class 4</h2>
             <p>Coming Soon!</p>
           
