@@ -70,7 +70,57 @@ element.onclick = function () {
                     <li>onload: The event occurs when a document has been loaded</li>
                     <li>onfocus: The event occurs when an element gets focus</li>
                 </ul>
+			</section>            
+            <section>
+                <h3>Events and Code</h3>
+                <p>How do you make an event trigger some code?</p>
+                <ol>
+                    <li>Break your code into functions</li>
+                    <li>Associate a function with a JavaScript event</li>
+                </ol>                    
 			</section>
+            <section>
+                <h3>Calling Functions from HTML</h3>
+                <p>You can call a function directly from your HTML code:</p>	     	
+			    <pre><code>
+&lt;button id="clickMe" onclick="sayHi()"&gt;Click Me!&lt;/button&gt;
+				</code></pre>
+                <pre><code>
+function sayHi() {
+    alert ('Hi!');
+}
+				</code></pre>
+            </section>
+            <section>
+                <h3>Listening Functions</h3>
+                <img src="images/ear.jpg" alt="Ear"/>
+				<p class="credit">Photo credit: <a href="https://flic.kr/p/58bycz" target="_blank">Simon James</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>		
+			</section>
+            <section>
+                <h3>Listening Functions</h3>
+                <p>Listening functions work like many of the other things we have done. First, find the object:</p>
+                <pre><code>
+var myTarget = document.getElementById('clickMe');
+                </code></pre>
+                <p>Then add an event to that object:</p>
+                <pre><code>
+myTarget.onclick=function(){
+     alert ('Hi!');
+}
+                </code></pre>
+			</section>
+            <section>
+				<h3>Let's Develop It</h3>
+                <p>Download <a href="files/class4.zip">this week's sample code</a>.</p>
+                <p>Make some JavaScript code fire after an <code>onmouseover</code> event. Try adding the event to the HTML and adding a listening function.</p>
+
+			</section> 
+            
+		</section>
+        
+        
+        <!-- More Events -->
+		<section id="events2">            
             <section>
                 <h3>Preventing Defaults</h3>
                 <img src="images/donotwant.jpg" alt="A cat resisting a bath"/>		
@@ -98,7 +148,7 @@ element.onmouseover = function (event) {
   console.log(this);
 };
 
-element.onmouseout = function (event) {
+element.onclick = function (event) {
   this.style.backgroundColor = 'red';
   this.innerHTML = 'I've been clicked!';
 };
@@ -106,11 +156,11 @@ element.onmouseout = function (event) {
 			</section>
             <section>
 				<h3>Let's Develop It</h3>
-                <p>Open the page from last week <a href="files/class3.zip">download a clean copy</a>. Add a link to the page:</p> 
+                <p>Write code that targets this link:</p> 
                 <pre><code>
 &lt;a href="http://girldevelopit.com/" id="gdiLink"&gt;Girl Develop It&lt;/a&gt;
 				</code></pre>
-                <p>Add code so that when a user clicks the link, the page displays an error message instead of going to the Girl Develop It homepage.</a>
+                <p>When a user clicks the link, the page should display an error message instead of going to the Girl Develop It homepage.</a>
 			</section> 
             
 		</section>
