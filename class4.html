@@ -215,7 +215,6 @@ submitButton.onclick = function () {
     event.preventDefault();
     var temperature = document.getElementById('temp').value;
     console.log (temperature);
-    return false;
 }
 				</code></pre>
 			</section>
@@ -248,7 +247,7 @@ setInterval(function, milliseconds);
 				</code></pre>
                 <p>For example, this is a simple clock:</p>
                 <pre><code>
-var simpleClock=setInterval(function(){myClock()},1000);
+var simpleClock=setInterval(myClock, 1000);
 function myClock() {
     var d = new Date();
     var t = d.toLocaleTimeString();
@@ -279,7 +278,7 @@ setTimeout(function, milliseconds);
                 <pre><code>
 var helloBox;
 function sayHello() {
-    helloBox=setTimeout(function(){alert("Hello")},3000);
+    helloBox=setTimeout(function(){alert('Hello')},3000);
 }
 function dontSayIt() {
     clearTimeout(helloBox);
@@ -294,12 +293,12 @@ var targetPic = document.getElementById('turtlePic');
 targetPic.onclick = function () {
     var leftMarginValue = 0
     function increaseMargin() {
-    leftMarginValue++  // update parameter each time 
-    targetPic.style.marginLeft = leftMarginValue + 'px' //set left margin 
-    if (leftMarginValue === 200)  // check finish condition
-        clearInterval(movePic);
-    }
-  var movePic = setInterval(function(){increaseMargin()}, 10) // update every 10ms
+        leftMarginValue++  // update parameter each time 
+        targetPic.style.marginLeft = leftMarginValue + 'px' //set left margin 
+        if (leftMarginValue === 200)  // check finish condition {
+            clearInterval(movePic);
+        }
+    var movePic = setInterval(function(){increaseMargin()}, 10) // update every 10ms
 }
 				</code></pre>
 			</section>
