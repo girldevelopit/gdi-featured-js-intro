@@ -36,20 +36,13 @@
 		<div class="reveal">
 		<!-- Any section element inside of this container is displayed as a slide -->
 		<div class="slides">
-        <!-- Opening slide -->
-            <section>
+             <section>
                 <img src = "images/gdi_logo_badge.png">
                 <h3>JavaScript for Beginners</h3>
                 <h4>Class 3</h4>
             </section>
-        
-        <!-- Objects -->
-		<section>
-            <section>
-			  <h3>Objects</h3>
-			  <img src="images/matches.jpg" alt="Collection of matches"/>
-				<p class="credit">Photo credit:  <a href="https://flic.kr/p/8RnSsa">Jir&iacute; Volejn&iacute;k</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
-			</section>
+   
+
             <section>
 			  <h3>Objects</h3>
 			  <p>Objects let us store a collection of properties.</p>
@@ -144,10 +137,7 @@ describeCat(lizzieTheCat);
                 <p>Try displaying some information about your recipe.</p>
                 <p>Bonus: Create a loop to list all the ingredients.</p>
 			</section> 
-        </section>
-        
-        <!-- Object Methods -->
-		<section>
+
             <section>
               <h3>Object methods</h3>
 			  <p>Objects can also hold functions.</p>
@@ -181,34 +171,17 @@ lizzieTheCat.eat('brown mushy stuff');
                   <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Date">Date</a></code></li>
                   <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Math">Math</a></code></li>
               </ul>
-     </section>
-        </section>
-        
-        <!-- Review: Role of HTML v. CSS-->
-		<section>
+            </section>
+
 			<section>
-			  <h3>Let's Review</h3>
-			  <img src="images/elephants.jpg" alt="Two elephants interacting"/>
-				<p class="credit">Photo credit:  <a href="http://www.flickr.com/photos/ginable/325235488/">Ginable</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
-			</section>
-			<section>
-			  <h3>Anatomy of a website</h3>
+			  <h3>Review: Anatomy of a website</h3>
 			  <div class = "blue"> Your Content</div>
 			  <div><span class = "blue">+ HTML: </span>Structure</div>
 			  <div><span class = "blue">+ CSS: </span>Presentation</div>
 			  <div class = "blue">= Your Website</div>
 			  <p>A website is a way to present your content to the world, using HTML and CSS to present that content &amp; make it look good.</p>
 			</section>
-			<section>
-			  <h3>HTML is Markup</h3>
-			  <img src="images/markup.jpg" alt="Printed document covered in ink marks"/>
-				<p class="credit">Photo credit:  <a href="http://www.flickr.com/photos/nics_events/2349630241/">Nic's events</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
-			</section>			
-			<section>
-			  <h3>CSS is Style</h3>
-			  <img src="images/fingernails.jpg" alt="Fingernails with polka-dot paint job"/>
-				<p class="credit">Photo credit:  <a href="http://www.flickr.com/photos/pumpkincat210/4778025555/">pumpkincat210</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
-			</section>
+
             <section>
 			<h3>IDs vs. Classes</h3>
 				<div class = "left-align">
@@ -220,16 +193,8 @@ lizzieTheCat.eat('brown mushy stuff');
 				  <p>The "." is how you tell CSS "this is a class name."</p>
 				</div>
 			</section>
-		</section>
-        
-        <!--The DOM-->
-        <section>
-            <section>
-              <h3>Nesting</h3>
-              <p>HTML elements "nest" inside one another</p>
-              <img src="images/nesting-dolls.jpg" alt="Russian nesting dolls"/>
-              <p class="credit">Photo credit:  <a href="http://www.flickr.com/photos/johnkay/3539939004/">John K</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
-            </section>
+	
+
             <section>
               <h3>The DOM Tree</h3>
               <p>We model the nested structure of an HTML page with the DOM (Document Object Model) Tree. The browser makes a "map" of all the elements on a page.</p>
@@ -262,7 +227,7 @@ lizzieTheCat.eat('brown mushy stuff');
         </section>
         
         <!--Accessing the DOM-->
-        <section>
+  
             <section>
               <h3>DOM Access</h3>
               <p>Your browser automatically builds a Document object to store the DOM of a page. To change a page:</p>
@@ -270,11 +235,6 @@ lizzieTheCat.eat('brown mushy stuff');
                 <li>Find the DOM node and store it in a variable</li>
                 <li>Use methods to manipulate the node</li>
               </ol>
-            </section>
-            <section>
-              <h3>Finding Nodes</h3>
-              <img src="images/search.jpg" alt="A magnifying glass"/>
-              <p class="credit">Photo credit:  <a href="https://flic.kr/p/4UokrH">Jeffery Beall</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
             </section>
             <section>
               <h3>DOM Access: By Id</h3>
@@ -335,15 +295,7 @@ document.getElementsByTagName('p'); //returns multiple nodes
 var specficParagraph = document.getElementsByTagName('p')[2];
 			  </code></pre>
             </section>
-        </section>
-        
-        <!--Manipulating the DOM-->
-        <section>
-            <section>
-              <h3>Changing Nodes</h3>
-              <img src="images/two-color.jpg" alt="Red and yellow tulip"/>
-              <p class="credit">Photo credit:  <a href="https://flic.kr/p/bCYp2S">Darryl Kenyon</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
-            </section>
+
             <section>
               <h3>DOM Nodes: Attributes</h3>
               <p>You can access and change attributes of DOM nodes using dot notation.</p>
@@ -408,10 +360,7 @@ pageNode.style.paddingTop = '10px';
                 <p>Create a simple HTML page or <a href="files/class3.zip">use this sample code</a>.</p>
                 <p>Isolate a node (an element on the page) and change an attribute or add a new style.</p> 
 			</section>       
-        </section>
-        
-        <!--Manipulating the DOM-->
-        <section>
+
             <section>
               <h3>DOM innerHTML</h3>
               <p>Each DOM node has an <code>innerHTML</code> property with the HTML of all its children. You can use the property to view or change the HTML of a node.</p>
@@ -467,15 +416,6 @@ pageNode.appendChild(newParagraph);
 				<h3>Let's Develop It</h3>
                 <p>Create a new paragraph element and add it to a div on your page.</p>
 			</section> 
-        </section>
-                
-        <!-- Final slides-->
-		<section id="final">
-			<section>
-				<h3>You did it!</h3>
-                <img src="images/fireworks.jpg" alt="Fireworks"/>
-				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/markwdw85/9425240584/" target="_blank">Mark W.</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>				
-			</section>
 			
 			<section>
 				<h3>Resources</h3>
