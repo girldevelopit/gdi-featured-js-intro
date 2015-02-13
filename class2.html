@@ -38,21 +38,14 @@
 		<div class="slides">
         <!-- Opening slide -->
             <section>
-                <img src = "images/gdi_logo_badge.png">
+                <img src="images/gdi_logo_badge.png" alt="GDI logo">
                 <h3>JavaScript for Beginners</h3>
                 <h4>Class 2</h4>
             </section>
         
-        <!-- Review -->
-        <section id="review">
+
             <section>
-                <h3>Let's Look Back</h3>
-                <img src="images/backwards-dance.jpg" alt="Woman looking backward as she dances"/>
-				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/zeepack/4398082292/" target="_blank">Deepak Bhatia</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
-                
-            </section>
-            <section>
-                <h3>Code Search</h3>
+                <h3>Review</h3>
                 <p>In this code, spot the comments, variables, operator, function, argument, and return value.</p>
                 <pre><code>
 function calculateTip(total) {
@@ -67,15 +60,11 @@ var receipt   = 'Meal: ' + billPreTip + ' Tip: ' + billTip +
 console.log(receipt); 
 				</code></pre>
             </section>
-        </section>
-        
-        <!-- Variable Scope -->
-        <section id="scope">
+    
             <section>
                 <h3>Variable Scope</h3>
                 <p>The scope of a variable is how long the computer will remember it.</p>
-                <img src="images/footprints.jpg" alt="Footprints being washed away"/>
-				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/heyvikram/187950111/" target="_blank">_vikram</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+
                 
             </section>
             <section>
@@ -102,15 +91,7 @@ whatIsAwesome();
 console.log (awesomeGroup + ' is pretty awesome.'); //Won't work
 				</code></pre>
             </section>
-        </section>
-        
-        <!-- Boolean -->
-        <section id="boolean">
-            <section>
-                <h3>Boolean Variables</h3>
-                <img src="images/kitten-switch.jpg" alt="Kitten with light switch"/>
-				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/elycefeliz/5726163170/" target="_blank">elycefeliz</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
-            </section>
+
             <section>
                 <h3>Boolean Variables</h3>
                 <p>Boolean variables represent the logical values True and False</p>
@@ -120,15 +101,7 @@ var dogsRule = false;
 				</code></pre>                
                 <p>If you try to use another variable as a boolean, JavaScript will guess. The number 0, the empty string '', undefined, and null are considered false, everything else reads as true.</p>
             </section>
-        </section>
-        
-        <!--If/Then-->
-        <section id="if-then">
-            <section>
-                <h3>Control Flow</h3>
-                <img src="images/fork-path.jpg" alt="Forked path"/>
-				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/dennism2/1504087870/" target="_blank">DennisM2</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
-            </section>
+
             <section>
                 <h3>The if statement</h3>
                 <p>Use if to decide which lines of code to execute, based on a condition.</p>
@@ -203,22 +176,12 @@ if (bananas &gt; 0) {
             <section>
                 <h3>Watch out!</h3>
                 <p>Don't mix up = and ==</p>
-                <img src="images/caution.jpg" alt="Caution Tape"/>
-				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/pictureperfectpose/76138988/" target="_blank">Eugene Zemlyanskiy</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
             </section>
             <section>
 				<h3>Let's Develop It</h3>
                 <p>Make a variable called "temperature." Write some code that tells you to put on a coat if it is below 50 degrees.</p> 
 			</section>
-        </section>
-        
-        <!--If/else -->
-        <section id="if-else">
-            <section>
-				<h3>Even more control flow</h3>
-				<img src="images/toomanysigns.jpg" alt="Sign post with multiple signs"/>
-				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/thomashawk/2402598275/" target="_blank">Thomas Hawk</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
-			</section>
+
             <section>
                 <h3>The if/else statement</h3>
                 <p>Use else to provide an alternate set of instructions.</p>
@@ -275,6 +238,7 @@ if (age &gt;= 35) {
                        <td>And</td>
                        <td><strong><code>TRUE</code></strong> if both a and b are <strong><code>TRUE</code></strong>.</td>
                       </tr>
+                      <tr>
                       <td>a || b</td>
                        <td>Or</td>
                        <td><strong><code>TRUE</code></strong> if either a or b is <strong><code>TRUE</code></strong>.</td>
@@ -303,15 +267,7 @@ if (bananas &gt;=2 &amp;&amp; bananas &lt;7) {
 				<h3>Let's Develop It</h3>
                 <p>Add a logical operator to your what to wear program.</p> 
 			</section>
-        </section>
-         
-        <!-- Loops -->
-        <section id="loops">
-            <section>
-                <h3>Loops</h3>
-                <img src="images/hula-hoop.jpg" alt="Lego stormtrooper inside key ring"/>
-				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/steve_pires/8430087504/" target="_blank">Steve Pires</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
-            </section>
+
             <section>
                 <h3>While loops</h3>
                 <p>While will repeat the same code over and over until some condition is met.</p>
@@ -326,8 +282,6 @@ while (bottlesOfBeer &gt;= 1) {
             <section>
 				<h3>Infinite Loops</h3>
                 <p>Make sure something changes in the loop, or your loop will go on forever...</p>
-				<img src="images/infinite-loop.jpg" alt="Spiral that goes on toward infinity"/>
-				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/samueljohn/5348462863/" target="_blank">Samuel John</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
 			</section>
             <section>
                 <h3>For loops</h3>
@@ -377,15 +331,7 @@ for (var i = 100; i &lt;= 200; i++) {
                 <p>Write a loop that gives you the 9's times table,<br /> from 9 x 1 = 9 to 9 x 12 = 108.</p>
                 <p>Finish early? Try using a loop inside a loop to write all the times tables, from 1 to 12.</p>
 			</section>
-        </section>
-        
-        <!-- Arrays -->
-        <section id="arrays">
-            <section>
-                <h3>Arrays</h3>
-                <img src="images/kitten-group.jpg" alt="Group of kittens"/>
-				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/pasotraspaso/4444291348/" target="_blank">Jesus Solana</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
-            </section>
+
             <section>
                 <h3>Arrays</h3>
                 <p>Arrays are ordered lists of values.</p>
@@ -439,15 +385,7 @@ myFavoriteThings.push('Dancing');
 				<h3>Let's Develop It</h3>
                 <p>Create an array of your favorite foods. Echo a few values onto your screen.</p> 
 			</section>
-        </section>
-        
-         <!-- Arrays and loops-->
-        <section id="arraysandloops">
-            <section>
-                <h3>Arrays + loops = BFF</h3>
-                <img src="images/holding-hands.jpg" alt="Couple holding hands"/>
-				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/mtsofan/8221708017/" target="_blank">John</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
-            </section>
+
             <section>
                 <h3>Iterating through arrays</h3>
                 <p>Use a for loop to easily process each item in an array.</p>
@@ -462,17 +400,7 @@ for (var i = 0; i &lt; rainbowColors.length; i++) {
 				<h3>Let's Develop It</h3>
                 <p>Use a loop to make a list of all your favorite foods.</p> 
 			</section>            
-        </section>
-       
-        
-        <!-- Final slides-->
-		<section id="final">
-			<section>
-				<h3>You did it!</h3>
-                <img src="images/kitten-yay.jpg" alt="Happy cat"/>
-				<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/laura-kali/7399310732/" target="_blank">OnceAndFutureLaura</a> <a href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">cc</a></p>
-			</section>
-			
+
 			<section>
 				<h3>Resources</h3>
 					<ul>
@@ -480,8 +408,7 @@ for (var i = 0; i &lt; rainbowColors.length; i++) {
 						<li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Code Academy</a>, with interactive JavaScript lessons to help you review.</li>
 					</ul>
 			</section>
-		</section>
- 
+		 
 			</div><!-- Close .slides -->
   		<footer>
         <div class="copyright">
