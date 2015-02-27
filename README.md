@@ -27,6 +27,7 @@ Introduces the Document Object Model (DOM) and how to use JavaScript to interact
 ### Class 4
 
 Events and Animations
+
 Introduces events, listening functions, user inputs, and basic animations. 
 
 
