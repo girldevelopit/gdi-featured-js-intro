@@ -1,24 +1,24 @@
 @font-face {
   font-family: "Gotham";
-  src: local("Gotham"), url("fonts/Gotham/Gotham-Medium.otf") format("opentype");
+  src: local("Gotham"), url("../../lib/font/Gotham-Medium.otf") format("opentype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: "Gotham-Book";
-  src: local("Gotham-Book"), url("fonts/Gotham/Gotham-Book.otf") format("opentype");
+  src: local("Gotham-Book"), url("../../lib/font/Gotham-Book.otf") format("opentype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: "Gotham-Italic";
-  src: local("Gotham-Italic"), url("fonts/Gotham/Gotham-MediumItalic.otf") format("opentype");
+  src: local("Gotham-Italic"), url("../../lib/font/Gotham-MediumItalic.otf") format("opentype");
   font-weight: normal;
   font-style: italic; }
 
 @font-face {
   font-family: "Gotham-Bold";
-  src: local("Gotham-Bold"), url("fonts/Gotham/Gotham-Bold.otf") format("opentype");
+  src: local("Gotham-Bold"), url("../../lib/font/Gotham-Bold.otf") format("opentype");
   font-weight: bold;
   font-style: bold; }
 
