@@ -55,7 +55,7 @@ function calculateTip(total) {
 
 var billPreTip = 10;
 var billTip = calculateTip(billPreTip);
-var receipt = 'Meal: ' + billPreTip + ' Tip: ' + billTip + 
+var receipt = 'Meal: ' + billPreTip + ' Tip: ' + billTip +
     ' Total: ' + (billPreTip + billTip);
 console.log(receipt);
 				</code></pre>
@@ -64,8 +64,6 @@ console.log(receipt);
             <section>
                 <h3>Variable Scope</h3>
                 <p>The scope of a variable is how long the computer will remember it.</p>
-
-
             </section>
             <section>
                 <h3>Global Scope</h3>
@@ -87,6 +85,7 @@ function whatIsAwesome() {
     var awesomeGroup = 'Girl Develop It'; //Local scope
     console.log ('I made a variable called awesomeGroup with a value of ' + awesomeGroup); //Will work
 }
+<!--on the slide, line 84 has a purple { and it's closing bracket } on line 87 is white. do they need to be the same color?-->
 whatIsAwesome();
 console.log (awesomeGroup + ' is pretty awesome.'); //Won't work
 				</code></pre>
@@ -99,7 +98,7 @@ console.log (awesomeGroup + ' is pretty awesome.'); //Won't work
 var catsAreBest = true;
 var dogsRule = false;
 				</code></pre>
-                <p>If you try to use another variable as a boolean, JavaScript will guess. The number 0, the empty string '', undefined, and null are considered false, everything else reads as true.</p>
+                <p>If you try to use another variable as a boolean, JavaScript will guess. The number 0, the empty string '  ', undefined, and null are considered false, everything else reads as true.</p>
             </section>
 
             <section>
@@ -405,7 +404,7 @@ for (var i = 0; i &lt; rainbowColors.length; i++) {
 				<h3>Resources</h3>
 					<ul>
 						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">JavaScript Guide</a>, from the Mozilla Developers Network.</li>
-						<li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Code Academy</a>, with interactive JavaScript lessons to help you review.</li>
+						<li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Codecademy</a>, with interactive JavaScript lessons to help you review.</li>
 					</ul>
 			</section>
 
