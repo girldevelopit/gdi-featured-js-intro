@@ -23,7 +23,7 @@
 		<!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
 
 		<!-- If use the PDF print sheet so students can print slides-->
-		
+
 		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
 
 		<!--[if lt IE 9]>
@@ -42,7 +42,7 @@
                 <h3>JavaScript for Beginners</h3>
                 <h4>Class 2</h4>
             </section>
-        
+
 
             <section>
                 <h3>Review</h3>
@@ -54,18 +54,18 @@ function calculateTip(total) {
 }
 
 var billPreTip = 10;
-var billTip   = calculateTip(billPreTip);
-var receipt   = 'Meal: ' + billPreTip + ' Tip: ' + billTip + 
+var billTip = calculateTip(billPreTip);
+var receipt = 'Meal: ' + billPreTip + ' Tip: ' + billTip + 
     ' Total: ' + (billPreTip + billTip);
-console.log(receipt); 
+console.log(receipt);
 				</code></pre>
             </section>
-    
+
             <section>
                 <h3>Variable Scope</h3>
                 <p>The scope of a variable is how long the computer will remember it.</p>
 
-                
+
             </section>
             <section>
                 <h3>Global Scope</h3>
@@ -80,7 +80,7 @@ whatIsAwesome();
 				</code></pre>
             </section>
             <section>
-                <h3>Local Scope</h3>            
+                <h3>Local Scope</h3>
                 <p>A variable declared within a function has a <span class="yellow">local</span> scope and can only be accessed within that function.</p>
                 <pre><code>
 function whatIsAwesome() {
@@ -98,7 +98,7 @@ console.log (awesomeGroup + ' is pretty awesome.'); //Won't work
                 <pre><code>
 var catsAreBest = true;
 var dogsRule = false;
-				</code></pre>                
+				</code></pre>
                 <p>If you try to use another variable as a boolean, JavaScript will guess. The number 0, the empty string '', undefined, and null are considered false, everything else reads as true.</p>
             </section>
 
@@ -170,8 +170,8 @@ if (bananas &gt; 0) {
                        <td>Greater than or equal to </td>
                        <td><strong><code>TRUE</code></strong> if a is greater than or equal to b.</td>
                       </tr>
-                    </tbody>    
-                </table>          
+                    </tbody>
+                </table>
 			</section>
             <section>
                 <h3>Watch out!</h3>
@@ -179,7 +179,7 @@ if (bananas &gt; 0) {
             </section>
             <section>
 				<h3>Let's Develop It</h3>
-                <p>Make a variable called "temperature." Write some code that tells you to put on a coat if it is below 50 degrees.</p> 
+                <p>Make a variable called "temperature." Write some code that tells you to put on a coat if it is below 50 degrees.</p>
 			</section>
 
             <section>
@@ -190,7 +190,7 @@ var age = 28;
 if (age &gt;= 16) {
     console.log ('Yay, you can drive!');
 } else {
-    console.log ('Sorry, but you have ' + (16 - age) + 
+    console.log ('Sorry, but you have ' + (16 - age) +
     ' years until you can drive.');
 }
 				</code></pre>
@@ -207,7 +207,7 @@ if (age &gt;= 35) {
 } else if (age &gt;= 18) {
     console.log('You can vote!');
 } else {
-    console.log('You can\'t vote, but you can 
+    console.log('You can\'t vote, but you can
     still write your representatives.');
 }
 				</code></pre>
@@ -248,8 +248,8 @@ if (age &gt;= 35) {
                        <td>Not</td>
                        <td><strong><code>TRUE</code></strong> if a is not <strong><code>TRUE</code></strong>.</td>
                       </tr>
-                     </tbody>    
-                </table>          
+                     </tbody>
+                </table>
 			</section>
             <section>
                 <h3>Using logical operators</h3>
@@ -265,7 +265,7 @@ if (bananas &gt;=2 &amp;&amp; bananas &lt;7) {
             </section>
             <section>
 				<h3>Let's Develop It</h3>
-                <p>Add a logical operator to your what to wear program.</p> 
+                <p>Add a logical operator to your what to wear program.</p>
 			</section>
 
             <section>
@@ -289,7 +289,7 @@ while (bottlesOfBeer &gt;= 1) {
                 <pre><code>
 //will count 1 to 10
 for (var i = 1; i &lt;= 10; i++) {
-    console.log (i); 
+    console.log (i);
 }
 				</code></pre>
             </section>
@@ -299,11 +299,11 @@ for (var i = 1; i &lt;= 10; i++) {
                 <pre><code>
 //Count from 1 to 50
 for (var i = 1; i &lt;= 50; i++) {
-    console.log (i);       
+    console.log (i);
     //Says 'Buzz' after multiples of three
     if (i % 3 == 0) {
         console.log (' Buzz');
-    }        
+    }
     //Says 'Bang' after multiples of five
     if (i % 5 == 0) {
         console.log (' Bang');
@@ -315,7 +315,7 @@ for (var i = 1; i &lt;= 50; i++) {
                 <h3>Break</h3>
                 <p>To exit a loop, use the break statement.</p>
                 <pre><code>
-//Count from 100 to 200              
+//Count from 100 to 200
 for (var i = 100; i &lt;= 200; i++) {
     console.log('Testing ' + i);
     //Stop at the first multiple of 7
@@ -340,7 +340,7 @@ var arrayName = [element0, element1, ...];
 				</code></pre>
                 <p>You can put different types of data into an array.</p>
                 <pre><code>
-var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 
+var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
 'Blue', 'Indigo', 'Violet'];
 var lotteryNumbers = [33, 72, 64, 18, 17, 85];
 var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
@@ -350,27 +350,27 @@ var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
                 <h3>Array Length</h3>
                 <p>The length property tells you how many things are in an array</p>
                 <pre><code>
-var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 
+var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
 'Blue', 'Indigo', 'Violet'];
 console.log(rainbowColors.length);
-				</code></pre>                
+				</code></pre>
             </section>
             <section>
                 <h3>Using Arrays</h3>
                 <p>You can access items with "bracket notation" by using the position of the object you want. Programmers start counting at zero.</p>
                 <pre><code>
-var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 
+var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
 'Blue', 'Indigo', 'Violet'];
 var firstColor = rainbowColors[0];
 var lastColor = rainbowColors[6];
-				</code></pre>                
+				</code></pre>
             </section>
             <section>
                 <h3>Changing arrays</h3>
                 <p>You can use bracket notation to change an item in an array</p>
                 <pre><code>
 var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
-myFavoriteThings[0] = 'Asparagus';            
+myFavoriteThings[0] = 'Asparagus';
                 </code></pre>
             </section>
             <section>
@@ -378,12 +378,12 @@ myFavoriteThings[0] = 'Asparagus';
                 <p>Arrays do not have a fixed length. You can use "push" to add something to an array.</p>
                 <pre><code>
 var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
-myFavoriteThings.push('Dancing');              
+myFavoriteThings.push('Dancing');
                 </code></pre>
             </section>
             <section>
 				<h3>Let's Develop It</h3>
-                <p>Create an array of your favorite foods. Echo a few values onto your screen.</p> 
+                <p>Create an array of your favorite foods. Echo a few values onto your screen.</p>
 			</section>
 
             <section>
@@ -393,13 +393,13 @@ myFavoriteThings.push('Dancing');
 var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
 for (var i = 0; i &lt; rainbowColors.length; i++) {
   console.log(rainbowColors[i]);
-}              
+}
                 </code></pre>
             </section>
             <section>
 				<h3>Let's Develop It</h3>
-                <p>Use a loop to make a list of all your favorite foods.</p> 
-			</section>            
+                <p>Use a loop to make a list of all your favorite foods.</p>
+			</section>
 
 			<section>
 				<h3>Resources</h3>
@@ -408,7 +408,7 @@ for (var i = 0; i &lt; rainbowColors.length; i++) {
 						<li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Code Academy</a>, with interactive JavaScript lessons to help you review.</li>
 					</ul>
 			</section>
-		 
+
 			</div><!-- Close .slides -->
   		<footer>
         <div class="copyright">
