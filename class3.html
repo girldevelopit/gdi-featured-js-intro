@@ -23,7 +23,7 @@
 		<!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
 
 		<!-- If use the PDF print sheet so students can print slides-->
-		
+
 		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
 
 		<!--[if lt IE 9]>
@@ -41,13 +41,13 @@
                 <h3>JavaScript for Beginners</h3>
                 <h4>Class 3</h4>
             </section>
-   
+
 
             <section>
 			  <h3>Objects</h3>
 			  <p>Objects let us store a collection of properties.</p>
               <pre><code>
-var objectName = { 
+var objectName = {
   propertyName: propertyValue,
   propertyName: propertyValue,
   ...
@@ -59,7 +59,7 @@ var aboutMe = {
   hair: 'Auburn',
   likes: ['knitting', 'code'],
   birthday: {month: 10, day: 17}
-}; 
+};
 			  </code></pre>
 			</section>
             <section>
@@ -69,7 +69,7 @@ var aboutMe = {
 var aboutMe = {
   hometown: 'Atlanta, GA',
   hair: 'Auburn'
-}; 
+};
 var myHometown = aboutMe.hometown;
 			  </code></pre>
               <p>Or using "bracket notation" (like arrays)</p>
@@ -84,7 +84,7 @@ var myHair = aboutMe['hair'];
 var aboutMe = {
   hometown: 'Atlanta, GA',
   hair: 'Auburn'
-}; 
+};
 aboutMe.hair = 'blue';
 			  </code></pre>
               <p>Add new properties</p>
@@ -101,7 +101,7 @@ delete aboutMe.gender;
 			  <p>Since arrays can hold any data type, they can also hold objects</p>
               <pre><code>
 var myCats = [
-  {name: 'Lizzie', 
+  {name: 'Lizzie',
    age: 18},
   {name: 'Daemon',
    age: 1}
@@ -136,7 +136,7 @@ describeCat(lizzieTheCat);
                 <p>Create an object to hold information on your favorite recipe. It should have properties for recipeTitle (a string), servings (a number), and ingredients (an array of strings).</p>
                 <p>Try displaying some information about your recipe.</p>
                 <p>Bonus: Create a loop to list all the ingredients.</p>
-			</section> 
+			</section>
 
             <section>
               <h3>Object methods</h3>
@@ -149,16 +149,16 @@ var lizzieTheCat = {
     console.log('meowww');
   },
   eat: function(food) {
-    console.log('Yum, I love ' + food);  
+    console.log('Yum, I love ' + food);
   },
 };
 			  </code></pre>
-              <p>Call object methods using dot notation:</p>
+              <p>Call object methods using dot notation.</p>
               <pre><code>
 lizzieTheCat.meow();
 lizzieTheCat.eat('brown mushy stuff');
 			  </code></pre>
-            </section>            
+            </section>
             <section>
               <h3>Built-in methods</h3>
               <p>JS provides several built-in objects:</p>
@@ -185,15 +185,15 @@ lizzieTheCat.eat('brown mushy stuff');
             <section>
 			<h3>IDs vs. Classes</h3>
 				<div class = "left-align">
-				  <span class = "yellow">ID</span> -- Should only apply to one element on a webpage, e.g., A webpage only has one footer.
+				  <span class = "yellow">ID</span> -- Should only apply to one element on a webpage. For instance, a webpage only has one footer.
 				  <p>The "#" is how you tell CSS "this is an id."</p>
 				</div>
 				<div class = "left-align">
-				  <span class = "yellow">Class</span> -- Lots of elements can have the same class, e.g., There can be many warnings on one webpage.
+				  <span class = "yellow">Class</span> -- Lots of elements can have the same class. For instance, there can be many warnings on one webpage.
 				  <p>The "." is how you tell CSS "this is a class name."</p>
 				</div>
 			</section>
-	
+
 
             <section>
               <h3>The DOM Tree</h3>
@@ -224,12 +224,12 @@ lizzieTheCat.eat('brown mushy stuff');
               <h3>The DOM: Sample Model</h3>
               <img src="images/dom-tree.png" alt="Simple DOM Tree"/>
             </section>
-          
+
         <!--Accessing the DOM-->
-  
+
             <section>
               <h3>DOM Access</h3>
-              <p>Your browser automatically builds a Document object to store the DOM of a page. To change a page:</p>
+              <p>Your browser automatically builds a Document Object to store the DOM of a page. To change a page:</p>
               <ol>
                 <li>Find the DOM node and store it in a variable</li>
                 <li>Use methods to manipulate the node</li>
@@ -252,7 +252,7 @@ var imgKitten = document.getElementById('kittenPic');
             </section>
             <section>
               <h3>DOM Access: By Tag Name</h3>
-              <p>You can certain types of HTML elements using this method:</p>
+              <p>You can find certain types of HTML elements using this method:</p>
               <pre><code>
 document.getElementsByTagName(tagName);
 			  </code></pre>
@@ -264,7 +264,7 @@ document.getElementsByTagName(tagName);
               <p>We would use:</p>
               <pre><code>
 var listItems = document.getElementsByTagName('li');
-for (var i =0; i &lt; listItems.length; i++) {
+for (var i = 0; i &lt; listItems.length; i++) {
   var listItem = listItems[i];
 }
 			  </code></pre>
@@ -311,7 +311,7 @@ imgKitten.src = 'http://placekitten.com/100/500';
             </section>
             <section>
               <h3>DOM Nodes: Getting and Setting Attributes</h3>
-              <p>You can also use <code>getAttribute/setAttribute</code></p>
+              <p>You can also use <code>getAttribute/setAttribute:</code></p>
               <pre><code>
 &lt;img id="kittenPic" src="http://placekitten.com/200/300" alt="cat"/&gt;
 			  </code></pre>
@@ -324,7 +324,7 @@ imgKitten.setAttribute('src', 'http://placekitten.com/100/500');
             </section>
             <section>
               <h3>DOM Nodes: Styles</h3>
-              <p>You can change page css using<code>style</code></p>
+              <p>You can change page css using <code>style</code></p>
               <p>To make this CSS:</p>
               <pre><code>
 body {
@@ -356,9 +356,9 @@ pageNode.style.paddingTop = '10px';
             </section>
             <section>
 				<h3>Let's Develop It</h3>
-                <p>Create a simple HTML page or <a href="files/class3.zip">use this sample code</a>.</p>
-                <p>Isolate a node (an element on the page) and change an attribute or add a new style.</p> 
-			</section>       
+                <p>Create a simple HTML page or <a href="files/class3.zip">use this sample code.</a></p>
+                <p>Isolate a node (an element on the page) and change an attribute or add a new style.</p>
+			</section>
 
             <section>
               <h3>DOM innerHTML</h3>
@@ -368,7 +368,7 @@ pageNode.style.paddingTop = '10px';
 var pageNode = document.getElementsByTagName('body')[0];
 pageNode.innerHTML = '&lt;h1&gt;Oh Noes!&lt;/h1&gt; &lt;p&gt;I just changed the whole page!&lt;/p&gt;'
 			  </code></pre>
-              <p>Or just add some new content to the end</p>
+              <p>Or just add some new content to the end:</p>
               <pre><code>
 pageNode.innerHTML += '...just adding this bit at the end of the page.';
 			  </code></pre>
@@ -380,7 +380,7 @@ pageNode.innerHTML += '...just adding this bit at the end of the page.';
               <pre><code>
 &lt;p id="warning"&gt;&lt;/p&gt;
 			  </code></pre>
-              <p>We can select the node and modify it</p>
+              <p>We can select the node and modify it:</p>
               <pre><code>
 var warningParagraph = document.getElementById('warning');
 warningParagraph.innerHTML = 'Danger Will Robinson!';
@@ -414,16 +414,16 @@ pageNode.appendChild(newParagraph);
             <section>
 				<h3>Let's Develop It</h3>
                 <p>Create a new paragraph element and add it to a div on your page.</p>
-			</section> 
-			
+			</section>
+
 			<section>
 				<h3>Resources</h3>
 					<ul>
 						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">JavaScript Guide</a>, from the Mozilla Developers Network.</li>
-						<li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Code Academy</a>, with interactive JavaScript lessons to help you review.</li>
+						<li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Codecademy</a>, with interactive JavaScript lessons to help you review.</li>
 					</ul>
 			</section>
- 
+
 			</div><!-- Close .slides -->
   		<footer>
         <div class="copyright">
