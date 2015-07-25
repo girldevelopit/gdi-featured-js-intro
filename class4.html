@@ -23,7 +23,7 @@
 		<!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
 
 		<!-- If use the PDF print sheet so students can print slides-->
-		
+
 		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
 
 		<!--[if lt IE 9]>
@@ -42,8 +42,8 @@
                 <h3>JavaScript for Beginners</h3>
                 <h4>Class 4</h4>
             </section>
-            
-             			
+
+
 			<section>
 				<h3>Events</h3>
 				<p>An 'event' is a type of object that is created when the user interacts with a web page.</p>
@@ -56,7 +56,7 @@ element.onclick = function () {
 			</section>
             <section>
 				<h3>Types of Events</h3>
-				<p>There are <a href="http://www.w3schools.com/jsref/dom_obj_event.asp">variety of events</a>. Some of the most common:</p>
+				<p>There are a <a href="http://www.w3schools.com/jsref/dom_obj_event.asp">variety of events</a>. Some of the most common:</p>
                 <ul>
                     <li>onclick: The event occurs when the user clicks on an element</li>
                     <li>onmouseover: The event occurs when the pointer is moved onto an element</li>
@@ -64,18 +64,18 @@ element.onclick = function () {
                     <li>onload: The event occurs when a document has been loaded</li>
                     <li>onfocus: The event occurs when an element gets focus</li>
                 </ul>
-			</section>            
+			</section>
             <section>
                 <h3>Events and Code</h3>
                 <p>How do you make an event trigger some code?</p>
                 <ol>
                     <li>Break your code into functions</li>
                     <li>Associate a function with a JavaScript event</li>
-                </ol>                    
+                </ol>
 			</section>
             <section>
                 <h3>Calling Functions from HTML</h3>
-                <p>You can call a function directly from your HTML code:</p>	     	
+                <p>You can call a function directly from your HTML code:</p>
 			    <pre><code>
 &lt;button id="clickMe" onclick="sayHi()"&gt;Click Me!&lt;/button&gt;
 				</code></pre>
@@ -103,11 +103,11 @@ myTarget.onclick=function(){
                 <p>Download <a href="files/class4.zip">this week's sample code</a>.</p>
                 <p>Make some JavaScript code fire after an <code>onmouseover</code> event. Try adding the event to the HTML and adding a listening function.</p>
 
-			</section>            
- 
+			</section>
+
             <section>
 				<h3>Preventing Defaults</h3>
-				<p>Elements like buttons and links have a default behaviors. However, the <code>event</code> objects has a built-in method to handle that:</p>
+				<p>Elements like buttons and links have default behaviors. However, the <code>event</code> objects has a built-in method to handle that:</p>
                 <pre><code>
 element.onclick = function (event) {
   event.preventDefault();
@@ -115,10 +115,10 @@ element.onclick = function (event) {
 
 				</code></pre>
 			</section>
-              			
+
 			<section>
 				<h3>This</h3>
-				<p>The keyword <code>this</code> references the element that the user has just interacted with</p>
+				<p>The keyword <code>this</code> references the element that the user has just interacted with:</p>
                 <pre><code>
 element.onmouseover = function (event) {
   console.log(this);
@@ -132,21 +132,21 @@ element.onclick = function (event) {
 			</section>
             <section>
 				<h3>Let's Develop It</h3>
-                <p>Write code that targets this link:</p> 
+                <p>Write code that targets this link:</p>
                 <pre><code>
 &lt;a href="http://girldevelopit.com/" id="gdiLink"&gt;Girl Develop It&lt;/a&gt;
 				</code></pre>
                 <p>When a user clicks the link, the page should display an error message instead of going to the Girl Develop It homepage.</p>
-			</section>            
-	
-			
+			</section>
+
+
 			<section>
                 <h3>Forms</h3>
-                <p>You can collect information from users to use in functions. The most common method is an HTML form</p>
+                <p>You can collect information from users to use in functions. The most common method is an HTML form:</p>
                 <pre><code>
 &lt;form id="temperatureForm"&gt;
-    &lt;label for="temp"&gt;Temperature:&lt;/label&gt; &lt;input type="text" id="temp" size="3"/&gt; degrees in 
-    &lt;input type="radio" name="tempFormat" value="F" checked /&gt;Fahrenheit 
+    &lt;label for="temp"&gt;Temperature:&lt;/label&gt; &lt;input type="text" id="temp" size="3"/&gt; degrees in
+    &lt;input type="radio" name="tempFormat" value="F" checked /&gt;Fahrenheit
     &lt;input type="radio" name="tempFormat" value="C" /&gt;Celsius &lt;br /&gt;
     &lt;label for="submitButton"&gt;&lt;/label&gt; &lt;input id="tempSubmitButton" type="submit" value="Submit" /&gt;
 &lt;/form&gt;
@@ -154,7 +154,7 @@ element.onclick = function (event) {
 			</section>
             <section>
                 <h3>Retrieving Form Data</h3>
-                <p>You retrieve the values of form elements using the <code>value</code> method.</p>
+                <p>You retrieve the values of form elements using the <code>value</code> method:</p>
                 <pre><code>
 var temperature = document.getElementById('temp').value;
 console.log (temperature);
@@ -186,16 +186,17 @@ submitButton.onclick = function () {
     var temperature = document.getElementById('temp').value;
     console.log (temperature);
 }
+<!--line 84 has a purple { opening bracket, but line 188 has a white } closing bracket. should they be the same color?-->
 				</code></pre>
 			</section>
             <section>
 				<h3>Let's Develop It</h3>
                 <p>Collect a value from the input box on the page. Use it inside a function of some kind. For example, collect a number and multiply it by five or collect a name and display a greeting.</p>
-			</section>  
+			</section>
 
             <section>
 				<h3>Timing Events</h3>
-				<p>In JavaScript, is possible to execute some code at specified time intervals.</p>
+				<p>In JavaScript, it is possible to execute some code at specified time intervals.</p>
                 <ul>
                     <li><code>setInterval()</code> executes a function over and over again, at specified time intervals</li>
                     <li><code>setTimeout()</code>  executes a function, once, after waiting a specified number of milliseconds</li>
@@ -209,17 +210,18 @@ setInterval(function, milliseconds);
 				</code></pre>
                 <p>For example, this is a simple clock:</p>
                 <pre><code>
-var simpleClock=setInterval(myClock, 1000);
+var simpleClock = setInterval(myClock, 1000);
 function myClock() {
     var d = new Date();
     var t = d.toLocaleTimeString();
     document.getElementById('resultsBox').innerHTML = t;
 }
+<!--line 214 has a purple { opening bracket, but line 218 has a white closing bracket, should it also be purple?}  -->
 				</code></pre>
 			</section>
             <section>
 				<h3>clearInterval</h3>
-				<p>You can use <code>clearInterval()</code> to stop a setInterval loop</p>
+				<p>You can use <code>clearInterval()</code> to stop a setInterval loop:</p>
                 <pre><code>
 clearInterval(intervalVariable)
 				</code></pre>
@@ -228,40 +230,43 @@ clearInterval(intervalVariable)
 function myStopFunction() {
     clearInterval(simpleClock);
 }
+<!--line 230 has a purple opening bracket { but line 232 has a white } closing bracket, should they be the same color?  -->
 				</code></pre>
 			</section>
             <section>
 				<h3>setTimeout</h3>
-				<p>The method <code>setTimeout()</code> is similar, but it will only run once.</p>
+				<p>The method <code>setTimeout()</code> is similar, but it will only run once:</p>
                 <pre><code>
 setTimeout(function, milliseconds);
 				</code></pre>
-                <p>For example, this code will wait 3 seconds, then create a popup box, unless the user triggers the <code>clearTimeout()</code></p>
+                <p>For example, this code will wait 3 seconds, then create a popup box, unless the user triggers the <code>clearTimeout():</code></p>
                 <pre><code>
 var helloBox;
 function sayHello() {
-    helloBox=setTimeout(function(){alert('Hello')},3000);
+    helloBox = setTimeout(function(){alert('Hello')},3000);
 }
 function dontSayIt() {
     clearTimeout(helloBox);
 }
+<!--line 245 and line 248 have purple opening brackets, but lines 247 and 250 have white closing brackets, should they all be the same colors?  -->
 				</code></pre>
 			</section>
             <section>
 				<h3>Animations</h3>
-				<p>By changing values slowly over time, we can create simple animations</p>
+				<p>By changing values slowly over time, we can create simple animations:</p>
                 <pre><code>
 var targetPic = document.getElementById('turtlePic');
 targetPic.onclick = function () {
     var leftMarginValue = 0;
     function increaseMargin() {
-        leftMarginValue++  // update parameter each time 
-        targetPic.style.marginLeft = leftMarginValue + 'px' //set left margin 
+        leftMarginValue++  // update parameter each time
+        targetPic.style.marginLeft = leftMarginValue + 'px' //set left margin
         if (leftMarginValue === 200)  // check finish condition {
             clearInterval(movePic);
         }
     var movePic = setInterval(function(){increaseMargin()}, 10) // update every 10ms
 }
+<!--lines 259, and 261, have purple opening { brackets, lines 266, and 268} have white closing brackets. line 267 has a purple opening bracket { and a white closing bracket }, should these all match? -->
 				</code></pre>
 			</section>
             <section>
@@ -273,11 +278,11 @@ targetPic.onclick = function () {
 				<h3>Resources</h3>
 					<ul>
 						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">JavaScript Guide</a>, from the Mozilla Developers Network.</li>
-						<li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Code Academy</a>, with interactive JavaScript lessons to help you review.</li>
+						<li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Codecademy</a>, with interactive JavaScript lessons to help you review.</li>
                         <li><a href="https://www.khanacademy.org/computing/cs/programming">Khan Academy</a> has a lot more information abut drawing and animations.</li>
 					</ul>
 			</section>
- 
+
 			</div><!-- Close .slides -->
   		<footer>
         <div class="copyright">
