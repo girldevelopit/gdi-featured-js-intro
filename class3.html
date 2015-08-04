@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Class 3 - Intro to JavaScript - Girl Develop It</title>
+
+    <meta name="description" content="Girl Develop It framework for easily creating beautiful presentations using HTML in GDI theme. Forked from Hakim El Hattab's reveal.js">
+    <meta name="author" content="Girl Develop It">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- For syntax highlighting -->
+    <!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
+    <!-- dark editor--><link rel="stylesheet" href="lib/css/dark.css">
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <link rel="stylesheet" href="plugin/accessibility-helper/css/accessibility-helper.css">
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+    </script>
+
+    <!-- If use the PDF print sheet so students can print slides-->
+
+    <link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <img src="img/circle-gdi-logo.png" alt="BDI Logo" class="noborder" style="max-height:400px;">
+          <h1>Introduction to JavaScript</h1>
+          <h2>Class 3</h2>
+        </section>
+        <!-- Objects -->
+      <section>
+        <section>
+          <h3>Objects</h3>
+          <img src="img/matches.jpg" alt="Collection of matches"/>
+          <p class="credit">Photo credit:  <a href="https://flic.kr/p/8RnSsa">Jir&iacute; Volejn&iacute;k</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
+        </section>
+
+        <section>
+          <h3>Objects</h3>
+          <p>Objects let us store a collection of properties.</p>
+<pre><code class="js">var objectName={
+  propertyName: propertyValue,
+  propertyName: propertyValue,
+  ...
+};
+</code></pre>
+<pre><code class="js">var aboutMe={
+  hometown: 'Atlanta, GA',
+  hair: 'Auburn',
+  likes: ['knitting', 'code'],
+  birthday: {month: 10, day: 17}
+};
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Accessing Objects</h3>
+          <p>You can retrieve values using "dot notation"</p>
+<pre><code class="js">var aboutMe={
+  hometown: 'Atlanta, GA',
+  hair: 'Auburn'
+};
+var myHometown=aboutMe.hometown;
+</code></pre>
+          <p>Or using "bracket notation" (like arrays)</p>
+<pre><code class="js">var myHair=aboutMe['hair'];
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Changing Objects</h3>
+          <p>You can use dot or bracket notation to change properties</p>
+<pre><code class="js">var aboutMe={
+  hometown: 'Atlanta, GA',
+  hair: 'Auburn'
+};
+aboutMe.hair='blue';
+</code></pre>
+          <p>Add new properties</p>
+<pre><code class="js">aboutMe.gender='female';
+</code></pre>
+          <p>Or delete them</p>
+<pre><code class="js">delete aboutMe.gender;
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Arrays of Objects</h3>
+          <p>Because arrays can hold any data type, they can also hold objects</p>
+<pre><code class="js">var myCats=[
+  {name: 'Lizzie',  age: 18},
+  {name: 'Daemon',  age: 1}
+];
+
+for (var i=0; i &lt; myCats.length; i++) {
+  var myCat=myCats[i];
+  console.log(myCat.name + ' is ' + myCat.age + ' years old.');
+}
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Arrays of Objects</h3>
+          <p>Just like other data types, objects can be passed into functions:</p>
+<pre><code class="js">var lizzieTheCat={
+  age: 18,
+  furColor: 'grey',
+  likes: ['catnip', 'milk'],
+  birthday: {month: 7, day: 17, year: 1996}
+}
+
+function describeCat(cat) {
+  console.log('This cat is ' + cat.age + ' years old with '
+  + cat.furColor + ' fur.');
+}
+
+describeCat(lizzieTheCat);
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Let's Develop It</h3>
+          <p>Create an object to hold information on your favorite recipe. It should have properties for recipeTitle (a string), servings (a number), and ingredients (an array of strings).</p>
+          <p>Try displaying some information about your recipe.</p>
+          <p>Bonus: Create a loop to list all the ingredients.</p>
+        </section>
+      </section>
+
+      <!-- Object Methods -->
+      <section>
+        <section>
+          <h3>Object methods</h3>
+          <p>Objects can also hold functions.</p>
+<pre><code class="js">var lizzieTheCat={
+  age: 18,
+  furColor: 'grey',
+  meow: function() {
+    console.log('meowww');
+  },
+  eat: function(food) {
+  console.log('Yum, I love ' + food);
+  },
+};
+</code></pre>
+          <p>Call object methods using dot notation:</p>
+<pre><code class="js">lizzieTheCat.meow();
+lizzieTheCat.eat('brown mushy stuff');
+</code></pre>
+        </section>
+
+        <section>
+        <h3>Built-in methods</h3>
+          <p>JS provides several built-in objects:</p>
+          <ul>
+            <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array">Array</a></code></li>
+            <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></code></li>
+            <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number">Number</a></code></li>
+            <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String">String</a></code></li>
+            <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/RegExp">RegExp</a></code></li>
+            <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Date">Date</a></code></li>
+            <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Math">Math</a></code></li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- Review: Role of HTML v. CSS-->
+      <section>
+        <section>
+          <h3>Let's Review</h3>
+          <img src="img/elephants.jpg" alt="Two elephants interacting"/>
+          <p class="credit">Photo credit:  <a href="http://www.flickr.com/photos/ginable/325235488/">Ginable</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
+        </section>
+
+        <section>
+          <h3>Anatomy of a website</h3>
+          <p><strong>Your Content</strong><br />
+          <strong>+ HTML</strong>: Structure<br />
+          <strong>+ CSS</strong>: Presentation<br />
+          <strong>= Your Website</strong></p>
+          <p>A website is a way to present your content to the world, using HTML and CSS to present that content &amp; make it look good.</p>
+        </section>
+
+        <section>
+          <h3>HTML is Markup</h3>
+          <img src="img/markup.jpg" alt="Printed document covered in ink marks"/>
+          <p class="credit">Photo credit:  <a href="http://www.flickr.com/photos/nics_events/2349630241/">Nic's events</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
+        </section>
+
+        <section>
+          <h3>CSS is Style</h3>
+          <img src="img/fingernails.jpg" alt="Fingernails with polka-dot paint job"/>
+          <p class="credit">Photo credit:  <a href="http://www.flickr.com/photos/pumpkincat210/4778025555/">pumpkincat210</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
+        </section>
+
+        <section>
+          <h3>IDs vs. Classes</h3>
+          <p><strong>ID</strong> -- Should only apply to one element on a webpage, i.e., a webpage only has one footer.<br />
+          The "#" is how you tell CSS "this is an id."</p>
+          <p><strong>Class</strong> -- Lots of elements can have the same class, i.e., There can be many warnings on one webpage.<br />
+          The "." is how you tell CSS "this is a class name."</p>
+        </section>
+      </section>
+
+      <!--The DOM-->
+      <section>
+        <section>
+          <h3>Nesting</h3>
+          <p>HTML elements "nest" inside one another</p>
+          <img src="img/nesting-dolls.jpg" alt="Russian nesting dolls"/>
+          <p class="credit">Photo credit:  <a href="http://www.flickr.com/photos/johnkay/3539939004/">John K</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
+        </section>
+
+        <section>
+          <h3>The DOM Tree</h3>
+          <p>We model the nested structure of an HTML page with the DOM (Document Object Model) Tree. The browser makes a "map" of all the elements on a page.</p>
+        </section>
+
+        <section>
+          <h3>The DOM: Sample Code</h3>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Test Page&lt;/title&gt;
+    &lt;style&gt;
+      h1 {
+        color: red;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;My Page&lt;/h1&gt;
+    &lt;p&gt;Hello World!&lt;/p&gt;
+    &lt;img src="http://placekitten.com/g/200/300" alt="cat"/&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+        </section>
+
+        <section>
+          <h3>The DOM: Sample Model</h3>
+          <img src="img/dom-tree.png" alt="Simple DOM Tree"/>
+        </section>
+      </section>
+
+      <!--Accessing the DOM-->
+      <section>
+        <section>
+          <h3>DOM Access</h3>
+          <p>Your browser automatically builds a Document object to store the DOM of a page. To change a page:</p>
+          <ol>
+            <li>Find the DOM node and store it in a variable</li>
+            <li>Use methods to manipulate the node</li>
+          </ol>
+        </section>
+
+        <section>
+          <h3>Finding Nodes</h3>
+          <img src="img/search.jpg" alt="A magnifying glass"/>
+          <p class="credit">Photo credit:  <a href="https://flic.kr/p/4UokrH">Jeffery Beall</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
+        </section>
+
+        <section>
+          <h3>DOM Access: By Id</h3>
+          <p>You can find nodes by id using the method:</p>
+<pre><code class="js">document.getElementById(id);
+</code></pre>
+          <p>To find:</p>
+<pre><code class="html">&lt;img id="kittenPic" src="http://placekitten.com/g/200/300" alt="cat"/&gt;
+</code></pre>
+          <p>We would use:</p>
+<pre><code class="js">var imgKitten=document.getElementById('kittenPic');
+</code></pre>
+        </section>
+
+        <section>
+          <h3>DOM Access: By Tag Name</h3>
+          <p>You can certain types of HTML elements using this method:</p>
+<pre><code class="js">document.getElementsByTagName(tagName);
+</code></pre>
+          <p>To find:</p>
+<pre><code class="html">&lt;li&gt;Daisy&lt;/li&gt;
+&lt;li&gt;Tulip&lt;/li&gt;
+</code></pre>
+          <p>We would use:</p>
+<pre><code class="js">var listItems=document.getElementsByTagName('li');
+for (var i=0; i &lt; listItems.length; i++) {
+  var listItem=listItems[i];
+}
+</code></pre>
+        </section>
+
+        <section>
+          <h3>DOM Access: HTML 5</h3>
+          <p>In newer browsers, you can use other methods too.</p>
+          <p>Available in <a href="http://caniuse.com/#search=getElementsByClassName">IE9+, FF3.6+, Chrome 17+, Safari 5+</a>:</p>
+<pre><code class="js">document.getElementsByClassName(className);
+</code></pre>
+          <p>Available in <a href="http://caniuse.com/#search=querySelectorAll">IE8+, FF3.6+, Chrome 17+, Safari 5+</a>:</p>
+<pre><code class="js">document.querySelector(cssQuery);
+document.querySelectorAll(cssQuery);
+</code></pre>
+        </section>
+
+        <section>
+          <h3>getElement vs. getElements</h3>
+          <p>Any method that starts with "getElement" will return a <span class="blue">single</span> node.</p>
+<pre><code class="js">document.getElementById('uniqueID'); //returns a single node
+</code></pre>
+          <p>Any method that starts with "getElements" will return a <span class="blue">array</span> of nodes. To modify a single node, you will need to use bracket notation to select the correct one.</p>
+<pre><code class="js">document.getElementsByTagName('p'); //returns multiple nodes
+var specficParagraph=document.getElementsByTagName('p')[2];
+</code></pre>
+        </section>
+      </section>
+
+      <!--Manipulating the DOM-->
+      <section>
+        <section>
+          <h3>Changing Nodes</h3>
+          <img src="img/two-color.jpg" alt="Red and yellow tulip"/>
+          <p class="credit">Photo credit:  <a href="https://flic.kr/p/bCYp2S">Darryl Kenyon</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
+        </section>
+
+        <section>
+          <h3>DOM Nodes: Attributes</h3>
+          <p>You can access and change attributes of DOM nodes using dot notation.</p>
+          <p>To change this element:</p>
+<pre><code class="html">&lt;img id="kittenPic" src="http://placekitten.com/g/200/300" alt="cat"/&gt;
+</code></pre>
+          <p>We could change the src attribute this way:</p>
+<pre><code class="js">var imgKitten=document.getElementById('kittenPic');
+var oldSrc=imgKitten.src;
+imgKitten.src='http://placekitten.com/g/600/500';
+</code></pre>
+        </section>
+
+        <section>
+          <h3>DOM Nodes: Getting and Setting Attributes</h3>
+          <p>You can also use <code>getAttribute/setAttribute</code></p>
+<pre><code class="html">&lt;img id="kittenPic" src="http://placekitten.com/g/200/300" alt="cat"/&gt;
+</code></pre>
+          <p>We could change the src attribute this way:</p>
+<pre><code class="js">var imgKitten=document.getElementById('kittenPic');
+var oldSrc=imgKitten.getAttribute('src');
+imgKitten.setAttribute('src', 'http://placekitten.com/g/600/500');
+</code></pre>
+        </section>
+
+        <section>
+          <h3>DOM Nodes: Styles</h3>
+          <p>You can change page css using<code>style</code></p>
+          <p>To make this CSS:</p>
+<pre><code class="css">body {
+  color: red;
+}
+</code></pre>
+          <p>Use this JavaScript:</p>
+<pre><code class="js">var pageNode=document.getElementsByTagName('body')[0];
+pageNode.style.color='red';
+</code></pre>
+        </section>
+
+        <section>
+          <h3>DOM Nodes: More Styles</h3>
+          <p>Change any CSS property with a "-" to camelCase, and be sure to include a unit on any number</p>
+          <p>To make this CSS:</p>
+<pre><code class="css">body {
+  background-color: pink;
+  padding-top: 10px;
+}
+</code></pre>
+          <p>Use this JavaScript:</p>
+<pre><code class="js">var pageNode=document.getElementsByTagName('body')[0]
+pageNode.style.backgroundColor='pink';
+pageNode.style.paddingTop='10px';
+</code></pre>
+        </section>
+
+        <section>
+        <h3>Let's Develop It</h3>
+        <p>Create a simple HTML page or <a href="files/class3.zip">use this sample code</a>.</p>
+        <p>Isolate a node (an element on the page) and change an attribute or add a new style.</p>
+        </section>
+      </section>
+
+      <!--Manipulating the DOM-->
+      <section>
+        <section>
+          <h3>DOM innerHTML</h3>
+          <p>Each DOM node has an <code>innerHTML</code> property with the HTML of all its children. You can use the property to view or change the HTML of a node.</p>
+          <p>For example, you can overwrite the entire body:</p>
+<pre><code class="js">var pageNode=document.getElementsByTagName('body')[0];
+pageNode.innerHTML='&lt;h1&gt;Oh Noes!&lt;/h1&gt;
+&lt;p&gt;I just changed the whole page!&lt;/p&gt;'
+</code></pre>
+          <p>Or just add some new content to the end</p>
+<pre><code class="js">pageNode.innerHTML +='...just adding this bit at the end of the page.';
+</code></pre>
+        </section>
+
+        <section>
+          <h3>DOM innerHTML continued</h3>
+          <p>You can also target a particular element</p>
+          <p>To fill this HTML element:</p>
+<pre><code class="html">&lt;p id="warning"&gt;&lt;/p&gt;
+</code></pre>
+          <p>We can select the node and modify it</p>
+<pre><code class="js">var warningParagraph=document.getElementById('warning');
+warningParagraph.innerHTML='Danger Will Robinson!';
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Creating New Nodes</h3>
+          <p>The <code>document</code> object also provides ways to create nodes from scratch:</p>
+<pre><code class="js">document.createElement(tagName);
+document.createTextNode(text);
+document.appendChild();
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Creating New Nodes: Sample Code</h3>
+<pre><code class="js">var pageNode=document.getElementsByTagName('body')[0];
+
+var newImg=document.createElement('img');
+newImg.src='http://placekitten.com/g/500/200';
+newImg.style.border='1px solid black';
+pageNode.appendChild(newImg);
+
+var newParagraph=document.createElement('p');
+var paragraphText=document.createTextNode('Squee!');
+newParagraph.appendChild(paragraphText);
+pageNode.appendChild(newParagraph);
+</code></pre>
+          </section>
+
+          <section>
+          <h3>Let's Develop It</h3>
+          <p>Create a new paragraph element and add it to a div on your page.</p>
+        </section>
+      </section>
+
+
+      <!-- Final slides-->
+      <section id="final">
+        <section>
+          <h3>You did it!</h3>
+          <img src="img/fireworks.jpg" alt="Fireworks"/>
+          <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/markwdw85/9425240584/" target="_blank">Mark W.</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+        </section>
+
+        <section>
+          <h3>Resources</h3>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">JavaScript Guide</a>, from the Mozilla Developers Network.</li>
+              <li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Code Academy</a>, with interactive JavaScript lessons to help you review.</li>
+            </ul>
+        </section>
+
+        <section>
+          <h2>Questions?</h2>
+        </section>
+      </section>
+      </div>
+    </div>
+      <footer>
+        <div class="copyright">
+          Intro to JavaScript -- Girl Develop It --
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+        </div>
+      </footer>
+    </div>
+
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/accessibility-helper/js/accessibility-helper.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
