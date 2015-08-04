@@ -1,52 +1,49 @@
-#Girl Develop It - Intro to JavaScript
-===================
+> Please read our slide creation guidelines in [the wiki](https://github.com/girldevelopit/gdi-slides-template/wiki). Then, delete this banner and add the specifics about your class below.
 
-This is the Girl Develop It Intro JavaScript course. Material based on original material by Sara Chipps, Pamela Fox, Alexis Goldstein, Izzy Johnston, Leo Newball, and Sylvia Richardson.
+# Add Your Course Title Here
 
-The course is meant to be taught in 4 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.
+Slides and materials are hosted at [http://example.com/](http://example.com/).
 
-## Classes
+## Course description
 
-### Class 1
+Use this space for a short description of your course. We recommend using the description from your meetup event.
 
-Introduction to JavaScript and Basic Programming Concepts
+**Cost:** 
 
-An overview of the history of JavaScript, what it is, and how it interacts with the browser. Covers basic JavaScript concepts including variables, data types, and functions. 
+**Dates:** 
 
-### Class 2
-Control Flow
+**Location:** 
 
-Introduces boolean variable, if/then statements, loops, and arrays.
-
-### Class 3
-
-Introduction to the DOM
-
-Introduces the Document Object Model (DOM) and how to use JavaScript to interact with it. Includes finding and modifying nodes.
-
-### Class 4
-
-Events and Animations
-Introduces events, listening functions, user inputs, and basic animations. 
+A limited number of scholarships are available for those with a financial hardship. To apply, contact us at...
 
 
-## Theme customization
+### Prerequisites:
 
-You can change theme colors by changing the theme css to any of the following options:
-```html
-  <link rel="stylesheet" href="css/theme/gdidefault.css" id="theme">
-  <link rel="stylesheet" href="css/theme/gdilight.css" id="theme">
-  <link rel="stylesheet" href="css/theme/gdisunny.css" id="theme">
-  <link rel="stylesheet" href="css/theme/gdicool.css" id="theme">
-```
-You can change the text editor theme by changing the highlight.js css to the following options:
-```html
-  <link rel="stylesheet" href="lib/css/dark.css">
-  <link rel="stylesheet" href="lib/css/light.css">
-```
-You can change transition by changing the reveal transition property in Reveal.initialize
-```javascript
-  Reveal.initialize({
-  				transition:  'default', // default/cube/page/concave/zoom/linear/none
-  			});
-```
+List any prerequisites for this class, including any previous classes or the equivalent self-study or real-world skills.
+
+You should have:
+
+(a) taken Intro or Intermediate HTML/CSS through Girl Develop It, or
+
+(b) built and managed websites on your own,
+
+**And also:**
+
+(a) taken intro to JavaScript through Girl Develop It, or
+
+(b) be familiar with syntax, arrays, conditionals, for and while loops, event handling, jQuery, AJAX requests, and handling JSON responses.
+
+
+### Tech requirements:
+
+ - Your laptop (Mac, PC, or Linux are all okay).
+ - A modern web browser - either Chrome or Firefox with Firebug installed.
+ - A text editor. We recommend Sublime Text 2 (free; available for Mac, PC, and Linux).
+
+
+### Topics covered:
+
+ - The topics you plan to cover
+ - Written in list form
+ - Here's another one
+
