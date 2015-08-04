@@ -1,29 +1,30 @@
 .reveal section img.noborder{
-	border-width: 0;
+  border-width: 0;
+	box-shadow: none;
 }
 
 .reveal section img {
-	max-height: 400px;
-	max-width: 80%;
+  max-height: 400px;
+  max-width: 80%;
 }
 
 div.halfblock{
-	float: left;
-	width: 45%;
-	text-align: left;
-	margin-right: 5%;
+  float: left;
+  width: 45%;
+  text-align: left;
+  margin-right: 5%;
 }
 
 div.left-align{
-	text-align: left;
+  text-align: left;
 }
 
 .clear{
-	clear: both;
+  clear: both;
 }
 
 p.credit, table.smalltext{
-	font-size: 70%;
+  font-size: 70%;
 }
 
 
