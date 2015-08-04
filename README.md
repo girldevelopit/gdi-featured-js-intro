@@ -1,49 +1,38 @@
-> Please read our slide creation guidelines in [the wiki](https://github.com/girldevelopit/gdi-slides-template/wiki). Then, delete this banner and add the specifics about your class below.
+##Intro to JavaScript
+Slides and materials are hosted at [http://roenok.github.io/gdi-intro-javascript/](http://roenok.github.io/gdi-intro-javascript/).
 
-# Add Your Course Title Here
+This is the Girl Develop It Intro JavaScript course. Material based on original material by Sara Chipps, Pamela Fox, Alexis Goldstein, Izzy Johnston, Leo Newball, and Sylvia Richardson.
 
-Slides and materials are hosted at [http://example.com/](http://example.com/).
+The course is meant to be taught in 4 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.
 
 ## Course description
+JavaScript is the world's most popular programming language for a reason -- it's the primary way to build interaction on the web. Learning JavaScript is a logical next step once you've learned HTML/CSS.
 
-Use this space for a short description of your course. We recommend using the description from your meetup event.
+Many programming courses end up glossing over some of the tricky words -- 'variable', 'object', 'method' -- this course is especially designed for beginners new to programming concepts, so you'll learn to program with JavaScript. If those words are confusing to you now, no worries! You're exactly who we want to teach.
 
-**Cost:** 
-
-**Dates:** 
-
-**Location:** 
-
-A limited number of scholarships are available for those with a financial hardship. To apply, contact us at...
-
+In this class, we will be covering: basic development concepts, JavaScript, dynamic HTML, and animations and events. Students will exit this class with a good grasp of basic programming principles and the knowledge of how to manipulate HTML elements.
 
 ### Prerequisites:
-
-List any prerequisites for this class, including any previous classes or the equivalent self-study or real-world skills.
-
 You should have:
+(a) taken Intro to HTML/CSS through Girl Develop It, or
+(b) have a working knowledge of HTML
 
-(a) taken Intro or Intermediate HTML/CSS through Girl Develop It, or
-
-(b) built and managed websites on your own,
-
-**And also:**
-
-(a) taken intro to JavaScript through Girl Develop It, or
-
-(b) be familiar with syntax, arrays, conditionals, for and while loops, event handling, jQuery, AJAX requests, and handling JSON responses.
-
+This course is specifically for beginners and we advise experienced developers to not take this class
 
 ### Tech requirements:
-
  - Your laptop (Mac, PC, or Linux are all okay).
  - A modern web browser - either Chrome or Firefox with Firebug installed.
  - A text editor. We recommend Sublime Text 2 (free; available for Mac, PC, and Linux).
 
+## Classes
+### Class 1: Introduction to JavaScript and Basic Programming Concepts
+An overview of the history of JavaScript, what it is, and how it interacts with the browser. Covers basic JavaScript concepts including variables, data types, and functions.
 
-### Topics covered:
+### Class 2: Control Flow
+Introduces boolean variable, if/then statements, loops, and arrays.
 
- - The topics you plan to cover
- - Written in list form
- - Here's another one
+### Class 3: Introduction to the DOM
+Introduces the Document Object Model (DOM) and how to use JavaScript to interact with it. Includes finding and modifying nodes.
 
+### Class 4: Events and Animations
+Introduces events, listening functions, user inputs, and basic animations.
