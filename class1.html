@@ -17,9 +17,9 @@
     <link rel="stylesheet" href="css/custom.css">
 
     <!-- For syntax highlighting -->
-    <!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
-    <!-- dark editor--><link rel="stylesheet" href="lib/css/dark.css">
-    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- light editor --> <link rel="stylesheet" href="lib/css/light.css">
+    <!-- dark editor <link rel="stylesheet" href="lib/css/dark.css">-->
+    <!-- <link rel="stylesheet" href="lib/css/zenburn.css">-->
 
     <link rel="stylesheet" href="plugin/accessibility-helper/css/accessibility-helper.css">
 
@@ -101,6 +101,7 @@
     &lt;p&gt;This is my awesome JavaScript code.&lt;/p&gt;
     &lt;script&gt;
       alert('Hello World!');
+      console.log ('Secret message');
     &lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;
@@ -108,14 +109,83 @@
         </section>
       </section>
 
-      <!-- Basics -->
-      <section id="basics">
+      <!-- Programming -->
+      <section id="programming">
         <section>
           <h3>Computers need simple, clear instructions</h3>
           <img src="img/confusedrobot.jpg" alt="Confused robot"/>
           <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/baboon/3946055/" target="_blank">baboon</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
         </section>
 
+        <section>
+          <h3>Thinking like a programmer</h3>
+          <p>Computers are great at <em>processing</em>. They are bad at <em>understanding</em>.</p>
+          <p>When you write a program, you must break down every step into simple pieces.</p>
+        </section>
+
+        <section>
+          <h3>Example: Draw a Square</h3>
+          <ol class="fragment">
+            <li>Find a whiteboard and a dry erase marker</li>
+            <li>Uncap the dry erase maker</li>
+            <li>Hold the marker in your hand</li>
+            <li>Place the marker against the whiteboard</li>
+            <li>Move your hand 1 foot to the right</li>
+            <li>Stop</li>
+            <li>Move your hand 1 foot down...</li>
+          </ol>
+        </section>
+
+        <section>
+          <h3>Example: Make a Sandwich</h3>
+          <iframe title="Sandwich video" width="560" height="315" src="https://www.youtube.com/embed/XWe4iohhmIw" frameborder="0" allowfullscreen></iframe>
+          <p class="credit">Source: <a>Harvard Students Making Sandwich: CS 50 Algorithm Intro</a></p>
+        </section>
+
+        <section>
+          <h3>Basically, computers can be hard to work with!</h3>
+          <img src="img/computer-toddler.jpg" alt="Toddler using old word processor"/>
+          <p class="credit">Photo credit: <a href="https://flic.kr/p/5Uvapm" target="_blank">Dan Hatton</a> <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/" target="_blank">cc</a></p>
+
+          <aside class="notes">Reassure the students! Coding is difficult, and it may take time to get good at it. Also, the natural state of code is broken. It's normal to have error messages, </aside>
+        </section>
+      </section>
+
+      <!-- JavaScript Basics -->
+      <section id="basics">
+        <section>
+          <h3>So what's up with JavaScript?</h3>
+          <img src="img/gears.jpg" alt="Gears"/>
+          <p class="credit">Photo credit: <a href="https://flic.kr/p/EEo4BV" target="_blank">Adam Foster</a> <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/" target="_blank">cc</a></p>
+        </section>
+
+        <section>
+          <h3>How does JavaScript work?</h3>
+          <ol>
+            <li>A user visits a webpage with JavaScript code on it.</li>
+            <li>The user's browser (e.g., Chrome) reads the code line-by-line.</li>
+            <li>The browser executes (runs) each line of code as it reads it.</li>
+            <li>Based on these instructions, the browser performs calculations and changes the HTML and CSS on the page.</li>
+            <li>If the browser finds code it doesn't understand, it stops running an creates an error message.</li>
+          </ol>
+        </section>
+
+        <section>
+          <h3>Watch Out!</h3>
+          <p>Every browser interprets JavaScript differently.</p>
+          <p>You can see what's going on in the console.</p>
+        </section>
+
+        <section>
+          <h3>Let's Develop It</h3>
+          <p>Open the console. In Chrome or Firefox, use the keyboard shortcut <strong>Command + Option + J</strong> (Mac) or <strong>Control + Shift + J</strong> (Windows/Linux).</p>
+          <p>Open your practice page. Do you see anything in the console?</p>
+          <p>Try typing in 2 + 2</p>
+        </section>
+      </section>
+
+      <!-- Using JavaScript -->
+      <section id="usingJS">
         <section>
           <h3>Script Tags</h3>
           <p>You can mix JavaScript and HTML. The script tag tells your browser the stuff inside is code, not content.</p>
@@ -350,83 +420,28 @@ console.log(kittensName); //Outputs 'Admiral Snuggles'
         </section>
       </section>
 
-      <!-- Functions -->
-      <section id="functions">
-        <section>
-          <h3>Functions</h3>
-          <p>Functions are separable, reusable pieces of code.
-          <img src="img/legos.jpg" alt="Pile of legos"/>
-          <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/catzrule/9940388305/">Rick Payette</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
-        </section>
-
-        <section>
-          <h3>Using Functions</h3>
-          <p>First, declare the function.</p>
-<pre><code class="js">function turtleFact() {
-  console.log('A turtle\'s lower shell is called a plastron.');
-}
-</code></pre>
-          <p>Then, use it as many times as you want!</p>
-<pre><code class="js"> turtleFact();</code></pre>
-        </section>
-
-        <section>
-          <h3>Arguments</h3>
-          <p>Functions can accept input values, called arguments.</p>
-<pre><code class="js">function callKitten (kittenName){
-  console.log('Come here, ' + kittenName + '!');
-}
-callKitten ('Fluffy'); //outputs 'Come here, Fluffy!'
-
-function addNumbers(a, b){
-  console.log(a + b);
-}
-addNumbers(5,7); //outputs 12
-addNumbers(9,12); //outputs 21
-</code></pre>
-        </section>
-
-        <section>
-          <h3>Arguments</h3>
-          <p>You can also pass variables into functions. These variables do not need to have the same name as the function arguments.</p>
-<pre><code class="js">function addOne(inputNumber){
-  var newNumber = inputNumber + 1;
-  console.log('&lt;p&gt;You now have ' + newNumber);
-}
-//Declare variables
-var numberOfKittens = 5;
-var numberOfPuppies = 4;
-//Use them in functions
-addOne(numberOfKittens);
-addOne(numberOfPuppies);
-</code></pre>
-        </section>
-
-        <section>
-          <h3>Let's Develop It</h3>
-          <p>Turn the code you wrote to output someone's full name into a function, then use it.</p>
-        </section>
-      </section>
-
-      <!-- returning values -->
       <section>
         <section>
-          <h3>Returning Values</h3>
-          <p>You can have a function give you back a value, to use later.</p>
-<pre><code class="js">function square(num) {
-  return num * num;
-}
-console.log(square(4));   // outputs '16'.
-var squareOfFive = square(5); // will make squareOfFive equal 25.
+          <h3>Combining strings and numbers</h3>
+          <p>You can use the concatenate function to mix strings and numbers. When you do this, JavaScript will treat the number like a string.</p>
+<pre><code class="js">var numberOfFruit = 6;
+var typeOfFruit = 'bananas';
+var allTheFruit = 'Wow, I have ' + numberOfFruit + ' ' + typeOfFruit + '!';
+console.log(allTheFruit);
 </code></pre>
-          <p>Return will immediately end a function.</p>
         </section>
-
         <section>
           <h3>Let's Develop It</h3>
-          <p>Add a return statement to your name function. Use that function to set the value of a variable.</p>
+          <p>Create a program to calculate the tip at a restuarant. It should:</p>
+          <ul>
+            <li>Have variables for the bill pre-tip and the tip percentage</li>
+            <li>Calculate the total bill</li>
+            <li>Output a sentence like "Your total bill, with tip, is $14.75"</li>
+          </ul>
         </section>
       </section>
+
+
 
       <!-- Final slides-->
       <section id="final">
@@ -441,6 +456,7 @@ var squareOfFive = square(5); // will make squareOfFive equal 25.
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">JavaScript Guide</a>, from the Mozilla Developers Network.</li>
               <li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Code Academy</a>, with interactive JavaScript lessons to help you review.</li>
+              <li><a href="http://jsforcats.com/">JavaScript For Cats,</a> the basics of JavaScript explained with extra cats.</li>
             </ul>
         </section>
 
@@ -448,7 +464,7 @@ var squareOfFive = square(5); // will make squareOfFive equal 25.
           <h2>Questions?</h2>
         </section>
       </section>
-    </div>      
+    </div>
     <footer>
       <div class="copyright">
         Intro to JavaScript -- Girl Develop It --
@@ -461,7 +477,6 @@ var squareOfFive = square(5); // will make squareOfFive equal 25.
     <script src="js/reveal.min.js"></script>
 
     <script>
-
       // Full list of configuration options available here:
       // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
@@ -469,9 +484,7 @@ var squareOfFive = square(5); // will make squareOfFive equal 25.
         progress: true,
         history: true,
         center: true,
-
         transition: 'slide', // none/fade/slide/convex/concave/zoom
-
         // Optional reveal.js plugins
         dependencies: [
           { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
@@ -483,7 +496,6 @@ var squareOfFive = square(5); // will make squareOfFive equal 25.
                     { src: 'plugin/accessibility-helper/js/accessibility-helper.js', async: true, condition: function() { return !!document.body.classList; } }
         ]
       });
-
     </script>
 
   </body>

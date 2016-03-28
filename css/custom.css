@@ -8,6 +8,10 @@
   max-width: 80%;
 }
 
+.reveal h1 {
+    font-size: 2.5em;
+}
+
 div.halfblock{
   float: left;
   width: 45%;

@@ -17,9 +17,9 @@
     <link rel="stylesheet" href="css/custom.css">
 
     <!-- For syntax highlighting -->
-    <!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
-    <!-- dark editor--><link rel="stylesheet" href="lib/css/dark.css">
-    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- light editor --> <link rel="stylesheet" href="lib/css/light.css">
+    <!-- dark editor <link rel="stylesheet" href="lib/css/dark.css">-->
+    <!-- <link rel="stylesheet" href="lib/css/zenburn.css">-->
 
     <link rel="stylesheet" href="plugin/accessibility-helper/css/accessibility-helper.css">
 
@@ -63,18 +63,113 @@
 
         <section>
         <h3>Code Search</h3>
-        <p>In this code, spot the comments, variables, operator, function, argument, and return value.</p>
-<pre><code class="js">function calculateTip(total) {
-  var tipPercent = 0.15; //Can be changed
-  return (total * tipPercent);
-}
-
+        <p>In this code, spot the comments, variables, and operator.</p>
+<pre><code class="js">
 var billPreTip = 10;
-var billTip   = calculateTip(billPreTip);
+var tipPercent = 0.15; //Can be changed
+var billTip = billPreTip * tipPercent;
 var receipt   = 'Meal: ' + billPreTip + ' Tip: ' + billTip +
 ' Total: ' + (billPreTip + billTip);
 console.log(receipt);
 </code></pre>
+        </section>
+      </section>
+
+      <!-- Functions -->
+      <section id="functions">
+        <section>
+          <h3>Functions</h3>
+          <p>Functions are separable, reusable pieces of code.
+          <img src="img/legos.jpg" alt="Pile of legos"/>
+          <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/catzrule/9940388305/">Rick Payette</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
+        </section>
+
+        <section>
+          <h3>Declaring Functions</h3>
+          <p>To declare (create) a function, you give it a name. You then include all the code for the function inside curly brackets:</p>
+<pre><code class="js">function turtleFacts() {
+  console.log('A turtle\'s lower shell is called a plastron.');
+  console.log('Turtles belong to the order Testudines');
+}
+</code></pre>
+          <p>Function can have multiple lines.</p>
+        </section>
+
+        <section>
+          <h3>Using Functions</h3>
+          <p>To use a function, just type its name, followed by parenthesis.</p>
+<pre><code class="js"> turtleFacts();</code></pre>
+          <p>We'll talk about what can go inside those parenthesis in a minute! For now, leave them empty.</p>
+        </section>
+
+        <section>
+          <h3>What's going on here?</h3>
+          <p>A function is a group of code you can reuse many times. Whenever you call a function by using it's name, you tell the browser to run the code inside the function.</p>
+          <p>You must declare a function before you can use it.</p>
+        </section>
+
+        <section>
+          <h3>Let's Develop It</h3>
+          <p>Write a function that outputs a sentence. Then call that function later in your code.</p>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h3>Arguments</h3>
+          <p>Functions can accept input values, called arguments.</p>
+<pre><code class="js">function callKitten (kittenName){
+  console.log('Come here, ' + kittenName + '!');
+}
+callKitten ('Fluffy'); //outputs 'Come here, Fluffy!'
+
+function addNumbers(a, b){
+  console.log(a + b);
+}
+addNumbers(5,7); //outputs 12
+addNumbers(9,12); //outputs 21
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Arguments</h3>
+          <p>You can also pass variables into functions. These variables do not need to have the same name as the function arguments.</p>
+<pre><code class="js">function addOne(inputNumber){
+  var newNumber = inputNumber + 1;
+  console.log('&lt;p&gt;You now have ' + newNumber);
+}
+//Declare variables
+var numberOfKittens = 5;
+var numberOfPuppies = 4;
+//Use them in functions
+addOne(numberOfKittens);
+addOne(numberOfPuppies);
+</code></pre>
+        </section>
+
+        <section>
+          <h3>Let's Develop It</h3>
+          <p>Last week, you wrote a simple program to combine a first name and a last name. Put that code inside a function. Then update the function to accept the first and last name as arguments.</p>
+        </section>
+      </section>
+
+      <!-- returning values -->
+      <section>
+        <section>
+          <h3>Returning Values</h3>
+          <p>You can have a function give you back a value, to use later.</p>
+<pre><code class="js">function square(num) {
+  return num * num;
+}
+console.log(square(4));   // outputs '16'.
+var squareOfFive = square(5); // will make the variable squareOfFive equal 25.
+</code></pre>
+          <p>Return will immediately end a function.</p>
+        </section>
+
+        <section>
+          <h3>Let's Develop It</h3>
+          <p>Add a return statement to your name function. Use that function to set the value of a variable.</p>
         </section>
       </section>
 
@@ -319,170 +414,7 @@ if (bananas &gt;=2 &amp;&amp; bananas &lt;7) {
           <h3>Let's Develop It</h3>
           <p>Add a logical operator to your what to wear program.</p>
         </section>
-      </section>
-
-      <!-- Loops -->
-      <section id="loops">
-        <section>
-        <h3>Loops</h3>
-          <img src="img/hula-hoop.jpg" alt="Lego stormtrooper inside key ring"/>
-          <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/steve_pires/8430087504/" target="_blank">Steve Pires</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
-        </section>
-
-        <section>
-        <h3>While loops</h3>
-          <p>While will repeat the same code over and over until some condition is met.</p>
-<pre class="js"><code>var bottlesOfBeer = 99;
-while (bottlesOfBeer &gt;= 1) {
-  console.log (bottlesOfBeer + ' bottles of beer on the wall');
-  bottlesOfBeer = bottlesOfBeer - 9;
-}
-</code></pre>
-        </section>
-
-        <section>
-          <h3>Infinite Loops</h3>
-          <p>Make sure something changes in the loop, or your loop will go on forever...</p>
-          <img src="img/infinite-loop.jpg" alt="Spiral that goes on toward infinity"/>
-          <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/samueljohn/5348462863/" target="_blank">Samuel John</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
-        </section>
-
-        <section>
-          <h3>For loops</h3>
-          <p>For loops are very similar, but you declare a counter in the statement.</p>
-<pre><code class="js">//will count 1 to 10
-for (var i = 1; i &lt;= 10; i++) {
-  console.log (i);
-}
-</code></pre>
-        </section>
-
-        <section>
-          <h3>Loops and logic</h3>
-          <p>You can add other statements or logical operators inside the loops.</p>
-<pre><code class="js">//Count from 1 to 50
-for (var i = 1; i &lt;= 50; i++) {
-  console.log (i);
-  //Says 'Buzz' after multiples of three
-  if (i % 3 == 0) {
-    console.log (' Buzz');
-  }
-  //Says 'Bang' after multiples of five
-  if (i % 5 == 0) {
-    console.log (' Bang');
-  }
-}
-</code></pre>
-        </section>
-
-        <section>
-        <h3>Break</h3>
-          <p>To exit a loop, use the break statement.</p>
-<pre><code class="js">//Count from 100 to 200
-for (var i = 100; i &lt;= 200; i++) {
-  console.log('Testing ' + i);
-  //Stop at the first multiple of 7
-  if (i % 7 == 0) {
-    console.log('Found it! ' + i);
-    break;
-  }
-}
-</code></pre>
-        </section>
-
-        <section>
-        <h3>Let's Develop It</h3>
-        <p>Write a loop that gives you the 9's times table,<br /> from 9 x 1 = 9 to 9 x 12 = 108.</p>
-        <p>Finish early? Try using a loop inside a loop to write all the times tables, from 1 to 12.</p>
-        </section>
-      </section>
-
-      <!-- Arrays -->
-      <section id="arrays">
-        <section>
-          <h3>Arrays</h3>
-          <img src="img/kitten-group.jpg" alt="Group of kittens"/>
-          <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/pasotraspaso/4444291348/" target="_blank">Jesus Solana</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
-        </section>
-
-        <section>
-          <h3>Arrays</h3>
-          <p>Arrays are ordered lists of values.</p>
-<pre><code class="js">var arrayName = [element0, element1, ...];
-</code></pre>
-          <p>You can put different types of data into an array.</p>
-<pre><code class="js">var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
-'Blue', 'Indigo', 'Violet'];
-var lotteryNumbers = [33, 72, 64, 18, 17, 85];
-var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
-</code></pre>
-        </section>
-
-        <section>
-          <h3>Array Length</h3>
-          <p>The length property tells you how many things are in an array</p>
-<pre><code class="js">var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
-'Blue', 'Indigo', 'Violet'];
-console.log(rainbowColors.length);
-</code></pre>
-        </section>
-
-        <section>
-          <h3>Using Arrays</h3>
-          <p>You can access items with "bracket notation" by using the position of the object you want. Programmers start counting at zero.</p>
-<pre><code class="js">var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
-'Blue', 'Indigo', 'Violet'];
-var firstColor = rainbowColors[0];
-var lastColor = rainbowColors[6];
-</code></pre>
-        </section>
-
-        <section>
-          <h3>Changing arrays</h3>
-          <p>You can use bracket notation to change an item in an array</p>
-<pre><code class="js">var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
-myFavoriteThings[0] = 'Asparagus';
-</code></pre>
-        </section>
-
-        <section>
-          <h3>Expanding arrays</h3>
-          <p>Arrays do not have a fixed length. You can use "push" to add something to an array.</p>
-<pre><code class="js">var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
-myFavoriteThings.push('Dancing');
-</code></pre>
-        </section>
-
-        <section>
-          <h3>Let's Develop It</h3>
-          <p>Create an array of your favorite foods. Echo a few values onto your screen.</p>
-        </section>
-      </section>
-
-      <!-- Arrays and loops-->
-      <section id="arraysandloops">
-        <section>
-          <h3>Arrays + loops = BFF</h3>
-          <img src="img/holding-hands.jpg" alt="Couple holding hands"/>
-          <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/mtsofan/8221708017/" target="_blank">John</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
-        </section>
-
-        <section>
-          <h3>Iterating through arrays</h3>
-          <p>Use a for loop to easily process each item in an array.</p>
-<pre><code class="js">var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
-  'Blue', 'Indigo', 'Violet'];
-for (var i = 0; i &lt; rainbowColors.length; i++) {
-  console.log(rainbowColors[i]);
-}
-</code></pre>
-        </section>
-
-        <section>
-          <h3>Let's Develop It</h3>
-          <p>Use a loop to make a list of all your favorite foods.</p>
-        </section>
-      </section>
+      </section>      
 
       <!-- Final slides-->
       <section id="final">
