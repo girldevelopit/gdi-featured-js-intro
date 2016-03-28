@@ -77,6 +77,24 @@ console.log(future);
 </pre>
         </div>
 
+        <h3>The Age Calculator</h3>
+        <p>Forgot how old someone is? Calculate it!</p>
+        <ul>
+          <li>Store the current year in a variable.</li>
+          <li>Store their birth year in a variable.</li>
+          <li>Calculate their 2 possible ages based on the stored values.</li>
+          <li>Output them to the screen like so: "They are either NN or NN", substituting the values.</li>
+        </ul>
+
+        <button onclick="showSolution(2)">Show/Hide Solution</button>
+        <div class="codebox" id="example2Code">
+<pre>var year = 1984;
+var now  = 2016;
+var age  = now - year;
+console.log('They are either ' + age + ' or ' + (age - 1));
+</pre>
+        </div>
+
         <h3>The Temperature Converter</h3>
         <p>Let's make a program to convert celsius tempatures to fahrenheit and vice versa, so we can complain about the weather with our friends oversees.</p>
         <p><strong>Reminder:</strong> To convert celsius to fahrenheit, multiply by 9, then divide by 5, then add 32. To convert fahrenheit to celsius, deduct 32, then multiply by 5, then divide by 9.</p>
@@ -87,8 +105,8 @@ console.log(future);
           <li>Convert it to celsius and output "NN°F is NN°C."</li>
         </ul>
 
-        <button onclick="showSolution(2)">Show/Hide Solution</button>
-        <div class="codebox" id="example2Code">
+        <button onclick="showSolution(3)">Show/Hide Solution</button>
+        <div class="codebox" id="example3Code">
 <pre>var inputCelsius  = 25;
 var outputFahrenheit = (inputCelsius * 9)/5 + 32;
 console.log (inputCelsius + '°C is ' + outputFahrenheit + '°F');
@@ -108,8 +126,8 @@ console.log (inputFahrenheit + '°F is ' + outputCelsius + '°C.');
           <li>Have to program output: "It is NN°F today. That's NN°C."
         </ul>
 
-        <button onclick="showSolution(3)">Show/Hide Solution</button>
-        <div class="codebox" id="example3Code">
+        <button onclick="showSolution(4)">Show/Hide Solution</button>
+        <div class="codebox" id="example4Code">
 <pre>var inputFahrenheit  = Math.random()*100;
 var outputCelsius = (inputFahrenheit - 32)/9 * 5;
 console.log ('It is ' + inputFahrenheit + '°F today. That\'s ' + outputCelsius + '°C.');
