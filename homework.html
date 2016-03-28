@@ -68,11 +68,11 @@
         <div class="codebox" id="example1Code">
 <pre>var numKids  = 5;
 var partner  = 'David Beckham';
-var location = 'Costa Rica';
+var geolocation = 'Costa Rica';
 var jobTitle = 'web developer';
 
-var future = 'You will be a ' + jobTitle + ' in ' + location + ', and married to ' +
-partner + ' ' + ' with ' + numKids + ' kids.';
+var future = 'You will be a ' + jobTitle + ' in ' + geolocation + ', and married to ' +
+partner + ' with ' + numKids + ' kids.';
 console.log(future);
 </pre>
         </div>
@@ -144,6 +144,85 @@ console.log ('It is ' + inputFahrenheit + '°F today. That\'s ' + outputCelsius 
 
       <section>
         <h2 id="class2">Class 2</h2>
+
+        <h3>The Fortune Teller: With Functions!</h3>
+        <p>Let's turn one of the <a href="#Class1">Class 1 Exercises</a> into a function.</p>
+        <ul>
+         <li>Write a function named <code>tellFortune</code> that:
+           <ul>
+            <li>takes 4 arguments: number of children, partner's name, geographic location, job title.</li>
+            <li>outputs your fortune to the screen like so: "You will be a X in Y, and married to Z with N kids."</li></ul>
+         </li>
+         <li>Call that function 3 times with 3 different values for the arguments.</li>
+        </ul>
+
+        <button onclick="showSolution(5)">Show/Hide Solution</button>
+        <div class="codebox" id="example5Code">
+<pre>var inputCelsius  = 25;
+var ofunction tellFortune(jobTitle, geolocation, partner, numKids) {
+    var future = 'You will be a ' + jobTitle + ' in ' + geolocation + ' and married to ' +
+   partner + ' ' + ' with ' + numKids + ' kids.';
+    console.log(future);
+}
+
+tellFortune('bball player', 'spain', 'Shaq', 3);
+tellFortune('stunt double', 'Japan', 'Ryan Gosling', 3000);
+tellFortune('Elvis impersonator', 'Russia', 'The Oatmeal', 0);
+</pre>
+        </div>
+
+        <h3>What number is bigger?</h3>
+        <p>Write a function that compares two numbers and returns the larger one. Be sure to try it our with some different numbers. Bonus: add error messages if the numbers are equal or cannot be compared.</p>
+        <p>Don't forget to test it!</p>
+
+        <button onclick="showSolution(6)">Show/Hide Solution</button>
+        <div class="codebox" id="example6Code">
+<pre>function greaterNum(num1, num2) {
+  if (num1 === num2) {
+    console.log ('Those numbers are equal');
+    return num1;
+  } else if (num1 &gt; num2) {
+    return num1;
+  } else if (num2 &gt; num1) {
+    return num2;
+  } else {
+    console.log ('Those are simply incomparable!');
+    return undefined;
+  }
+}
+
+console.log (greaterNum(3, 3));
+console.log (greaterNum(7, -2));
+console.log (greaterNum(5, 9));
+console.log (greaterNum(5, 'dog'));
+</pre>
+        </div>
+
+        <h3>Pluralize</h3>
+        <p>Write a function <code>pluralize</code> that takes in two arguments, a number and a word, and returns the plural. For example:</p>
+<pre>pluralize(5, 'cat'): '5 cats'
+pluralize(7, 'turtle'): '7 cats'
+</pre>
+        <p>Bonus: Make it handle a few collective nouns like "sheep" and "geese".</p>
+
+
+        <button onclick="showSolution(7)">Show/Hide Solution</button>
+        <div class="codebox" id="example7Code">
+<pre>function pluralize(number, noun) {
+  if (number != 1 &amp;&amp; noun != 'sheep' &amp;&amp; noun != 'geese') {
+    return number + ' ' + noun + 's';
+  } else {
+    return number + ' ' + noun;
+  }
+}
+console.log('I have ' + pluralize(0, 'cat'));
+console.log('I have ' + pluralize(1, 'cat'));
+console.log('I have ' + pluralize(2, 'cat'));
+console.log('I have ' + pluralize(3, 'geese'));
+</pre>
+        </div>
+
+
         <h3>The Calculator</h3>
         <ul>
           <li>Write a function called <code>squareNumber</code> that will take one argument (a number), square that number, and return the result. It should also log a string like "The result of squaring the number 3 is 9." </li>
@@ -163,8 +242,8 @@ console.log ('It is ' + inputFahrenheit + '°F today. That\'s ' + outputCelsius 
           </li>
         </ul>
 
-        <button onclick="showSolution(2)">Show/Hide Solution</button>
-        <div class="codebox" id="example2Code">
+        <button onclick="showSolution(8)">Show/Hide Solution</button>
+        <div class="codebox" id="example8Code">
 <pre>function squareNumber(num) {
   var squaredNumber = num * num;
   console.log('The result of squaring the number ' + num + ' is ' + squaredNumber);
@@ -220,8 +299,8 @@ mixUp('mix', pod'): 'pox mid'
 mixUp('dog', 'dinner'): 'dig donner'
 </pre>
 
-        <button onclick="showSolution(3)">Show/Hide Solution</button>
-        <div class="codebox" id="example3Code">
+        <button onclick="showSolution(9)">Show/Hide Solution</button>
+        <div class="codebox" id="example9Code">
 <pre>//This function uses the slice() method. It extracts a part of a string and returns a new string
 function mixUp(string1, string2) {
   return string1.slice(0, 2) + string2.slice(2) + " " + string2.slice(0, 2) + string1.slice(2);
@@ -236,8 +315,8 @@ fixStart('babble'): 'ba**le'
 fixStart('turtle'): 'tur*le'
 </pre>
 
-        <button onclick="showSolution(4)">Show/Hide Solution</button>
-        <div class="codebox" id="example4Code">
+        <button onclick="showSolution(10)">Show/Hide Solution</button>
+        <div class="codebox" id="example10Code">
 <pre>//This function uses a few new methods and regular expressions
 function fixStart(inputString) {
   var firstChar = inputString.charAt(0);
@@ -245,58 +324,10 @@ function fixStart(inputString) {
 }
 </pre>
         </div>
+      </section>
 
-
-        <h3>What number is bigger?</h3>
-        <p>Write a function that compares two numbers and returns the larger one. Be sure to try it our with some different numbers. Bonus: add error messages if the numbers are equal or cannot be compared.</p>
-        <p>Don't forget to test it!</p>
-
-        <button onclick="showSolution(5)">Show/Hide Solution</button>
-        <div class="codebox" id="example5Code">
-<pre>function greaterNum(num1, num2) {
-  if (num1 === num2) {
-    console.log ('Those numbers are equal');
-    return num1;
-  } else if (num1 &gt; num2) {
-    return num1;
-  } else if (num2 &gt; num1) {
-    return num2;
-  } else {
-    console.log ('Those are simply incomparable!');
-    return undefined;
-  }
-}
-
-console.log (greaterNum(3, 3));
-console.log (greaterNum(7, -2));
-console.log (greaterNum(5, 9));
-console.log (greaterNum(5, 'dog'));
-</pre>
-        </div>
-
-        <h3>Pluralize</h3>
-        <p>Write a function <code>pluralize</code> that takes in two arguments, a number and a word, and returns the plural. For example:</p>
-<pre>pluralize(5, 'cat'): '5 cats'
-pluralize(7, 'turtle'): '7 cats'
-</pre>
-        <p>Bonus: Make it handle a few collective nouns like "sheep" and "geese".</p>
-
-
-        <button onclick="showSolution(6)">Show/Hide Solution</button>
-        <div class="codebox" id="example6Code">
-<pre>function pluralize(number, noun) {
-  if (number != 1 &amp;&amp; noun != 'sheep' &amp;&amp; noun != 'geese') {
-    return number + ' ' + noun + 's';
-  } else {
-    return number + ' ' + noun;
-  }
-}
-console.log('I have ' + pluralize(0, 'cat'));
-console.log('I have ' + pluralize(1, 'cat'));
-console.log('I have ' + pluralize(2, 'cat'));
-console.log('I have ' + pluralize(3, 'geese'));
-</pre>
-        </div>
+      <section>
+        <h2 id="class3">Class 3</h2>
 
         <h3>Even/Odd Counter</h3>
         <p>Write a for loop that will iterate from 0 to 20. For each iteration, it will check if the current number is even or odd, and report that to the screen (e.g. "2 is even")</p>
@@ -341,10 +372,6 @@ for (var i = 0; i &lt; choices.length; i++) {
 }
 </pre>
         </div>
-      </section>
-
-      <section>
-        <h2 id="class3">Class 3</h2>
 
         <h3>The Reading List</h3>
         <p>Keep track of which books you read and which books you want to read!</p>
