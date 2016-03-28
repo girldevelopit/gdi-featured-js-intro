@@ -52,7 +52,170 @@
           <h1>Introduction to JavaScript</h1>
           <h2>Class 3</h2>
         </section>
-        <!-- Objects -->
+        <!-- Loops -->
+        <section id="loops">
+          <section>
+          <h3>Loops</h3>
+            <img src="img/hula-hoop.jpg" alt="Lego stormtrooper inside key ring"/>
+            <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/steve_pires/8430087504/" target="_blank">Steve Pires</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+          </section>
+
+          <section>
+          <h3>While loops</h3>
+            <p>While will repeat the same code over and over until some condition is met.</p>
+  <pre class="js"><code>var bottlesOfBeer = 99;
+  while (bottlesOfBeer &gt;= 1) {
+    console.log (bottlesOfBeer + ' bottles of beer on the wall');
+    bottlesOfBeer = bottlesOfBeer - 9;
+  }
+  </code></pre>
+          </section>
+
+          <section>
+            <h3>Infinite Loops</h3>
+            <p>Make sure something changes in the loop, or your loop will go on forever...</p>
+            <img src="img/infinite-loop.jpg" alt="Spiral that goes on toward infinity"/>
+            <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/samueljohn/5348462863/" target="_blank">Samuel John</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+          </section>
+
+          <section>
+            <h3>For loops</h3>
+            <p>For loops are very similar, but you declare a counter in the statement.</p>
+  <pre><code class="js">//will count 1 to 10
+  for (var i = 1; i &lt;= 10; i++) {
+    console.log (i);
+  }
+  </code></pre>
+          </section>
+
+          <section>
+            <h3>Loops and logic</h3>
+            <p>You can add other statements or logical operators inside the loops.</p>
+  <pre><code class="js">//Count from 1 to 50
+  for (var i = 1; i &lt;= 50; i++) {
+    console.log (i);
+    //Says 'Buzz' after multiples of three
+    if (i % 3 == 0) {
+      console.log (' Buzz');
+    }
+    //Says 'Bang' after multiples of five
+    if (i % 5 == 0) {
+      console.log (' Bang');
+    }
+  }
+  </code></pre>
+          </section>
+
+          <section>
+          <h3>Break</h3>
+            <p>To exit a loop, use the break statement.</p>
+  <pre><code class="js">//Count from 100 to 200
+  for (var i = 100; i &lt;= 200; i++) {
+    console.log('Testing ' + i);
+    //Stop at the first multiple of 7
+    if (i % 7 == 0) {
+      console.log('Found it! ' + i);
+      break;
+    }
+  }
+  </code></pre>
+          </section>
+
+          <section>
+          <h3>Let's Develop It</h3>
+          <p>Write a loop that gives you the 9's times table,<br /> from 9 x 1 = 9 to 9 x 12 = 108.</p>
+          <p>Finish early? Try using a loop inside a loop to write all the times tables, from 1 to 12.</p>
+          </section>
+        </section>
+
+        <!-- Arrays -->
+        <section id="arrays">
+          <section>
+            <h3>Arrays</h3>
+            <img src="img/kitten-group.jpg" alt="Group of kittens"/>
+            <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/pasotraspaso/4444291348/" target="_blank">Jesus Solana</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+          </section>
+
+          <section>
+            <h3>Arrays</h3>
+            <p>Arrays are ordered lists of values.</p>
+  <pre><code class="js">var arrayName = [element0, element1, ...];
+  </code></pre>
+            <p>You can put different types of data into an array.</p>
+  <pre><code class="js">var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
+  'Blue', 'Indigo', 'Violet'];
+  var lotteryNumbers = [33, 72, 64, 18, 17, 85];
+  var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
+  </code></pre>
+          </section>
+
+          <section>
+            <h3>Array Length</h3>
+            <p>The length property tells you how many things are in an array</p>
+  <pre><code class="js">var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
+  'Blue', 'Indigo', 'Violet'];
+  console.log(rainbowColors.length);
+  </code></pre>
+          </section>
+
+          <section>
+            <h3>Using Arrays</h3>
+            <p>You can access items with "bracket notation" by using the position of the object you want. Programmers start counting at zero.</p>
+  <pre><code class="js">var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
+  'Blue', 'Indigo', 'Violet'];
+  var firstColor = rainbowColors[0];
+  var lastColor = rainbowColors[6];
+  </code></pre>
+          </section>
+
+          <section>
+            <h3>Changing arrays</h3>
+            <p>You can use bracket notation to change an item in an array</p>
+  <pre><code class="js">var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
+  myFavoriteThings[0] = 'Asparagus';
+  </code></pre>
+          </section>
+
+          <section>
+            <h3>Expanding arrays</h3>
+            <p>Arrays do not have a fixed length. You can use "push" to add something to an array.</p>
+  <pre><code class="js">var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
+  myFavoriteThings.push('Dancing');
+  </code></pre>
+          </section>
+
+          <section>
+            <h3>Let's Develop It</h3>
+            <p>Create an array of your favorite foods. Echo a few values onto your screen.</p>
+          </section>
+        </section>
+
+        <!-- Arrays and loops-->
+        <section id="arraysandloops">
+          <section>
+            <h3>Arrays + loops = BFF</h3>
+            <img src="img/holding-hands.jpg" alt="Couple holding hands"/>
+            <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/mtsofan/8221708017/" target="_blank">John</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+          </section>
+
+          <section>
+            <h3>Iterating through arrays</h3>
+            <p>Use a for loop to easily process each item in an array.</p>
+  <pre><code class="js">var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
+    'Blue', 'Indigo', 'Violet'];
+  for (var i = 0; i &lt; rainbowColors.length; i++) {
+    console.log(rainbowColors[i]);
+  }
+  </code></pre>
+          </section>
+
+          <section>
+            <h3>Let's Develop It</h3>
+            <p>Use a loop to make a list of all your favorite foods.</p>
+          </section>
+        </section>
+
+      <!-- Objects -->
       <section>
         <section>
           <h3>Objects</h3>
