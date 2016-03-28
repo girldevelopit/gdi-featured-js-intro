@@ -76,6 +76,56 @@ partner + ' ' + ' with ' + numKids + ' kids.';
 console.log(future);
 </pre>
         </div>
+
+        <h3>The Temperature Converter</h3>
+        <p>Let's make a program to convert celsius tempatures to fahrenheit and vice versa, so we can complain about the weather with our friends oversees.</p>
+        <p><strong>Reminder:</strong> To convert celsius to fahrenheit, multiply by 9, then divide by 5, then add 32. To convert fahrenheit to celsius, deduct 32, then multiply by 5, then divide by 9.</p>
+        <ul>
+          <li>Store a celsius temperature into a variable.</li>
+          <li>Convert it to fahrenheit and output "NN°C is NN°F".</li>
+          <li>Now store a fahrenheit temperature into a variable.</li>
+          <li>Convert it to celsius and output "NN°F is NN°C."</li>
+        </ul>
+
+        <button onclick="showSolution(2)">Show/Hide Solution</button>
+        <div class="codebox" id="example2Code">
+<pre>var inputCelsius  = 25;
+var outputFahrenheit = (inputCelsius * 9)/5 + 32;
+console.log (inputCelsius + '°C is ' + outputFahrenheit + '°F');
+
+var inputFahrenheit  = 73;
+var outputCelsius = (inputFahrenheit - 32)/9 * 5;
+console.log (inputFahrenheit + '°F is ' + outputCelsius + '°C.');
+</pre>
+        </div>
+
+        <h3>Challenge Question: Using Math functions</h3>
+        <p>JavaScript has a built-in tool that can generate a random number between 0 and 1. This tools is called a <em>method</em>. We'll talk about methods more later in the class. For now, know if you type <code>Math.random()</code>, you'll get a random number between 0 and 1.</p>
+
+        <p>Using this tool, update your fahrenheit to celsius tempature conversion program to do the following:</p>
+        <ul>
+          <li>Instead of inputing a value for the Fahrenheit tempature, use Math.random() to generate a random tempature between 0 and 100</li>
+          <li>Have to program output: "It is NN°F today. That's NN°C."
+        </ul>
+
+        <button onclick="showSolution(3)">Show/Hide Solution</button>
+        <div class="codebox" id="example3Code">
+<pre>var inputFahrenheit  = Math.random()*100;
+var outputCelsius = (inputFahrenheit - 32)/9 * 5;
+console.log ('It is ' + inputFahrenheit + '°F today. That\'s ' + outputCelsius + '°C.');
+</pre>
+        </div>
+
+
+
+
+
+
+
+      </section>
+
+      <section>
+        <h2 id="class2">Class 2</h2>
         <h3>The Calculator</h3>
         <ul>
           <li>Write a function called <code>squareNumber</code> that will take one argument (a number), square that number, and return the result. It should also log a string like "The result of squaring the number 3 is 9." </li>
@@ -140,7 +190,7 @@ doCrazyStuff(5);
 </pre>
         </div>
 
-        <h3>Challenge Questions: String Manipulation</h3>
+        <h3>Challenge Question: String Manipulation</h3>
         <p>If you feel comfortable with the other exercises, it's time to expand your knowledge! These puzzles involve manipulating strings; to try them out, you'll need to use some of the <a href="http://www.w3schools.com/jsref/jsref_obj_string.asp" target="_blank">built-in JavaScript methods for strings</a>. Methods are pre-written functions that are built into the language.</p>
 
         <p>These questions are not as straightforward as the others. They challenge you to really think like a programmer. Really try to solve them before you peek at the answer.</p>
@@ -177,10 +227,8 @@ function fixStart(inputString) {
 }
 </pre>
         </div>
-      </section>
 
-      <section>
-        <h2 id="class2">Class 2</h2>
+
         <h3>What number is bigger?</h3>
         <p>Write a function that compares two numbers and returns the larger one. Be sure to try it our with some different numbers. Bonus: add error messages if the numbers are equal or cannot be compared.</p>
         <p>Don't forget to test it!</p>
