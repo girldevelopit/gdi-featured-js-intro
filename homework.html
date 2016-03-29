@@ -133,13 +133,6 @@ var outputCelsius = (inputFahrenheit - 32)/9 * 5;
 console.log ('It is ' + inputFahrenheit + '°F today. That\'s ' + outputCelsius + '°C.');
 </pre>
         </div>
-
-
-
-
-
-
-
       </section>
 
       <section>
@@ -335,8 +328,8 @@ console.log (fixStart('turtle'));
         <h3>Even/Odd Counter</h3>
         <p>Write a for loop that will iterate from 0 to 20. For each iteration, it will check if the current number is even or odd, and report that to the screen (e.g. "2 is even")</p>
 
-        <button onclick="showSolution(7)">Show/Hide Solution</button>
-        <div class="codebox" id="example7Code">
+        <button onclick="showSolution(11)">Show/Hide Solution</button>
+        <div class="codebox" id="example11Code">
 <pre>
 for (var i = 0; i &lt;= 20; i++) {
   if (i % 2 === 0) {
@@ -349,24 +342,36 @@ for (var i = 0; i &lt;= 20; i++) {
         </div>
 
         <h3>Top Choice</h3>
-        <p>Create an array to hold your top choices (colors, presidents, whatever). For each choice, log to the screen a string like: "My #1 choice is blue." Bonus: Change it to log "My 1st choice, "My 2nd choice", "My 3rd choice", picking the right suffix for the number based on what it is.</p>
+        <p>Create an array to hold your top choices (colors, presidents, whatever). For each choice, log to the screen a string like: "My #1 choice is blue."</p>
 
-        <button onclick="showSolution(8)">Show/Hide Solution</button>
-        <div class="codebox" id="example8Code">
+        <p>Bonus: Change it to log "My 1st choice, "My 2nd choice", "My 3rd choice", picking the right suffix for the number based on what it is. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice">The method slice</a> might be helpful here.</p>
+
+        <button onclick="showSolution(12)">Show/Hide Solution</button>
+        <div class="codebox" id="example12Code">
 <pre>
+//Simple code
 var choices = ['red', 'orange', 'pink', 'yellow'];
 for (var i = 0; i &lt; choices.length; i++) {
   console.log('My #' + (i + 1) + ' choice is ' + choices[i]);
 }
 
+//Bonus solution
+var choices = ['red', 'orange', 'pink', 'yellow'];
+function findLast (inputNum) {
+  tmpSlice = String(inputNum);
+  var lastDigit = (tmpSlice.slice(-1));
+  return lastDigit;
+}
+
 for (var i = 0; i &lt; choices.length; i++) {
   var choiceNum = i + 1;
-  var choiceNumSuffix;
-  if (choiceNum == 1) {
+  var choiceNumSuffix = 0;
+  var choiceNumLast = findLast(choiceNum);
+  if (choiceNumLast == 1) {
     choiceNumSuffix = 'st';
-  } else if (choiceNum == 2) {
+  } else if (choiceNumLast == 2) {
     choiceNumSuffix = 'nd';
-  } else if (choiceNum == 3) {
+  } else if (choiceNumLast == 3) {
     choiceNumSuffix = 'rd';
   } else {
     choiceNumSuffix = 'th';
@@ -384,8 +389,8 @@ for (var i = 0; i &lt; choices.length; i++) {
           <li>Now use an if/else statement to change the output depending on whether you read it yet or not. If you read it, log a string like 'You already read "The Hobbit" by J.R.R. Tolkien', and if not, log a string like 'You still need to read "The Lord of the Rings" by J.R.R. Tolkien.'</li>
         </ul>
 
-        <button onclick="showSolution(9)">Show/Hide Solution</button>
-        <div class="codebox" id="example9Code">
+        <button onclick="showSolution(13)">Show/Hide Solution</button>
+        <div class="codebox" id="example13Code">
 <pre>
 var books = [
   {title: 'The Design of EveryDay Things',
