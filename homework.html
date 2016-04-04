@@ -109,11 +109,11 @@ console.log('They are either ' + age + ' or ' + (age - 1));
         <div class="codebox" id="example3Code">
 <pre>var inputCelsius  = 25;
 var outputFahrenheit = (inputCelsius * 9)/5 + 32;
-console.log (inputCelsius + '°C is ' + outputFahrenheit + '°F');
+console.log(inputCelsius + '°C is ' + outputFahrenheit + '°F');
 
 var inputFahrenheit  = 73;
 var outputCelsius = (inputFahrenheit - 32)/9 * 5;
-console.log (inputFahrenheit + '°F is ' + outputCelsius + '°C.');
+console.log(inputFahrenheit + '°F is ' + outputCelsius + '°C.');
 </pre>
         </div>
 
@@ -130,7 +130,7 @@ console.log (inputFahrenheit + '°F is ' + outputCelsius + '°C.');
         <div class="codebox" id="example4Code">
 <pre>var inputFahrenheit  = Math.random()*100;
 var outputCelsius = (inputFahrenheit - 32)/9 * 5;
-console.log ('It is ' + inputFahrenheit + '°F today. That\'s ' + outputCelsius + '°C.');
+console.log('It is ' + inputFahrenheit + '°F today. That\'s ' + outputCelsius + '°C.');
 </pre>
         </div>
       </section>
@@ -171,22 +171,22 @@ tellFortune('Elvis impersonator', 'Russia', 'The Oatmeal', 0);
         <div class="codebox" id="example6Code">
 <pre>function greaterNum(num1, num2) {
   if (num1 === num2) {
-    console.log ('Those numbers are equal');
+    console.log('Those numbers are equal');
     return num1;
   } else if (num1 &gt; num2) {
     return num1;
   } else if (num2 &gt; num1) {
     return num2;
   } else {
-    console.log ('Those are simply incomparable!');
+    console.log('Those are simply incomparable!');
     return undefined;
   }
 }
 
-console.log (greaterNum(3, 3));
-console.log (greaterNum(7, -2));
-console.log (greaterNum(5, 9));
-console.log (greaterNum(5, 'dog'));
+console.log(greaterNum(3, 3));
+console.log(greaterNum(7, -2));
+console.log(greaterNum(5, 9));
+console.log(greaterNum(5, 'dog'));
 </pre>
         </div>
 
@@ -297,8 +297,8 @@ mixUp('dog', 'dinner'): 'dig donner'
 function mixUp(string1, string2) {
   return string2.slice(0, 2) + string1.slice(2) + " " + string1.slice(0, 2) + string2.slice(2);
 }
-console.log (mixUp('mix', 'pod'));
-console.log (mixUp('dog', 'dinner'));
+console.log(mixUp('mix', 'pod'));
+console.log(mixUp('dog', 'dinner'));
 </pre>
         </div>
 
@@ -316,8 +316,8 @@ function fixStart(inputString) {
   var firstChar = inputString.charAt(0);
   return firstChar + inputString.slice(1).replace(new RegExp(firstChar, 'g'), '*');
 }
-console.log (fixStart('babble'));
-console.log (fixStart('turtle'));
+console.log(fixStart('babble'));
+console.log(fixStart('turtle'));
 </pre>
         </div>
       </section>
@@ -589,7 +589,7 @@ button.innerHTML = 'Yahoooo!';
         <div class="codebox" id="example16Code">
 <pre>function countTags (tagType) {
   var tagArray = document.getElementsByTagName(tagType);
-  console.log ('There are ' + tagArray.length + ' tags of type ' + tagType + ' on the page.');
+  console.log('There are ' + tagArray.length + ' tags of type ' + tagType + ' on the page.');
 }
 </pre>
         </div>
