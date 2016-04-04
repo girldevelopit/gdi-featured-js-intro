@@ -376,7 +376,7 @@ pageNode.appendChild(newParagraph);
 <pre><code class="html">&lt;button id="clickMe" onclick="sayHi()"&gt;Click Me!&lt;/button&gt;
 </code></pre>
 <pre><code class="js">function sayHi() {
-  alert ('Hi!');
+  alert('Hi!');
 }
 </code></pre>
         </section>
@@ -397,7 +397,7 @@ pageNode.appendChild(newParagraph);
 </code></pre>
           <p>Then add an event to that object:</p>
 <pre><code class="js">myTarget.onclick=function(){
-  alert ('Hi!');
+  alert('Hi!');
 }
 </code></pre>
         </section>
@@ -478,7 +478,7 @@ element.onclick=function (event) {
           <h3>Retrieving Form Data</h3>
           <p>You retrieve the values of form elements using the <code>value</code> method.</p>
 <pre><code class="js">var temperature=document.getElementById('temp').value;
-console.log (temperature);
+console.log(temperature);
 </code></pre>
           <p>You can retrieve the value of a form at any time. Try <code>onblur</code> (when a form element loses focus).</p>
         </section>
@@ -505,7 +505,7 @@ for (var i=0, length=radios.length; i &lt; length; i++) {
   submitButton.onclick=function () {
   event.preventDefault();
   var temperature=document.getElementById('temp').value;
-  console.log (temperature);
+  console.log(temperature);
 }
 </code></pre>
         </section>
