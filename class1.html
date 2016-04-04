@@ -89,9 +89,6 @@
         <section>
           <h3>The language of the web</h3>
           <img src="img/client-server.jpg" alt="Laptop and server connected via the internet"/>
-          <p>Can be read by most web browsers (Chrome, IE, etc)</p>
-          <p>Used for scripting /plugins</p>
-          <p>Also used in things outside of the web (Node.js)</p>
           <p>
             <small class="credit">Photo credits: <a href="http://www.flickr.com/photos/papalars/5210226441/" target="_blank">Andrew E. Larson</a> and <a href="http://www.flickr.com/photos/johnseb/3425464/" target="_blank">John Seb Barber</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></small>
           </p>
@@ -145,6 +142,23 @@
           </p>
         </section>
 
+              <!-- Using JavaScript -->
+        <section>
+          <h3>Script Tags</h3>
+          <p>You can mix JavaScript and HTML. The <b>script tag</b> tells your browser the stuff inside is code, not content.</p>
+<pre><code class="html">&lt;script&gt;
+  CODE GOES HERE
+&lt;/script&gt;
+</code></pre>
+        </section>
+
+        <section>
+          <h3>JavaScript Files</h3>
+          <p>Just like CSS, you can split a long block of JavaScript into its own file. </p>
+<pre><code class="html">&lt;script src="path/to/file.js"&gt;&lt;/script&gt;
+</code></pre>
+        </section>
+
         <section>
           <h3>Let's Develop It</h3>
           <ul>
@@ -169,98 +183,87 @@
 
         <section>
           <h3>How does JavaScript work?</h3>
-          <ol>
-            <li>A user visits a website with JavaScript code on it.</li>
-            <li>The user's browser (e.g., Chrome) reads the code line-by-line.</li>
-            <li>The browser executes (runs) each line of code as it reads it.</li>
-            <li>Based on these instructions, the browser performs calculations and changes the HTML and CSS on the page.</li>
-            <li>If the browser finds code it doesn't understand, it stops running and creates an error message.</li>
-          </ol>
+          <div class="left-align">
+            <ol>
+              <li>You visit a website with JavaScript code on it.</li>
+              <li>Your browser (e.g., Chrome) reads the code line-by-line.</li>
+              <li>The browser runs each line of code as it reads it.</li>
+              <li>Based on these instructions, the browser performs calculations and changes the HTML and CSS on the page.</li>
+              <li>If the browser finds code it doesn't understand, it stops running and creates an error message.</li>
+            </ol>
+          </div>
         </section>
 
         <section>
-          <h3>Watch Out!</h3>
-          <p>Every browser interprets JavaScript differently.</p>
+          <h3>Console</h3>
           <p>You can see what's going on in the <b>console</b>.</p>
-          <img>console image
+          <img src="img/console-panel.png">
         </section>
 
         <section>
           <h3>Let's Develop It</h3>
           <ul>
             <li>Open the console.</li>
-            <li>In Chrome, use the keyboard shortcut <strong>Command + Option + J</strong> (Mac) or <strong>Control + Shift + J</strong> (Windows/Linux).</li>
+            <li>In Chrome, use the keyboard shortcut:
+              <ul>
+                <li>Mac: <strong>Command + Option + J</strong></li>
+                <li>Windows: <strong>Control + Shift + J</strong></li>
+              </ul>
             <li>Open your practice page.</li>
             <li>Do you see anything in the console?</li>
-            <li>Try typing in 2 + 2</li>
+            <li>Try typing in 2 + 2 and hitting enter.</li>
           </ul>
-        </section>
-
-      <!-- Using JavaScript -->
-        <section>
-          <h3>Script Tags</h3>
-          <p>You can mix JavaScript and HTML. The <b>script tag</b> tells your browser the stuff inside is code, not content.</p>
-<pre><code class="html">&lt;script&gt;
-  CODE GOES HERE
-&lt;/script&gt;
-</code></pre>
-        </section>
-
-        <section>
-          <h3>JavaScript Files</h3>
-          <p>Just like CSS, you can split a long block of JavaScript into its own file. </p>
-<pre><code class="html">&lt;script src="path/to/file.js"&gt;&lt;/script&gt;
-</code></pre>
         </section>
 
         <section>
           <h3>Statements</h3>
           <p>Each instruction in JS is a "statement", like:</p>
-<pre><code class="js">console.log('Hello World!');
+<pre><code class="javascript">console.log('Hello World!');
 console.log('I am glad to meet you');
 console.log('I am fuzzy');
 </code></pre>
-  <p>A 'simple' statement represents a single instruction and ends with a semi-colon. You can think of a simple statement like a sentence - the semi-colon is like a full stop and tells Javascript that your statement is finished.
-Let's add a simple statement to our script tags and see what happens...</p>
         </section>
 
         <section>
           <h3>Comments</h3>
-          <p>You can leave comments in your code&mdash;notes that people can read and computers will ignore.</p>
-<pre><code class="js">/* I can make long comments
-with multiple lines
-like this */
-console.log('Hello World!'); //Or make short comments like this
+          <p>You can leave comments in your code&mdash;notes that people can read but computers will ignore.</p>
+<pre><code class="javascript">/*
+I can make long comments
+with multiple lines here
+*/
+
+console.log('Hello World!'); // Or make short comments here
 </code></pre>
         </section>
 
         <section>
           <h3>Getting results onto your screen</h3>
           <p>Open a popup box.</p>
-<pre><code class="js">alert('Hello World!');
+<pre><code class="javascript">alert('Hello World!');
 </code></pre>
           <p>Display a message in your console.</p>
-<pre><code class="js">console.log('Hello World!');
+<pre><code class="javascript">console.log('Hello World!');
 </code></pre>
           <p>Add something to the page.</p>
-<pre><code class="js">document.write('Hello World!');
+<pre><code class="javascript">document.write('Hello World!');
 </code></pre>
         </section>
 
         <section>
           <h3>Let's Develop It</h3>
           <ul>
-            <li>Open index.html. Add a comment to the code.</li>
-            <li>Try different ways of printing your message.</li>
-            <li>Create a new file called mycode.js. Move your code to this file and link it to your page.</li>
+            <li>Open <code>index.html</code>.</li>
+            <li>Add a comment to the code.</li>
+            <li>Try different ways of printing a message.</li>
+            <li>Create a new file called <code>mycode.js</code>.</li>
+            <li>Move your code to this file and link it to your page.</li>
           </ul>
         </section>
 
       <!-- Variables -->
         <section>
           <h3>Variables</h3>
-          <p>Variables are one of the basic building blocks of Javascript</p>
-          <p>Just like 'x' in algebra, a variable in programming is a named container for a value that can change.</p>
+          <p>Just like 'x' in algebra, a variable is a named container for a value that can change.</p>
           <img src="img/empty-glass.jpg" alt="Empty glass" class="noborder"/>
           <p class="credit">
             <small>Photo credit: <a href="http://www.flickr.com/photos/giuliag/3570562404/" target="_blank">giulia gasparro</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></small>
@@ -268,33 +271,17 @@ console.log('Hello World!'); //Or make short comments like this
         </section>
 
         <section>
-          <h3>Primitive Data Types</h3>
-               <p style="display:none;">Variables can store different "types" of data, like:</p>
-              <ul>
-               <li><b>string:</b> an immutable string of characters:
-              <pre>var greeting = 'Hello Kitty';
-              var restaurant = "Pamela's Place";
-              </pre>
-               <li><b>number:</b> whole (6, -102) or floating point (5.8737):
-              <pre>var myAge = 28;
-              var pi = 3.14;
-              </pre>
-               <li><b>boolean:</b> Represents logical values true or false:
-              <pre>var catsAreBest = true;
-              var dogsRule = false;
-              </pre>
-               <li><b>undefined:</b> Represents a value that hasn't been defined.
-              <pre>var notDefinedYet;</pre>
-               <li><b>null:</b> Represents an explicitly empty value.
-              <pre>var goodPickupLines = null;</pre>
-              </ul>
+          <h3>Declaring a Variable</h3>
+          <p>To declare (create) a variable, just type the word <code>var</code> and the variable name.</p>
+<pre><code class="javascript">var numberOfKittens;</code></pre>
+          <p>It is a good idea to give your variable a starting value. This is called initializing the variable.</p>
+<pre><code class="javascript">var numberOfKittens = 5;</code></pre>
         </section>
 
-
         <section>
-        <h3>Variable Values</h3>
+          <h3>Variable Values</h3>
           <ul>
-            <li>When you first create a variable, it does not have a value (it is null).</li>
+            <li>When you first create a variable, it does not have a value (it is <code>undefined</code>).</li>
             <li>You can set a value for a variable.</li>
             <li>Variables can hold different types of data.</li>
             <li>The value of a variable can change over time.</li>
@@ -305,35 +292,47 @@ console.log('Hello World!'); //Or make short comments like this
           <h3>Naming Variables</h3>
           <ul>
             <li>The variable name is case-sensitive.</li>
-            <li>A new variable needs to have a unique name.</li>
-            <li>Variable names need to start with a letter, $, or _.</li>
-            <li>Variable names can only be made of letters, numbers, $, or _.</li>
-            <li>Avoid <a href="https://developer.mozilla.org/en/JavaScript/Reference/Reserved_Words">reserved words</a></li>
-            <li>Choose clarity and meaning for humans to read later</li>
+            <li>A new variable should have a unique name.</li>
+            <li>Variable names need to start with a letter, <code>$</code>, or <code>_</code>.</li>
+            <li>Avoid <a href="https://developer.mozilla.org/en/JavaScript/Reference/Reserved_Words">reserved words</a>.</li>
+            <li>Choose clarity and meaning for humans to read later.</li>
           </ul>
-        </section>
-
-        <section>
-          <h3>Declaring a Variable</h3>
-          <p>To declare (create) a variable, just type the word "var" and the variable name.</p>
-<pre><code class="js">var numberOfKittens;</code></pre>
-          <p>It is a good idea to give your variable a starting value. This is called initializing the variable.</p>
-<pre><code class="js">var numberOfKittens = 5;</code></pre>
         </section>
 
         <section>
           <h3>Using a Variable</h3>
           <p>Once you have created a variable, you can use it in your code. Just type the name of the variable.</p>
-<pre><code class="js">var numberOfKittens = 5;
+<pre><code class="javascript">var numberOfKittens = 5;
+
 console.log (numberOfKittens);
 </code></pre>
         </section>
 
         <section>
           <h3>Let's Develop It</h3>
-          <p>In your JS file, create a variable and give it a valid name and a value. Then, display the value.</p>
+          <p>In your JavaScript file, create a variable and give it a valid name and value. Then, display the value.</p>
         </section>
 
+        <section>
+          <h3>Data Types</h3>
+          <ul>
+            <li><b>string</b> string of characters
+              <pre><code class="javascript">var userName = 'Jane Lane';</code></pre>
+            </li>
+            <li><b>number</b> integer or floating point
+              <pre><code class="javascript">var myAge = 30;</code></pre>
+            </li>
+            <li><b>boolean</b> true or false
+              <pre><code class="javascript">var catsAreBest = true;</code></pre>
+            </li>
+            <li><b>undefined</b> value that hasn't been defined
+              <pre><code class="javascript">var favoriteThings;</code></pre>
+            </li>
+            <li><b>null</b> an explicitly empty value
+              <pre><code class="javascript">var goodPickupLines = null;</code></pre>
+            </li>
+          </ul>
+        </section>
 
       <!-- Variable Types and Operators-->
       <!-- Numbers-->
@@ -347,17 +346,18 @@ console.log (numberOfKittens);
 
         <section>
           <h3>Numbers</h3>
-          <p>Variable can be numbers, either integers or floats (decimals).</p>
-<pre><code class="js">var numberOfKittens = 5;
+          <p>Numbers can be either integers or floats (decimals).</p>
+<pre><code class="javascript">var numberOfKittens = 5;
 var cutenessRating = 9.6;
 </code></pre>
-          <p>The browser will automatically convert integers to floats if needed</p>
+          <p>JavaScript automatically converts integers to floats</p>
+          <p><code>NaN</code> = Not-A-Number</p>
         </section>
 
         <section>
           <h3>Arithmetic Operators</h3>
           <p>Once you have numbers, you can do math with them!</p>
-<pre><code class="js">var numberOfKittens = 5;
+<pre><code class="javascript">var numberOfKittens = 5;
 var numberOfPuppies = 4;
 var numberOfAnimals = numberOfKittens + numberOfPuppies;
 </code></pre>
@@ -375,34 +375,34 @@ var numberOfAnimals = numberOfKittens + numberOfPuppies;
             </thead>
             <tbody>
               <tr>
-                <td>-a</td>
-                <td>Negation</td>
-                <td>Opposite of a.</td>
+                <td><code>-a</code></td>
+                <td> Negation</td>
+                <td>Opposite of <code>a</code>.</td>
               </tr>
               <tr>
-                <td>a + b</td>
+                <td><code>a + b</code></td>
                 <td>Addition</td>
-                <td>Sum of a and b.</td>
+                <td>Sum of <code>a</code> and <code>b</code>.</td>
               </tr>
               <tr>
-                <td>a - b</td>
+                <td><code>a - b</code></td>
                 <td>Subtraction</td>
-                <td>Difference of a and b.</td>
+                <td>Difference of <code>a</code> and <code>b</code>.</td>
               </tr>
               <tr>
-                <td>a * b</td>
+                <td><code>a * b</code></td>
                 <td>Multiplication</td>
-                <td>Product of a and b.</td>
+                <td>Product of <code>a</code> and <code>b</code>.</td>
               </tr>
               <tr>
-                <td>a / b</td>
+                <td><code>a / b</code></td>
                 <td>Division</td>
-                <td>Quotient of a and b.</td>
+                <td>Quotient of <code>a</code> and <code>b</code>.</td>
               </tr>
               <tr>
-                <td>a % b</td>
+                <td><code>a % b</code></td>
                 <td>Modulus</td>
-                <td>Remainder of a divided by b.</td>
+                <td>Remainder of <code>a</code> divided by <code>b</code>.</td>
               </tr>
             </tbody>
           </table>
@@ -417,10 +417,10 @@ var numberOfAnimals = numberOfKittens + numberOfPuppies;
       <!-- Strings -->
         <section>
           <h3>Strings</h3>
-          <p>Variables can be strings, groups of characters. You put your string in quotes.</p>
-<pre><code class="js">var kittensName = 'Fluffy';</code></pre>
+          <p>Variables can be strings, groups of characters. You put your string in single or double quotes.</p>
+<pre><code class="javascript">var kittensName = 'Fluffy';</code></pre>
           <p>If you want to use a quote in your string, you'll need to "escape" it with a backslash.</p>
-<pre><code class="js">console.log('I\'d like to use an apostrophe');</code></pre>
+<pre><code class="javascript">console.log('I\'d like to use an apostrophe');</code></pre>
         </section>
 
         <section>
@@ -433,19 +433,19 @@ var numberOfAnimals = numberOfKittens + numberOfPuppies;
 
         <section>
           <h3>String Operators</h3>
-          <p>You can put strings together with a +, the concatenation operator.</p>
-          <pre><code class="js">var kittensName = 'Fluffy ';
+          <p>You can put strings together with a <code>+</code>, the concatenation operator.</p>
+          <pre><code class="javascript">var kittensName = 'Fluffy ';
 var fullName = kittensName + 'McDougle';
-console.log(fullName); //Outputs 'Fluffy McDougle'
+console.log(fullName); // Outputs 'Fluffy McDougle'
 </code></pre>
         </section>
 
         <section>
           <h3>String Operators</h3>
-          <p>You can also use += to add things to the end of a string.</p>
-<pre><code class="js">var kittensName = 'Admiral ';
+          <p>You can also use <code>+=</code> to add things to the end of a string.</p>
+<pre><code class="javascript">var kittensName = 'Admiral ';
 kittensName += 'Snuggles';
-console.log(kittensName); //Outputs 'Admiral Snuggles'
+console.log(kittensName); // Outputs 'Admiral Snuggles'
 </code></pre>
         </section>
 
@@ -465,9 +465,9 @@ console.log(kittensName); //Outputs 'Admiral Snuggles'
         <section>
           <h3>Combining strings and numbers</h3>
           <p>You can use the concatenate function to mix strings and numbers. When you do this, JavaScript will treat the number like a string.</p>
-<pre><code class="js">var numberOfFruit = 6;
+<pre><code class="javascript">var numberOfFruit = 6;
 var typeOfFruit = 'bananas';
-var allTheFruit = 'Wow, I have ' + numberOfFruit + ' ' + typeOfFruit + '!';
+var allTheFruit = 'I have ' + numberOfFruit + ' ' + typeOfFruit + '!';
 console.log(allTheFruit);
 </code></pre>
         </section>
@@ -475,13 +475,11 @@ console.log(allTheFruit);
           <h3>Let's Develop It</h3>
           <p>Create a program to calculate the tip at a restuarant. It should:</p>
           <ul>
-            <li>Have variables for the bill pre-tip and the tip percentage</li>
-            <li>Calculate the total bill</li>
-            <li>Output a sentence like "Your total bill, with tip, is $14.75"</li>
+            <li>Have variables for the bill pre-tip and the tip percentage.</li>
+            <li>Calculate the total bill.</li>
+            <li>Output a sentence like "Your total bill, with tip, is $14.75".</li>
           </ul>
         </section>
-
-
 
       <!-- Final slides-->
         <section>
