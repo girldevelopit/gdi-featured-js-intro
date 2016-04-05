@@ -26,13 +26,13 @@ This course is specifically for beginners and we advise experienced developers t
 
 ## Classes
 ### Class 1: Introduction to JavaScript and Basic Programming Concepts
-An overview of the history of JavaScript, what it is, and how it interacts with the browser. Covers basic JavaScript concepts including variables, data types, and functions.
+An overview of the history of JavaScript, what it is, and how it interacts with the browser. Covers basic JavaScript concepts including variables and data types
 
-### Class 2: Control Flow
-Introduces boolean variable, if/then statements, loops, and arrays.
+### Class 2: Functions and Control Flow
+Introduces functions, boolean variable, and if/then/else statements.
 
-### Class 3: Introduction to the DOM
-Introduces the Document Object Model (DOM) and how to use JavaScript to interact with it. Includes finding and modifying nodes.
+### Class 3: Loops, Arrays, and Objects
+Introduces more complex programing concepts, including loops, arrays, objects, and mthods.
 
-### Class 4: Events and Animations
-Introduces events, listening functions, user inputs, and basic animations.
+### Class 4: Introduction to the DOM
+Introduces the Document Object Model (DOM) and how to use JavaScript to interact with it. Includes finding and modifying nodes, events, and listeing functions.
