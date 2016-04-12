@@ -63,12 +63,12 @@
           <section>
           <h3>While loops</h3>
             <p>While will repeat the same code over and over until some condition is met.</p>
-  <pre class="js"><code>var bottlesOfBeer = 99;
-  while (bottlesOfBeer &gt;= 1) {
-    console.log (bottlesOfBeer + ' bottles of beer on the wall');
-    bottlesOfBeer = bottlesOfBeer - 9;
-  }
-  </code></pre>
+<pre class="javascript"><code>var bottlesOfBeer = 99;
+while (bottlesOfBeer &gt;= 1) {
+  console.log (bottlesOfBeer + ' bottles of beer on the wall');
+  bottlesOfBeer = bottlesOfBeer - 9;
+}
+</code></pre>
           </section>
 
           <section>
@@ -81,44 +81,44 @@
           <section>
             <h3>For loops</h3>
             <p>For loops are very similar, but you declare a counter in the statement.</p>
-  <pre><code class="js">//will count 1 to 10
-  for (var i = 1; i &lt;= 10; i++) {
-    console.log (i);
-  }
-  </code></pre>
+<pre><code class="javascript">//will count 1 to 10
+for (var i = 1; i &lt;= 10; i++) {
+  console.log (i);
+}
+</code></pre>
           </section>
 
           <section>
             <h3>Loops and logic</h3>
             <p>You can add other statements or logical operators inside the loops.</p>
-  <pre><code class="js">//Count from 1 to 50
-  for (var i = 1; i &lt;= 50; i++) {
-    console.log (i);
-    //Says 'Buzz' after multiples of three
-    if (i % 3 == 0) {
-      console.log (' Buzz');
-    }
-    //Says 'Bang' after multiples of five
-    if (i % 5 == 0) {
-      console.log (' Bang');
-    }
+<pre><code class="javascript">//Count from 1 to 50
+for (var i = 1; i &lt;= 50; i++) {
+  console.log (i);
+  //Says 'Buzz' after multiples of three
+  if (i % 3 == 0) {
+    console.log (' Buzz');
   }
-  </code></pre>
+  //Says 'Bang' after multiples of five
+  if (i % 5 == 0) {
+    console.log (' Bang');
+  }
+}
+</code></pre>
           </section>
 
           <section>
           <h3>Break</h3>
             <p>To exit a loop, use the break statement.</p>
-  <pre><code class="js">//Count from 100 to 200
-  for (var i = 100; i &lt;= 200; i++) {
-    console.log('Testing ' + i);
-    //Stop at the first multiple of 7
-    if (i % 7 == 0) {
-      console.log('Found it! ' + i);
-      break;
-    }
+<pre><code class="javascript">//Count from 100 to 200
+for (var i = 100; i &lt;= 200; i++) {
+  console.log('Testing ' + i);
+  //Stop at the first multiple of 7
+  if (i % 7 == 0) {
+    console.log('Found it! ' + i);
+    break;
   }
-  </code></pre>
+}
+</code></pre>
           </section>
 
           <section>
@@ -139,49 +139,49 @@
           <section>
             <h3>Arrays</h3>
             <p>Arrays are ordered lists of values.</p>
-  <pre><code class="js">var arrayName = [element0, element1, ...];
-  </code></pre>
+<pre><code class="javascript">var arrayName = [element0, element1, ...];
+</code></pre>
             <p>You can put different types of data into an array.</p>
-  <pre><code class="js">var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
-  'Blue', 'Indigo', 'Violet'];
-  var lotteryNumbers = [33, 72, 64, 18, 17, 85];
-  var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
-  </code></pre>
+<pre><code class="javascript">var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
+'Blue', 'Indigo', 'Violet'];
+var lotteryNumbers = [33, 72, 64, 18, 17, 85];
+var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
+</code></pre>
           </section>
 
           <section>
             <h3>Array Length</h3>
             <p>The length property tells you how many things are in an array</p>
-  <pre><code class="js">var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
-  'Blue', 'Indigo', 'Violet'];
-  console.log(rainbowColors.length);
-  </code></pre>
+<pre><code class="javascript">var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
+'Blue', 'Indigo', 'Violet'];
+console.log(rainbowColors.length);
+</code></pre>
           </section>
 
           <section>
             <h3>Using Arrays</h3>
             <p>You can access items with "bracket notation" by using the position of the object you want. Programmers start counting at zero.</p>
-  <pre><code class="js">var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
-  'Blue', 'Indigo', 'Violet'];
-  var firstColor = rainbowColors[0];
-  var lastColor = rainbowColors[6];
-  </code></pre>
+<pre><code class="javascript">var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
+'Blue', 'Indigo', 'Violet'];
+var firstColor = rainbowColors[0];
+var lastColor = rainbowColors[6];
+</code></pre>
           </section>
 
           <section>
             <h3>Changing arrays</h3>
             <p>You can use bracket notation to change an item in an array</p>
-  <pre><code class="js">var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
-  myFavoriteThings[0] = 'Asparagus';
-  </code></pre>
+<pre><code class="javascript">var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
+myFavoriteThings[0] = 'Asparagus';
+</code></pre>
           </section>
 
           <section>
             <h3>Expanding arrays</h3>
             <p>Arrays do not have a fixed length. You can use "push" to add something to an array.</p>
-  <pre><code class="js">var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
-  myFavoriteThings.push('Dancing');
-  </code></pre>
+<pre><code class="javascript">var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
+myFavoriteThings.push('Dancing');
+</code></pre>
           </section>
 
           <section>
@@ -201,12 +201,12 @@
           <section>
             <h3>Iterating through arrays</h3>
             <p>Use a for loop to easily process each item in an array.</p>
-  <pre><code class="js">var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
-    'Blue', 'Indigo', 'Violet'];
-  for (var i = 0; i &lt; rainbowColors.length; i++) {
-    console.log(rainbowColors[i]);
-  }
-  </code></pre>
+<pre><code class="javascript">var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
+  'Blue', 'Indigo', 'Violet'];
+for (var i = 0; i &lt; rainbowColors.length; i++) {
+  console.log(rainbowColors[i]);
+}
+</code></pre>
           </section>
 
           <section>
@@ -226,13 +226,13 @@
         <section>
           <h3>Objects</h3>
           <p>Objects let us store a collection of properties.</p>
-<pre><code class="js">var objectName={
+<pre><code class="javascript">var objectName={
   propertyName: propertyValue,
   propertyName: propertyValue,
   ...
 };
 </code></pre>
-<pre><code class="js">var aboutMe={
+<pre><code class="javascript">var aboutMe={
   hometown: 'Atlanta, GA',
   hair: 'Auburn',
   likes: ['knitting', 'code'],
@@ -244,38 +244,38 @@
         <section>
           <h3>Accessing Objects</h3>
           <p>You can retrieve values using "dot notation"</p>
-<pre><code class="js">var aboutMe={
+<pre><code class="javascript">var aboutMe={
   hometown: 'Atlanta, GA',
   hair: 'Auburn'
 };
 var myHometown=aboutMe.hometown;
 </code></pre>
           <p>Or using "bracket notation" (like arrays)</p>
-<pre><code class="js">var myHair=aboutMe['hair'];
+<pre><code class="javascript">var myHair=aboutMe['hair'];
 </code></pre>
         </section>
 
         <section>
           <h3>Changing Objects</h3>
           <p>You can use dot or bracket notation to change properties</p>
-<pre><code class="js">var aboutMe={
+<pre><code class="javascript">var aboutMe={
   hometown: 'Atlanta, GA',
   hair: 'Auburn'
 };
 aboutMe.hair='blue';
 </code></pre>
           <p>Add new properties</p>
-<pre><code class="js">aboutMe.gender='female';
+<pre><code class="javascript">aboutMe.gender='female';
 </code></pre>
           <p>Or delete them</p>
-<pre><code class="js">delete aboutMe.gender;
+<pre><code class="javascript">delete aboutMe.gender;
 </code></pre>
         </section>
 
         <section>
           <h3>Arrays of Objects</h3>
           <p>Because arrays can hold any data type, they can also hold objects</p>
-<pre><code class="js">var myCats=[
+<pre><code class="javascript">var myCats=[
   {name: 'Lizzie',  age: 18},
   {name: 'Daemon',  age: 1}
 ];
@@ -290,7 +290,7 @@ for (var i=0; i &lt; myCats.length; i++) {
         <section>
           <h3>Arrays of Objects</h3>
           <p>Just like other data types, objects can be passed into functions:</p>
-<pre><code class="js">var lizzieTheCat={
+<pre><code class="javascript">var lizzieTheCat={
   age: 18,
   furColor: 'grey',
   likes: ['catnip', 'milk'],
@@ -319,7 +319,7 @@ describeCat(lizzieTheCat);
         <section>
           <h3>Object methods</h3>
           <p>Objects can also hold functions.</p>
-<pre><code class="js">var lizzieTheCat={
+<pre><code class="javascript">var lizzieTheCat={
   age: 18,
   furColor: 'grey',
   meow: function() {
@@ -331,7 +331,7 @@ describeCat(lizzieTheCat);
 };
 </code></pre>
           <p>Call object methods using dot notation:</p>
-<pre><code class="js">lizzieTheCat.meow();
+<pre><code class="javascript">lizzieTheCat.meow();
 lizzieTheCat.eat('brown mushy stuff');
 </code></pre>
         </section>

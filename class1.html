@@ -232,7 +232,7 @@
         <section>
           <h3>Separating Instructions</h3>
           <p>After each individual statement, you must add a semicolon.</p>
-<pre><code class="js">console.log('Hello World!');
+<pre><code class="javascript">console.log('Hello World!');
 console.log('I am glad to meet you');
 console.log('I am fuzzy');
 </code></pre>
@@ -241,7 +241,7 @@ console.log('I am fuzzy');
         <section>
           <h3>Comments</h3>
           <p>You can leave comments in your code&mdash;notes that people can read and computers will ignore.</p>
-<pre><code class="js">/*I can make long comments
+<pre><code class="javascript">/*I can make long comments
 with multiple lines
 like this*/
 console.log('Hello World!'); //Or make short comments like this
@@ -251,13 +251,13 @@ console.log('Hello World!'); //Or make short comments like this
         <section>
           <h3>Getting results onto your screen</h3>
           <p>Open a popup box.</p>
-<pre><code class="js">alert('Hello World!');
+<pre><code class="javascript">alert('Hello World!');
 </code></pre>
           <p>Display a message in your console.</p>
-<pre><code class="js">console.log('Hello World!');
+<pre><code class="javascript">console.log('Hello World!');
 </code></pre>
           <p>Add something to the page.</p>
-<pre><code class="js">document.write('Hello World!');
+<pre><code class="javascript">document.write('Hello World!');
 </code></pre>
         </section>
 
@@ -303,15 +303,15 @@ console.log('Hello World!'); //Or make short comments like this
         <section>
           <h3>Declaring a Variable</h3>
           <p>To declare (create) a variable, just type the word "var" and the variable name.</p>
-<pre><code class="js">var numberOfKittens;</code></pre>
+<pre><code class="javascript">var numberOfKittens;</code></pre>
           <p>It is a good idea to give your variable a starting value. This is called initializing the variable.</p>
-<pre><code class="js">var numberOfKittens = 5;</code></pre>
+<pre><code class="javascript">var numberOfKittens = 5;</code></pre>
         </section>
 
         <section>
           <h3>Using a Variable</h3>
           <p>Once you have created a variable, you can use it in your code. Just type the name of the variable.</p>
-<pre><code class="js">var numberOfKittens = 5;
+<pre><code class="javascript">var numberOfKittens = 5;
 console.log (numberOfKittens);
 </code></pre>
         </section>
@@ -335,7 +335,7 @@ console.log (numberOfKittens);
         <section>
           <h3>Numbers</h3>
           <p>Variable can be numbers, either integers or floats (decimals).</p>
-<pre><code class="js">var numberOfKittens = 5;
+<pre><code class="javascript">var numberOfKittens = 5;
 var cutenessRating = 9.6;
 </code></pre>
           <p>The browser will automatically convert integers to floats if needed</p>
@@ -344,7 +344,7 @@ var cutenessRating = 9.6;
         <section>
           <h3>Arithmetic Operators</h3>
           <p>Once you have numbers, you can do math with them!</p>
-<pre><code class="js">var numberOfKittens = 5;
+<pre><code class="javascript">var numberOfKittens = 5;
 var numberOfPuppies = 4;
 var numberOfAnimals = numberOfKittens + numberOfPuppies;
 </code></pre>
@@ -406,9 +406,9 @@ var numberOfAnimals = numberOfKittens + numberOfPuppies;
         <section>
           <h3>Strings</h3>
           <p>Variable can be strings, groups of characters. You put your string in quotes.</p>
-<pre><code class="js">var kittensName = 'Fluffy';</code></pre>
+<pre><code class="javascript">var kittensName = 'Fluffy';</code></pre>
           <p>If you want to use a quote in your string, you'll need to "escape" it with a backslash.</p>
-<pre><code class="js">console.log('I\'d like to use an apostrophe');</code></pre>
+<pre><code class="javascript">console.log('I\'d like to use an apostrophe');</code></pre>
         </section>
 
         <section>
@@ -420,7 +420,7 @@ var numberOfAnimals = numberOfKittens + numberOfPuppies;
         <section>
           <h3>String Operators</h3>
           <p>You can put strings together with a +, the concatenation operator.</p>
-          <pre><code class="js">var kittensName = 'Fluffy ';
+          <pre><code class="javascript">var kittensName = 'Fluffy ';
 var fullName = kittensName + 'McDougle';
 console.log(fullName); //Outputs 'Fluffy McDougle'
 </code></pre>
@@ -429,7 +429,7 @@ console.log(fullName); //Outputs 'Fluffy McDougle'
         <section>
           <h3>String Operators</h3>
           <p>You can also use += to add things to the end of a string.</p>
-<pre><code class="js">var kittensName = 'Admiral ';
+<pre><code class="javascript">var kittensName = 'Admiral ';
 kittensName += 'Snuggles';
 console.log(kittensName); //Outputs 'Admiral Snuggles'
 </code></pre>
@@ -451,7 +451,7 @@ console.log(kittensName); //Outputs 'Admiral Snuggles'
         <section>
           <h3>Combining strings and numbers</h3>
           <p>You can use the concatenate function to mix strings and numbers. When you do this, JavaScript will treat the number like a string.</p>
-<pre><code class="js">var numberOfFruit = 6;
+<pre><code class="javascript">var numberOfFruit = 6;
 var typeOfFruit = 'bananas';
 var allTheFruit = 'Wow, I have ' + numberOfFruit + ' ' + typeOfFruit + '!';
 console.log(allTheFruit);
