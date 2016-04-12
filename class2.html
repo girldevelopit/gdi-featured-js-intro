@@ -64,8 +64,7 @@
         <section>
         <h3>Code Search</h3>
         <p>In this code, spot the comments, variables, and operator.</p>
-<pre><code class="js">
-var billPreTip = 10;
+<pre><code class="javascript">var billPreTip = 10;
 var tipPercent = 0.15; //Can be changed
 var billTip = billPreTip * tipPercent;
 var receipt   = 'Meal: ' + billPreTip + ' Tip: ' + billTip +
@@ -87,7 +86,7 @@ console.log(receipt);
         <section>
           <h3>Declaring Functions</h3>
           <p>To declare (create) a function, you give it a name. You then include all the code for the function inside curly brackets:</p>
-<pre><code class="js">function turtleFacts() {
+<pre><code class="javascript">function turtleFacts() {
   console.log('A turtle\'s lower shell is called a plastron.');
   console.log('Turtles belong to the order Testudines');
 }
@@ -98,7 +97,7 @@ console.log(receipt);
         <section>
           <h3>Using Functions</h3>
           <p>To use a function, just type its name, followed by parenthesis.</p>
-<pre><code class="js"> turtleFacts();</code></pre>
+<pre><code class="javascript"> turtleFacts();</code></pre>
           <p>We'll talk about what can go inside those parenthesis in a minute! For now, leave them empty.</p>
         </section>
 
@@ -118,7 +117,7 @@ console.log(receipt);
         <section>
           <h3>Arguments</h3>
           <p>Functions can accept input values, called arguments.</p>
-<pre><code class="js">function callKitten (kittenName){
+<pre><code class="javascript">function callKitten (kittenName){
   console.log('Come here, ' + kittenName + '!');
 }
 callKitten ('Fluffy'); //outputs 'Come here, Fluffy!'
@@ -134,7 +133,7 @@ addNumbers(9,12); //outputs 21
         <section>
           <h3>Arguments</h3>
           <p>You can also pass variables into functions. These variables do not need to have the same name as the function arguments.</p>
-<pre><code class="js">function addOne(inputNumber){
+<pre><code class="javascript">function addOne(inputNumber){
   var newNumber = inputNumber + 1;
   console.log('&lt;p&gt;You now have ' + newNumber);
 }
@@ -158,7 +157,7 @@ addOne(numberOfPuppies);
         <section>
           <h3>Returning Values</h3>
           <p>You can have a function give you back a value, to use later.</p>
-<pre><code class="js">function square(num) {
+<pre><code class="javascript">function square(num) {
   return num * num;
 }
 console.log(square(4));   // outputs '16'.
@@ -185,7 +184,7 @@ var squareOfFive = square(5); // will make the variable squareOfFive equal 25.
         <section>
           <h3>Global Scope</h3>
           <p>A variable declared outside a function has a <span class="yellow">global</span> scope and can be accessed anywhere, even in a function.</p>
-<pre><code class="js">var awesomeGroup = 'Girl Develop It'; //Global scope
+<pre><code class="javascript">var awesomeGroup = 'Girl Develop It'; //Global scope
 function whatIsAwesome() {
   console.log (awesomeGroup + ' is pretty awesome.'); //Will work
 }
@@ -196,7 +195,7 @@ whatIsAwesome();
         <section>
           <h3>Local Scope</h3>
           <p>A variable declared within a function has a <span class="yellow">local</span> scope and can only be accessed within that function.</p>
-<pre><code class="js">function whatIsAwesome() {
+<pre><code class="javascript">function whatIsAwesome() {
   var awesomeGroup = 'Girl Develop It'; //Local scope
   console.log ('I made a variable called awesomeGroup with a value of ' + awesomeGroup); //Will work
 }
@@ -217,7 +216,7 @@ console.log (awesomeGroup + ' is pretty awesome.'); //Won't work
         <section>
           <h3>Boolean Variables</h3>
           <p>Boolean variables represent the logical values True and False</p>
-<pre><code class="js">var catsAreBest = true;
+<pre><code class="javascript">var catsAreBest = true;
 var dogsRule = false;
 </code></pre>
           <p>If you try to use another variable as a boolean, JavaScript will guess. The number 0, the empty string '', undefined, and null are considered false, everything else reads as true.</p>
@@ -235,11 +234,11 @@ var dogsRule = false;
         <section>
           <h3>The if statement</h3>
           <p>Use if to decide which lines of code to execute, based on a condition.</p>
-<pre><code class="js">if (condition) {
+<pre><code class="javascript">if (condition) {
   // statements to execute
 }
 </code></pre>
-<pre><code class="js">var bananas = 5;
+<pre><code class="javascript">var bananas = 5;
 if (bananas &gt; 0) {
   console.log ('You have some bananas!');
 }
@@ -326,8 +325,7 @@ if (bananas &gt; 0) {
         <section>
           <h3>The if/else statement</h3>
           <p>Use else to provide an alternate set of instructions.</p>
-<pre><code class="js">
-var age = 28;
+<pre><code class="javascript">var age = 28;
 if (age &gt;= 16) {
   console.log ('Yay, you can drive!');
 } else {
@@ -340,7 +338,7 @@ if (age &gt;= 16) {
         <section>
           <h3>The if/else if/else statement</h3>
           <p>If you have multiple conditions, you can use else if.</p>
-<pre><code class="js">var age = 20;
+<pre><code class="javascript">var age = 20;
 if (age &gt;= 35) {
   console.log('You can vote AND hold any place in government!');
 } else if (age &gt;= 25) {
@@ -401,7 +399,7 @@ if (age &gt;= 35) {
         <section>
           <h3>Using logical operators</h3>
           <p>You can use these operators to combine conditions.</p>
-<pre><code class="js">var bananas = 5;
+<pre><code class="javascript">var bananas = 5;
 if (bananas &gt;=2 &amp;&amp; bananas &lt;7) {
   console.log ('You have a reasonable number of bananas');
 } else {
@@ -414,7 +412,7 @@ if (bananas &gt;=2 &amp;&amp; bananas &lt;7) {
           <h3>Let's Develop It</h3>
           <p>Add a logical operator to your what to wear program.</p>
         </section>
-      </section>      
+      </section>
 
       <!-- Final slides-->
       <section id="final">
