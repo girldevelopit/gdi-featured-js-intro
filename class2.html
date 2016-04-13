@@ -54,7 +54,6 @@
         </section>
 
         <!-- Review -->
-      <section id="review">
         <section>
         <h3>Let's Look Back</h3>
         <img src="img/backwards-dance.jpg" alt="Woman looking backward as she dances"/>
@@ -64,19 +63,18 @@
         <section>
         <h3>Code Search</h3>
         <p>In this code, spot the comments, variables, and operator.</p>
-<pre><code class="js">
-var billPreTip = 10;
-var tipPercent = 0.15; //Can be changed
+<pre><code class="javascript">var billPreTip = 10;
+var tipPercent = 0.15; // Can be changed
+
 var billTip = billPreTip * tipPercent;
-var receipt   = 'Meal: ' + billPreTip + ' Tip: ' + billTip +
+var receipt = 'Meal: ' + billPreTip + ' Tip: ' + billTip +
 ' Total: ' + (billPreTip + billTip);
+
 console.log(receipt);
 </code></pre>
         </section>
-      </section>
 
       <!-- Functions -->
-      <section id="functions">
         <section>
           <h3>Functions</h3>
           <p>Functions are separable, reusable pieces of code.
@@ -86,62 +84,64 @@ console.log(receipt);
 
         <section>
           <h3>Declaring Functions</h3>
-          <p>To declare (create) a function, you give it a name. You then include all the code for the function inside curly brackets:</p>
-<pre><code class="js">function turtleFacts() {
-  console.log('A turtle\'s lower shell is called a plastron.');
-  console.log('Turtles belong to the order Testudines');
+          <p>To declare (create) a function, you can give it a name, then include all the code for the function inside curly brackets <code>{}</code></p>
+<pre><code class="javascript">function parrotFacts() {
+  console.log('Some parrot species can live for over 80 years');
+  console.log('Kakapos are a critically endangered flightless parrot');
 }
 </code></pre>
-          <p>Function can have multiple lines.</p>
+          <p>Functions can have multiple lines.</p>
         </section>
 
         <section>
           <h3>Using Functions</h3>
-          <p>To use a function, just type its name, followed by parenthesis.</p>
-<pre><code class="js"> turtleFacts();</code></pre>
+          <p>To invoke (use) a function, you type its name, followed by parenthesis <code>()</code></p>
+<pre><code class="javascript"> parrotFacts();</code></pre>
           <p>We'll talk about what can go inside those parenthesis in a minute! For now, leave them empty.</p>
         </section>
 
         <section>
           <h3>What's going on here?</h3>
-          <p>A function is a group of code you can reuse many times. Whenever you call a function by using it's name, you tell the browser to run the code inside the function.</p>
+          <p>A function is a group of code you can reuse many times. Whenever you invoke a function by using it's name, you tell the browser to run the code inside the function.</p>
           <p>You must declare a function before you can use it.</p>
         </section>
 
         <section>
           <h3>Let's Develop It</h3>
-          <p>Write a function that outputs a sentence. Then call that function later in your code.</p>
+          <p>Write a function that outputs a sentence. Then invoke that function later in your code.</p>
         </section>
-      </section>
 
-      <section>
         <section>
           <h3>Arguments</h3>
-          <p>Functions can accept input values, called arguments.</p>
-<pre><code class="js">function callKitten (kittenName){
+          <p>Functions can accept input values, called <code>arguments</code>.</p>
+<pre><code class="javascript">function callKitten (kittenName){
   console.log('Come here, ' + kittenName + '!');
 }
-callKitten ('Fluffy'); //outputs 'Come here, Fluffy!'
+
+callKitten('Fluffy'); // outputs 'Come here, Fluffy!'
 
 function addNumbers(a, b){
   console.log(a + b);
 }
-addNumbers(5,7); //outputs 12
-addNumbers(9,12); //outputs 21
+
+addNumbers(5, 7);  // outputs 12
+addNumbers(9, 12); // outputs 21
 </code></pre>
         </section>
 
         <section>
           <h3>Arguments</h3>
-          <p>You can also pass variables into functions. These variables do not need to have the same name as the function arguments.</p>
-<pre><code class="js">function addOne(inputNumber){
-  var newNumber = inputNumber + 1;
-  console.log('&lt;p&gt;You now have ' + newNumber);
+          <p>You can also pass <code>variables</code> into functions. These variables do not need to have the same name as the function arguments.</p>
+<pre><code class="javascript">function addOne(num){
+  var newNumber = num + 1;
+  console.log('You now have ' + newNumber);
 }
-//Declare variables
+
+// Declare variables
 var numberOfKittens = 5;
 var numberOfPuppies = 4;
-//Use them in functions
+
+// Use them in functions
 addOne(numberOfKittens);
 addOne(numberOfPuppies);
 </code></pre>
@@ -149,65 +149,65 @@ addOne(numberOfPuppies);
 
         <section>
           <h3>Let's Develop It</h3>
-          <p>Last week, you wrote a simple program to combine a first name and a last name. Put that code inside a function. Then update the function to accept the first and last name as arguments.</p>
+          <p>Write a simple program to combine a first name and a last name inside a function. Then update the function to accept a first and last name as arguments.</p>
         </section>
-      </section>
 
       <!-- returning values -->
-      <section>
         <section>
           <h3>Returning Values</h3>
-          <p>You can have a function give you back a value, to use later.</p>
-<pre><code class="js">function square(num) {
+          <p>You can have a function return a value, to use later.</p>
+<pre><code class="javascript">function square(num) {
   return num * num;
 }
-console.log(square(4));   // outputs '16'.
-var squareOfFive = square(5); // will make the variable squareOfFive equal 25.
+
+console.log(square(4));       // outputs '16'
+
+var squareOfFive = square(5); // squareOfFive now equals '25'
 </code></pre>
-          <p>Return will immediately end a function.</p>
+          <p><code>return</code> will immediately end a function.</p>
         </section>
 
         <section>
           <h3>Let's Develop It</h3>
-          <p>Add a return statement to your name function. Use that function to set the value of a variable.</p>
+          <p>Add a return statement to your 'name' function. Use that function to set the value of a variable.</p>
         </section>
-      </section>
 
       <!-- Variable Scope -->
-      <section id="scope">
         <section>
           <h3>Variable Scope</h3>
-          <p>The scope of a variable is how long the computer will remember it.</p>
+          <p>The scope of a variable determines where it's value is accessible throughout your program.</p>
           <img src="img/footprints.jpg" alt="Footprints being washed away"/>
           <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/heyvikram/187950111/" target="_blank">_vikram</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
         </section>
 
         <section>
           <h3>Global Scope</h3>
-          <p>A variable declared outside a function has a <span class="yellow">global</span> scope and can be accessed anywhere, even in a function.</p>
-<pre><code class="js">var awesomeGroup = 'Girl Develop It'; //Global scope
+          <p>A variable declared outside a function has a <code>global scope</code> and can be accessed anywhere, even inside of functions.</p>
+<pre><code class="javascript">var awesomeGroup = 'Girl Develop It'; // Global scope
+
 function whatIsAwesome() {
-  console.log(awesomeGroup + ' is pretty awesome.'); //Will work
+  console.log(awesomeGroup + ' is pretty awesome.'); // Will work
 }
+
 whatIsAwesome();
 </code></pre>
         </section>
 
         <section>
           <h3>Local Scope</h3>
-          <p>A variable declared within a function has a <span class="yellow">local</span> scope and can only be accessed within that function.</p>
-<pre><code class="js">function whatIsAwesome() {
-  var awesomeGroup = 'Girl Develop It'; //Local scope
-  console.log('I made a variable called awesomeGroup with a value of ' + awesomeGroup); //Will work
+          <p>A variable declared inside a function has a <code>local scope</code> and can only be accessed within that function.</p>
+<pre><code class="javascript">function whatIsAwesome() {
+  var awesomeGroup = 'Girl Develop It';              // Local scope
+  console.log(awesomeGroup + ' is pretty awesome.'); // Will work
 }
+
 whatIsAwesome();
-console.log(awesomeGroup + ' is pretty awesome.'); //Won't work
+
+console.log(awesomeGroup + ' is pretty awesome.'); // Won't work
 </code></pre>
         </section>
-      </section>
 
       <!-- Boolean -->
-      <section id="boolean">
         <section>
           <h3>Boolean Variables</h3>
           <img src="img/kitten-switch.jpg" alt="Kitten with light switch"/>
@@ -216,16 +216,14 @@ console.log(awesomeGroup + ' is pretty awesome.'); //Won't work
 
         <section>
           <h3>Boolean Variables</h3>
-          <p>Boolean variables represent the logical values True and False</p>
-<pre><code class="js">var catsAreBest = true;
+          <p>Boolean variables represent the logical values <code>true</code> and <code>false</code></p>
+<pre><code class="javascript">var catsAreBest = true;
 var dogsRule = false;
 </code></pre>
-          <p>If you try to use another variable as a boolean, JavaScript will guess. The number 0, the empty string '', undefined, and null are considered false, everything else reads as true.</p>
+          <p>Some values are considered <code><a href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy">falsy</a></code> and will evaluate to <code>false</code> in a Boolean context. The number <code>0</code>, an empty string <code>''</code>, <code>undefined</code>, <code>null</code>, and <code>NaN</code> will evaluate to <code>false</code>, everything else evaluates as <code>true</code>.</p>
           </section>
-      </section>
 
       <!--If/Then-->
-      <section id="if-then">
         <section>
           <h3>Control Flow</h3>
           <img src="img/fork-path.jpg" alt="Forked path"/>
@@ -234,12 +232,13 @@ var dogsRule = false;
 
         <section>
           <h3>The if statement</h3>
-          <p>Use if to decide which lines of code to execute, based on a condition.</p>
-<pre><code class="js">if (condition) {
+          <p>Use <code>if</code> statements to decide which lines of code to execute, based on a condition.</p>
+<pre><code class="javascript">if (condition) {
   // statements to execute
 }
 </code></pre>
-<pre><code class="js">var bananas = 5;
+<pre><code class="javascript">var bananas = 5;
+
 if (bananas &gt; 0) {
   console.log('You have some bananas!');
 }
@@ -258,45 +257,45 @@ if (bananas &gt; 0) {
             </thead>
             <tbody>
               <tr>
-                <td>a == b</td>
+                <td><code>a == b</code></td>
                 <td>Equal</td>
-                <td><strong><code>TRUE</code></strong> if a is equal to b (can be different types).</td>
+                <td><strong><code>TRUE</code></strong> if <code>a</code> is equal to <code>b</code> (can be different types).</td>
               </tr>
               <tr>
-                <td>a === b</td>
+                <td><code>a === b</code></td>
                 <td>Identical</td>
                 <td>
-              <strong><code>TRUE</code></strong> if a is equal to b, and the same type. </td>
+              <strong><code>TRUE</code></strong> if <code>a</code> is equal to <code>b</code>, and the same type. </td>
               </tr>
               <tr>
-                <td>a != b</td>
+                <td><code>a != b</code></td>
                 <td>Not equal</td>
-                <td><strong><code>TRUE</code></strong> if a is not equal to b (can be different types).</td>
+                <td><strong><code>TRUE</code></strong> if <code>a</code> is not equal to <code>b</code> (can be different types).</td>
               </tr>
               <tr>
-                <td>a !== b</td>
+                <td><code>a !== b</code></td>
                 <td>Not identical</td>
-                <td><strong><code>TRUE</code></strong> if a is not equal to b, or they are not the same type.</td>
+                <td><strong><code>TRUE</code></strong> if <code>a</code> is not equal to <code>b</code>, or they are not the same type.</td>
               </tr>
               <tr>
-                <td>a &lt; b</td>
+                <td><code>a &lt; b</code></td>
                 <td>Less than</td>
-                <td><strong><code>TRUE</code></strong> if a is strictly less than b.</td>
+                <td><strong><code>TRUE</code></strong> if <code>a</code> is strictly less than <code>b</code>.</td>
               </tr>
               <tr>
-                <td>a &gt; b</td>
+                <td><code>a &gt; b</code></td>
                 <td>Greater than</td>
-                <td><strong><code>TRUE</code></strong> if a is strictly greater than b.</td>
+                <td><strong><code>TRUE</code></strong> if <code>a</code> is strictly greater than <code>b</code>.</td>
               </tr>
               <tr>
-                <td>a &lt;= b</td>
+                <td><code>a &lt;= b</code></td>
                 <td>Less than or equal to </td>
-                <td><strong><code>TRUE</code></strong> if a is less than or equal to b.</td>
+                <td><strong><code>TRUE</code></strong> if <code>a</code> is less than or equal to <code>b</code>.</td>
               </tr>
               <tr>
-                <td>a &gt;= b</td>
+                <td><code>a &gt;= b</code></td>
                 <td>Greater than or equal to </td>
-                <td><strong><code>TRUE</code></strong> if a is greater than or equal to b.</td>
+                <td><strong><code>TRUE</code></strong> if <code>a</code> is greater than or equal to <code>b</code>.</td>
               </tr>
             </tbody>
           </table>
@@ -304,7 +303,7 @@ if (bananas &gt; 0) {
 
         <section>
           <h3>Watch out!</h3>
-          <p>Don't mix up = and ==</p>
+          <p>Don't mix up <code>=</code> and <code>==</code> and <code>===</code></p>
           <img src="img/caution.jpg" alt="Caution Tape"/>
           <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/pictureperfectpose/76138988/" target="_blank">Eugene Zemlyanskiy</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
         </section>
@@ -313,10 +312,8 @@ if (bananas &gt; 0) {
           <h3>Let's Develop It</h3>
           <p>Make a variable called "temperature." Write some code that tells you to put on a coat if it is below 50 degrees.</p>
         </section>
-      </section>
 
       <!--If/else -->
-      <section id="if-else">
         <section>
           <h3>Even more control flow</h3>
           <img src="img/toomanysigns.jpg" alt="Sign post with multiple signs"/>
@@ -325,22 +322,22 @@ if (bananas &gt; 0) {
 
         <section>
           <h3>The if/else statement</h3>
-          <p>Use else to provide an alternate set of instructions.</p>
-<pre><code class="js">
-var age = 28;
+          <p>Use <code>else</code> to provide an alternate set of instructions.</p>
+<pre><code class="javascript">var age = 30;
 if (age &gt;= 16) {
   console.log('Yay, you can drive!');
 } else {
-  console.log('Sorry, but you have ' + (16 - age) +
+  console.log('Sorry, you have ' + (16 - age) +
   ' years until you can drive.');
 }
 </code></pre>
         </section>
 
         <section>
-          <h3>The if/else if/else statement</h3>
-          <p>If you have multiple conditions, you can use else if.</p>
-<pre><code class="js">var age = 20;
+          <h3>The if/else statement</h3>
+          <p>If you have multiple conditions, you can use <code>else if</code>.</p>
+<pre><code class="javascript">var age = 20;
+
 if (age &gt;= 35) {
   console.log('You can vote AND hold any place in government!');
 } else if (age &gt;= 25) {
@@ -348,8 +345,7 @@ if (age &gt;= 35) {
 } else if (age &gt;= 18) {
   console.log('You can vote!');
 } else {
-  console.log('You can\'t vote, but you can
-  still write your representatives.');
+  console.log('You can\'t vote, but you can write your representatives.');
 }
 </code></pre>
         </section>
@@ -358,16 +354,14 @@ if (age &gt;= 35) {
           <h3>Let's Develop It</h3>
           <p>Modify your "wear a coat" code for these conditions:</p>
           <ol>
-            <li>If it is less than 50 degrees, wear a coat.</li>
-            <li>If it is less than 30 degrees, wear a coat and a hat.</li>
-            <li>If it is less than 0 degrees, stay inside.</li>
+            <li>If it's less than 50 degrees, wear a coat.</li>
+            <li>If it's less than 30 degrees, wear a coat and a hat.</li>
+            <li>If it's less than 0 degrees, stay inside.</li>
             <li>Otherwise, wear whatever you want.</li>
           </ol>
         </section>
-      </section>
 
       <!-- Logical Operators -->
-      <section>
         <section>
           <h3>Logical Operators</h3>
           <table>
@@ -380,19 +374,19 @@ if (age &gt;= 35) {
             </thead>
             <tbody>
               <tr>
-                <td>a &amp;&amp; b</td>
+                <td><code>a &amp;&amp; b</code></td>
                 <td>And</td>
-                <td><strong><code>TRUE</code></strong> if both a and b are <strong><code>TRUE</code></strong>.</td>
+                <td><strong><code>TRUE</code></strong> if both <code>a</code> and <code>b</code> are <strong><code>TRUE</code></strong>.</td>
               </tr>
               <tr>
-                <td>a || b</td>
+                <td><code>a || b</code></td>
                 <td>Or</td>
-                <td><strong><code>TRUE</code></strong> if either a or b is <strong><code>TRUE</code></strong>.</td>
+                <td><strong><code>TRUE</code></strong> if either <code>a</code> or <code>b</code> is <strong><code>TRUE</code></strong>.</td>
               </tr>
               <tr>
-                <td>! a</td>
+                <td><code>! a</code></td>
                 <td>Not</td>
-                <td><strong><code>TRUE</code></strong> if a is not <strong><code>TRUE</code></strong>.</td>
+                <td><strong><code>TRUE</code></strong> if <code>a</code> is not <strong><code>TRUE</code></strong>.</td>
               </tr>
             </tbody>
           </table>
@@ -401,7 +395,8 @@ if (age &gt;= 35) {
         <section>
           <h3>Using logical operators</h3>
           <p>You can use these operators to combine conditions.</p>
-<pre><code class="js">var bananas = 5;
+<pre><code class="javascript">var bananas = 5;
+
 if (bananas &gt;=2 &amp;&amp; bananas &lt;7) {
   console.log('You have a reasonable number of bananas');
 } else {
@@ -412,12 +407,10 @@ if (bananas &gt;=2 &amp;&amp; bananas &lt;7) {
 
         <section>
           <h3>Let's Develop It</h3>
-          <p>Add a logical operator to your what to wear program.</p>
+          <p>Add a logical operator to your "what to wear" program.</p>
         </section>
-      </section>
 
       <!-- Final slides-->
-      <section id="final">
         <section>
           <h3>You did it!</h3>
           <img src="img/kitten-yay.jpg" alt="Happy cat"/>
@@ -435,7 +428,6 @@ if (bananas &gt;=2 &amp;&amp; bananas &lt;7) {
         <section>
           <h2>Questions?</h2>
         </section>
-      </section>
     </div>
     <footer>
       <div class="copyright">
