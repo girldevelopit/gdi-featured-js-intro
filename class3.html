@@ -138,7 +138,7 @@ for (var i = 100; i &lt;= 200; i++) {
           <section>
             <h3>Arrays</h3>
             <p>Arrays are ordered lists of values.</p>
-  <pre><code class="javascript">var arrayName = [element0, element1, ...];</code></pre>
+  <pre><code class="javascript">var arrayName = [element0, element1];</code></pre>
             <p>You can put different types of data into an array.</p>
   <pre><code class="javascript">var rainbow = ['Red', 'Orange', 'Yellow', 'Green',
   'Blue', 'Indigo', 'Violet'];
@@ -221,8 +221,7 @@ for (var i = 0; i &lt; favoriteFoods.length; i++) {
           <p>Objects let us store a collection of properties.</p>
 <pre><code class="javascript">var objectName = {
   propertyName: propertyValue,
-  propertyName: propertyValue,
-  ...
+  propertyName: propertyValue
 };
 </code></pre>
 <pre><code class="javascript">var aboutMe = {
@@ -251,7 +250,7 @@ var myHometown = aboutMe.hometown;</code></pre><br>
           <p>You can use dot or bracket notation to change properties</p>
 <pre><code class="javascript">var aboutMe = {
   hometown: 'Columbus, GA',
-  eyeColor: 'Auburn'
+  eyeColor: 'green'
 };
 
 aboutMe.eyeColor = 'blue';</code></pre><br>
@@ -259,10 +258,7 @@ aboutMe.eyeColor = 'blue';</code></pre><br>
 <pre><code class="javascript">aboutMe.married = true;
 </code></pre><br>
           <p>Or delete them</p>
-<pre><code class="javascript">delete aboutMe.married;
-
-aboutMe.married = undefined;
-</code></pre>
+<pre><code class="javascript">delete aboutMe.married;</code></pre>
         </section>
 
         <section>
@@ -338,20 +334,6 @@ albertTheParrot.eat('ravioli');
           <p>Call your new method.</p>
         </section>
 
-        <section>
-        <h3>Built-in methods</h3>
-          <p>JavaScript provides several built-in objects:</p>
-          <ul>
-            <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array">Array</a></code></li>
-            <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></code></li>
-            <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number">Number</a></code></li>
-            <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String">String</a></code></li>
-            <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/RegExp">RegExp</a></code></li>
-            <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Date">Date</a></code></li>
-            <li><code><a target="_blank" href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Math">Math</a></code></li>
-          </ul>
-        </section>
-
       <!-- Final slides-->
         <section>
           <h3>You did it!</h3>
@@ -386,6 +368,32 @@ albertTheParrot.eat('ravioli');
     <script>
 
       // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/accessibility-helper/js/accessibility-helper.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
+on options available here:
       // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
         controls: true,
