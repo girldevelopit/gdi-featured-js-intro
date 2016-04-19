@@ -65,7 +65,7 @@
             <p><code>while</code> will repeat the same code over and over until some condition is met.</p>
   <pre class="javascript"><code>var bottlesOfBeer = 99;
 
-while (bottlesOfBeer &gt;= 0) {
+while (bottlesOfBeer &gt; 0) {
   console.log(bottlesOfBeer + ' bottles of beer on the wall');
   bottlesOfBeer = bottlesOfBeer - 1;
 }</code></pre>
@@ -95,14 +95,14 @@ for (var i = 1; i &lt;= 10; i++) {
 for (var i = 1; i &lt;= 50; i++) {
   console.log(i);
 
-  // Says 'Buzz' after multiples of three
+  // Says 'Fizz' after multiples of three
   if (i % 3 == 0) {
-    console.log(' Buzz');
+    console.log(' Fizz');
   }
 
-  // Says 'Bang' after multiples of five
+  // Says 'Buzz' after multiples of five
   if (i % 5 == 0) {
-    console.log(' Bang');
+    console.log(' Buzz');
   }
 }</code></pre>
           </section>
@@ -162,7 +162,7 @@ console.log(directors.length);</code></pre>
   <pre><code class="javascript">var directors = ['Coppola', 'Miyazaki', 'Kubrick'];
 
 var firstDirector = directors[0];
-var lastDirector  = directors[2];</code></pre>
+var lastDirector  = directors[2];</code></pre><br>
   <p>JS arrays are "zero-indexed", so starts counting at 0.</p>
           </section>
 
@@ -179,9 +179,7 @@ parrots[0] = 'African Grey';</code></pre>
             <p>Arrays do not have a fixed length. You can use <code>push</code> to add something to an array.</p>
   <pre><code class="javascript">var parrots = ['Cockatiel', 'Amazon', 'Eclectus'];
 
-parrots.push('Cockatoo');
-
-console.log(parrots);</code></pre>
+parrots.push('Cockatoo');</code></pre>
           </section>
 
           <section>
@@ -241,12 +239,11 @@ for (var i = 0; i &lt; favoriteFoods.length; i++) {
 <pre><code class="javascript">var aboutMe = {
   hometown: 'Columbus, GA',
   eyeColor: 'green'
-  ...
 };
 
-var myHometown = aboutMe.hometown;</code></pre>
+var myHometown = aboutMe.hometown;</code></pre><br>
           <p>Or using "bracket notation" (like arrays)</p>
-<pre><code class="javascript">var myHair = aboutMe['eyeColor'];</code></pre>
+<pre><code class="javascript">var myEyes = aboutMe['eyeColor'];</code></pre>
         </section>
 
         <section>
@@ -257,10 +254,10 @@ var myHometown = aboutMe.hometown;</code></pre>
   eyeColor: 'Auburn'
 };
 
-aboutMe.eyeColor = 'blue';</code></pre>
+aboutMe.eyeColor = 'blue';</code></pre><br>
           <p>Add new properties</p>
 <pre><code class="javascript">aboutMe.married = true;
-</code></pre>
+</code></pre><br>
           <p>Or delete them</p>
 <pre><code class="javascript">delete aboutMe.married;
 
@@ -271,7 +268,7 @@ aboutMe.married = undefined;
         <section>
           <h3>Arrays of Objects</h3>
           <p>Because arrays can hold any data type, they can also hold objects</p>
-<pre><code class="javascript">var myPets=[
+<pre><code class="javascript">var myPets = [
   {name: 'Albert', age: 21},
   {name: 'Alex',   age: 6}
 ];
