@@ -372,7 +372,7 @@ pageNode.appendChild(newParagraph);
 
           <section>
           <h3>Calling Functions from JavaScript</h3>
-          <p>You can call a function from our addEventListener:</p>
+          <p>You can call a function from the addEventListener:</p>
 <pre><code class="html">&lt;button id="myBtn"&gt;Click Me!&lt;/button&gt;
 </code></pre>
 <pre><code class="javascript">var button = document.getElementById("myBtn");
@@ -394,7 +394,7 @@ button.addEventListener("click", sayHi);</code></pre>
         <section>
           <h3>Let's Develop It</h3>
           <p>Go back to the sample files you downloaded earlier.</p>
-          <p>Make some JavaScript code fire after a <code>mouseover</code> event. Try adding the event to the HTML and adding a listening function.</p>
+          <p>Make some JavaScript code fire after a <code>mouseover</code> event. Try listening for the event executing some code when the event fires.</p>
         </section>
 
       <!-- More Events -->
@@ -405,7 +405,7 @@ button.addEventListener("click", sayHi);</code></pre>
 
         <section>
           <h3>Preventing Defaults</h3>
-          <p>Elements like buttons and links have default behaviors. However, the <code>event</code> object has a built-in method to prevent the default behavior:</p>
+          <p>Elements like buttons and links have default behaviors. However, the <code>event</code> object has a built-in method to prevent the default behavior</p>
 <pre><code class="javascript">element.addEventListener("click", function(event) {
   event.preventDefault;
 });
@@ -413,23 +413,25 @@ button.addEventListener("click", sayHi);</code></pre>
         </section>
 
         <section>
-          <h3>This</h3>
+          <h3>currentTarget</h3>
           <img src="img/arrow.jpg" alt="Lighted arrow sign pointed downward"/>
           <p class="credit">Photo credit: <a href="https://flic.kr/p/6ei68A" target="_blank">Alan Berning</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
         </section>
 
         <section>
-          <h3>This</h3>
-          <p>The keyword <code>this</code> references the element that the user has just interacted with</p>
+          <h3>currentTarget</h3>
+          <p>The event's <code>currentTarget</code> references the element the event listener was attached to.</p>
 <pre><code class="javascript">element.onmouseover = function (event) {
-  console.log(this);
+  console.log(event.currentTarget);
 };
 
-element.onclick=function (event) {
-  this.style.backgroundColor = 'red';
-  this.innerHTML = 'I\'ve been clicked!';
-};
-</code></pre>
+element.addEventListener("click", function(event) {
+  el = event.currentTarget;
+
+  el.style.backgroundColor = 'red';
+  el.innerHTML = 'I\'ve been clicked!';
+};</code></pre>
+<p>You may also see code that references the keyword <code>this</code> as the "target".
         </section>
 
         <section>
@@ -449,14 +451,13 @@ element.onclick=function (event) {
 
         <section>
           <h3>Forms</h3>
-          <p>You can collect information from users to use in functions. The most common method is an HTML form</p>
-<pre><code class="html">&lt;form id="temperatureForm"&gt;
-  &lt;label for="temp"&gt;Temperature:&lt;/label&gt;
-  &lt;input type="text" id="temp" size="3"/&gt; degrees in
-  &lt;input type="radio" name="tempFormat" value="F" checked /&gt;Fahrenheit
-  &lt;input type="radio" name="tempFormat" value="C" /&gt;Celsius &lt;br /&gt;
-  &lt;label for="submitButton"&gt;&lt;/label&gt;
-  &lt;input id="tempSubmitButton" type="submit" value="Submit" /&gt;
+          <p>You can collect information from users to use in your code. The most common method is an HTML form</p>
+<pre><code class="html">&lt;form id="userForm"&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;input type="text" id="name"/&gt;
+  &lt;input type="radio" name="married" value="Yes" checked /&gt; Yes
+  &lt;input type="radio" name="married" value="No" /&gt; No
+  &lt;input type="submit" value="Submit" /&gt;
 &lt;/form&gt;
 </code></pre>
         </section>
@@ -464,18 +465,18 @@ element.onclick=function (event) {
         <section>
           <h3>Retrieving Form Data</h3>
           <p>You retrieve the values of form elements using the <code>value</code> method.</p>
-<pre><code class="javascript">var temperature = document.getElementById('temp').value;
-console.log(temperature);
+<pre><code class="javascript">var name = document.getElementById('name').value;
+console.log(name);
 </code></pre>
-          <p>You can retrieve the value of a form at any time. Try <code>onblur</code> (when a form element loses focus).</p>
+          <p>You can retrieve the value of a form at any time. Even when an event like <code>onblur</code> is triggered (when a form element loses focus).</p>
         </section>
 
         <section>
           <h3>Radio Buttons</h3>
           <p>Radio buttons usually do not have IDs, so you will need to use an array:</p>
-<pre><code class="javascript">var radios = document.getElementsByName('tempFormat');
+<pre><code class="javascript">var radios = document.getElementsByName('married');
 
-for (var i=0, length=radios.length; i &lt; length; i++) {
+for (var i = 0, length = radios.length; i &lt; length; i++) {
   if (radios[i].checked) {
     var radioButtonValue=radios[i].value;
     // only one radio can be checked, so stop now
@@ -488,11 +489,13 @@ for (var i=0, length=radios.length; i &lt; length; i++) {
         <section>
           <h3>Submit buttons</h3>
           <p>If you are going to retrieve form values with the submit button, be sure to prevent the default action!</p>
-<pre><code class="javascript">var submitButton=document.getElementById('tempSubmitButton');
-  submitButton.onclick=function () {
+<pre><code class="javascript">var submitButton = document.getElementById('tempSubmitButton');
+
+submitButton.addEventListener("click", function(event) {
   event.preventDefault();
-  var temperature=document.getElementById('temp').value;
-  console.log(temperature);
+
+  var name = document.getElementById('name').value;
+  console.log(name);
 }
 </code></pre>
         </section>
@@ -507,6 +510,12 @@ for (var i=0, length=radios.length; i &lt; length; i++) {
           <h3>You did it!</h3>
           <img src="img/jumping-man.jpg" alt="Man jumping in air"/>
           <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/sunface13/988453859/" target="_blank">sunface13</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+        </section>
+
+        <section>
+          <h3>Survey</h3>
+          <p>Please take our post-class survey so we can improve our classes. It should only take about 2 minutes.</p>
+          <a href="http://goo.gl/forms/rUIuXN3bY2">Take the Survey!</a>
         </section>
 
         <section>
