@@ -215,10 +215,11 @@ var specficParagraph = document.getElementsByTagName('p')[2];
             <p>We could change the src attribute this way:</p>
 <pre><code class="javascript">var imgKitten = document.getElementById('kittenPic');
 
-var oldSrc = imgKitten.src;
+// will return src attribute on image
+imgKitten.src
 
-imgKitten.src='http://placekitten.com/g/600/500';
-</code></pre>
+// will set our src to a new src
+imgKitten.src = 'http://placekitten.com/g/600/500';</code></pre>
           </section>
 
           <section>
@@ -229,8 +230,10 @@ imgKitten.src='http://placekitten.com/g/600/500';
           <p>We could change the src attribute this way:</p>
 <pre><code class="javascript">var imgKitten = document.getElementById('kittenPic');
 
-var oldSrc = imgKitten.getAttribute('src');
+// will return src attribute on image
+imgKitten.getAttribute('src');
 
+// will set our src to a new src
 imgKitten.setAttribute('src', 'http://placekitten.com/g/600/500');
 </code></pre>
           </section>
@@ -260,11 +263,11 @@ pageBody.style.color = 'red';
 }
 </code></pre>
           <p>Use this JavaScript:</p>
-<pre><code class="javascript">var pageNode = document.getElementsByTagName('body')[0]
+<pre><code class="javascript">var pageBody = document.getElementsByTagName('body')[0]
 
-pageNode.style.backgroundColor = 'pink';
+pageBody.style.backgroundColor = 'pink';
 
-pageNode.style.paddingTop = '10px';
+pageBody.style.paddingTop = '10px';
 </code></pre>
           </section>
 
@@ -277,7 +280,7 @@ pageNode.style.paddingTop = '10px';
         <!--Manipulating the DOM-->
           <section>
             <h3>DOM innerHTML</h3>
-            <p>Each DOM node has an <code>innerHTML</code> property with the HTML of all its children. You can use the property to view or change the HTML of a node.</p><br>
+            <p>Each DOM node has an <code>innerHTML</code> property with the HTML and content of its children. You can use the property to view or change the HTML of a node.</p><br>
             <p>For example, you can overwrite the entire body:</p>
   <pre><code class="javascript">var pageBody = document.getElementsByTagName('body')[0];
 
@@ -288,7 +291,7 @@ pageBody.innerHTML = '&lt;h1&gt;Oh Noes!&lt;/h1&gt;&lt;p&gt;I changed the whole 
 
           <section>
             <h3>DOM innerHTML continued</h3>
-            <p>You can also target a particular element</p><br>
+            <p>You can also target one specific element's content</p><br>
             <p>To put content in this paragraph element:</p>
   <pre><code class="html">&lt;p id="warning"&gt;&lt;/p&gt;</code></pre>
             <p>We can select the node and modify it</p>
@@ -304,23 +307,27 @@ warningParagraph.innerHTML = 'Danger Will Robinson!';</code></pre>
 
 document.createTextNode(text);
 
-document.appendChild();</code></pre>
+element.appendChild(element);</code></pre>
           </section>
 
           <section>
             <h3>Creating New Nodes: Sample Code</h3>
 <pre><code class="javascript">var pageNode = document.getElementsByTagName('body')[0];
 
+// create our image tag with attributes
 var newImg = document.createElement('img');
 newImg.src = 'http://placekitten.com/g/500/200';
 newImg.style.border = '1px solid black';
 
+// add our image to the body
 pageNode.appendChild(newImg);
 
+// create a paragraph tag with content
 var newParagraph  = document.createElement('p');
 var paragraphText = document.createTextNode('Squee!');
-
 newParagraph.appendChild(paragraphText);
+
+// add our new paragraph to the body
 pageNode.appendChild(newParagraph);
 </code></pre>
             </section>
@@ -341,7 +348,7 @@ pageNode.appendChild(newParagraph);
           <h3>Events</h3>
           <p>An <strong>event</strong> is an object that is sent when actions take place on your webpage, most often when a user interacts with your webpage.</p><br>
           <p>For example, JavaScript creates an event when a user clicks an element.</p>
-<pre><code class="javascript">element.addEventListener("click", function() {
+<pre><code class="javascript">element.addEventListener("click", function(event) {
   // code to be executed when user clicks
 });
 </code></pre>
@@ -353,6 +360,7 @@ pageNode.appendChild(newParagraph);
           <ul>
             <li><strong>click:</strong> Occurs when the user clicks on an element</li>
             <li><strong>mouseover:</strong> Occurs when the pointer is moved onto an element</li>
+            <li><strong>mouseout:</strong> Occurs when the pointer is moved off an element</li>
             <li><strong>keyup:</strong> Occurs when the user releases a key</li>
             <li><strong>load:</strong> Occurs when a document has been loaded</li>
             <li><strong>focus:</strong> Occurs when an element gets focus</li>
@@ -365,9 +373,9 @@ pageNode.appendChild(newParagraph);
           <p>You can call a function directly from your HTML code:</p>
 <pre><code class="html">&lt;button id="myBtn" onclick="sayHi()"&gt;Click Me!&lt;/button&gt;
 </code></pre>
-<pre><code class="javascript">function sayHi() {
+<pre><code class="javascript">function sayHi(event) {
   alert('Hi!');
-}</code></pre>
+};</code></pre>
         </section>
 
           <section>
@@ -377,15 +385,15 @@ pageNode.appendChild(newParagraph);
 </code></pre>
 <pre><code class="javascript">var button = document.getElementById("myBtn");
 
-button.addEventListener("click", function() {
+button.addEventListener("click", function(event) {
   alert("Hi!");
 });</code></pre>
 <p>or</p>
 <pre><code class="javascript">var button = document.getElementById("myBtn");
 
-var sayHi = function() {
+var sayHi = function(event) {
   alert("Hi!");
-}
+};
 
 button.addEventListener("click", sayHi);</code></pre>
         </section>
@@ -405,9 +413,15 @@ button.addEventListener("click", sayHi);</code></pre>
 
         <section>
           <h3>Preventing Defaults</h3>
-          <p>Elements like buttons and links have default behaviors. However, the <code>event</code> object has a built-in method to prevent the default behavior</p>
-<pre><code class="javascript">element.addEventListener("click", function(event) {
-  event.preventDefault;
+          <p>Elements like links and checkboxes have default behaviors determined by the browser. However, the <code>event</code> object has a built-in method to <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault">prevent the default behavior</a></p>
+          <p>Our anchor link in HTML</p>
+<pre><code class="html">&lt;a id="myLink" href="https://www.girldevelopit.com"&gt;GDI&lt;/a&gt;
+</code></pre>
+<p>Code to prevent going to link's href on click</p>
+<pre><code class="javascript">var link = document.getElementById("myLink");
+
+link.addEventListener("click", function(event) {
+  event.preventDefault();
 });
 </code></pre>
         </section>
@@ -421,15 +435,16 @@ button.addEventListener("click", sayHi);</code></pre>
         <section>
           <h3>currentTarget</h3>
           <p>The event's <code>currentTarget</code> references the element the event listener was attached to.</p>
-<pre><code class="javascript">element.onmouseover = function (event) {
-  console.log(event.currentTarget);
-};
+          <p>Our button in HTML:</p>
+          <pre><code class="html">&lt;button id="myBtn"&gt;Click Me!&lt;/a&gt;</code></pre>
+          <p>This code adds styles and text to our clicked button</p>
+<pre><code class="javascript">myButton = document.getElementById("myBtn");
 
-element.addEventListener("click", function(event) {
-  el = event.currentTarget;
+myButton.addEventListener("click", function(event) {
+  btn = event.currentTarget;
 
-  el.style.backgroundColor = 'red';
-  el.innerHTML = 'I\'ve been clicked!';
+  btn.style.backgroundColor = 'red';
+  btn.innerHTML = 'Clicked!';
 };</code></pre>
 <p>You may also see code that references the keyword <code>this</code> as the "target".
         </section>
@@ -453,11 +468,11 @@ element.addEventListener("click", function(event) {
           <h3>Forms</h3>
           <p>You can collect information from users to use in your code. The most common method is an HTML form</p>
 <pre><code class="html">&lt;form id="userForm"&gt;
-  &lt;label for="name"&gt;Name:&lt;/label&gt;
-  &lt;input type="text" id="name"/&gt;
+  &lt;label for="name"&gt;First Name:&lt;/label&gt;
+  &lt;input type="text" id="firstName"/&gt;
   &lt;input type="radio" name="married" value="Yes" checked /&gt; Yes
   &lt;input type="radio" name="married" value="No" /&gt; No
-  &lt;input type="submit" value="Submit" /&gt;
+  &lt;input type="submit" id="submitBtn" value="Submit" /&gt;
 &lt;/form&gt;
 </code></pre>
         </section>
@@ -465,20 +480,22 @@ element.addEventListener("click", function(event) {
         <section>
           <h3>Retrieving Form Data</h3>
           <p>You retrieve the values of form elements using the <code>value</code> method.</p>
-<pre><code class="javascript">var name = document.getElementById('name').value;
+<pre><code class="javascript">var name = document.getElementById('firstName').value;
 console.log(name);
 </code></pre>
-          <p>You can retrieve the value of a form at any time. Even when an event like <code>onblur</code> is triggered (when a form element loses focus).</p>
+          <p>You can retrieve the value of a form at any time. Even when an event like <code>blur</code> is triggered (when a form element loses focus).</p>
         </section>
 
         <section>
           <h3>Radio Buttons</h3>
-          <p>Radio buttons usually do not have IDs, so you will need to use an array:</p>
+          <p>Radio buttons usually do not have IDs, so you will need to use a <code>for</code> loop to get the value on each radio:</p>
 <pre><code class="javascript">var radios = document.getElementsByName('married');
 
-for (var i = 0, length = radios.length; i &lt; length; i++) {
+var length = radios.length;
+
+for (var i = 0; i &lt; length; i++) {
   if (radios[i].checked) {
-    var radioButtonValue=radios[i].value;
+    var radioButtonValue = radios[i].value;
     // only one radio can be checked, so stop now
     break;
   }
@@ -489,12 +506,12 @@ for (var i = 0, length = radios.length; i &lt; length; i++) {
         <section>
           <h3>Submit buttons</h3>
           <p>If you are going to retrieve form values with the submit button, be sure to prevent the default action!</p>
-<pre><code class="javascript">var submitButton = document.getElementById('tempSubmitButton');
+<pre><code class="javascript">var submitButton = document.getElementById('submitBtn');
 
 submitButton.addEventListener("click", function(event) {
   event.preventDefault();
 
-  var name = document.getElementById('name').value;
+  var name = document.getElementById('firstName').value;
   console.log(name);
 }
 </code></pre>
