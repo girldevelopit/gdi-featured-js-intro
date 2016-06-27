@@ -74,7 +74,8 @@
           <ul>
             <li>Who are you?</li>
             <li>What do you hope to get out of the class?</li>
-            <li>How did you end up in Atlanta?</li>
+            <!-- Feel free to change the icebreaker question! -->
+            <li>What's your favorite ice cream flavor?</li>
           </ul>
           </div>
         </section>
@@ -87,7 +88,7 @@
         </section>
 
         <section>
-          <h3>The language of the web</h3>
+          <h3>JavaScript is the language of the web</h3>
           <img src="img/client-server.jpg" alt="Laptop and server connected via the internet"/>
           <p>
             <small class="credit">Photo credits: <a href="http://www.flickr.com/photos/papalars/5210226441/" target="_blank">Andrew E. Larson</a> and <a href="http://www.flickr.com/photos/johnseb/3425464/" target="_blank">John Seb Barber</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></small>
@@ -95,12 +96,24 @@
         </section>
 
         <section>
+          <h3>JavaScript works with HTML & CSS</h3>
+          <img src="img/triangle.jpg" alt="Triangle"/>
+          <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/ggunson/44539990/">Gillicious</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
+        </section>
+
+        <section>
+          <h3>JavaScript lets you reuse code</h3>
+          <img src="img/desert-landscape.jpg" alt="Desert landscape"/>
+          <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/philsnyder/4216356826/" target="_blank">Phil Synder</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+        </section>
+
+        <section>
           <h3>What is JavaScript?</h3>
           <ul>
-            <li>Created by Brendan Eich as "LiveScript" in 1995, which gets renamed to "JavaScript"</li>
+            <li>Created by Brendan Eich as "LiveScript" in 1995, which got renamed to "JavaScript"</li>
+            <li>Standardized by the <b>ECMAScript</b> specifications. This class covers <a href="http://www.ecma-international.org/ecma-262/5.1/">ES5</a> (standardized in 2009)</li>
             <li>A <b>client-side processing language</b>. A browser reads the code and runs it directly.</li>
             <li>Interfaces with <b>HTML</b> & <b>CSS</b>.</li>
-            <li>Standardized by the <b>ECMAScript</b> specifications.</li>
             <li>Lets you build dynamic webpages that respond to input from users.</li>
           </ul>
         </section>
@@ -142,7 +155,7 @@
           </p>
         </section>
 
-              <!-- Using JavaScript -->
+        <!-- Using JavaScript -->
         <section>
           <h3>Script Tags</h3>
           <p>You can mix JavaScript and HTML. The <b>script tag</b> tells your browser the stuff inside is code, not content.</p>
@@ -181,6 +194,53 @@
 </code></pre>
         </section>
 
+        <!-- Programming -->
+        <section>
+          <h3>Computers need simple, clear instructions</h3>
+          <img src="img/confusedrobot.jpg" alt="Confused robot"/>
+          <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/baboon/3946055/" target="_blank">baboon</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+        </section>
+
+        <section>
+          <h3>Thinking like a programmer</h3>
+          <p>Computers are great at <em>processing</em>. They are bad at <em>understanding</em>.</p>
+          <p>When you write a program, you must break down every step into simple pieces.</p>
+        </section>
+
+        <section>
+          <h3>Example: Draw a Square</h3>
+          <ol class="fragment">
+            <li>Find a whiteboard and a dry erase marker.</li>
+            <li>Uncap the dry erase maker.</li>
+            <li>Hold the marker in your hand.</li>
+            <li>Place the marker against the whiteboard.</li>
+            <li>Move your hand 1 foot to the right.</li>
+            <li>Stop.</li>
+            <li>Move your hand 1 foot down...</li>
+          </ol>
+        </section>
+
+        <section>
+          <h3>Example: Make a Sandwich</h3>
+          <iframe title="Sandwich video" width="560" height="315" src="https://www.youtube.com/embed/XWe4iohhmIw" frameborder="0" allowfullscreen></iframe>
+          <p class="credit">Source: <a>Harvard Students Making Sandwich: CS 50 Algorithm Intro</a></p>
+        </section>
+
+        <section>
+          <h3>Basically, computers can be hard to work with!</h3>
+          <img src="img/computer-toddler.jpg" alt="Toddler using old word processor"/>
+          <p class="credit">Photo credit: <a href="https://flic.kr/p/5Uvapm" target="_blank">Dan Hatton</a> <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/" target="_blank">cc</a></p>
+
+          <aside class="notes">Reassure the students! Coding is difficult, and it may take time to get good at it. Also, the natural state of code is broken. It's normal to have error messages, </aside>
+        </section>
+
+        <!-- JavaScript Basics -->
+        <section>
+          <h3>So what's up with JavaScript?</h3>
+          <img src="img/gears.jpg" alt="Gears"/>
+          <p class="credit">Photo credit: <a href="https://flic.kr/p/EEo4BV" target="_blank">Adam Foster</a> <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/" target="_blank">cc</a></p>
+        </section>
+
         <section>
           <h3>How does JavaScript work?</h3>
           <div class="left-align">
@@ -215,6 +275,7 @@
           </ul>
         </section>
 
+        <!-- Using JavaScript -->
         <section>
           <h3>Statements</h3>
           <p>Each instruction in JS is a "statement", like:</p>
@@ -313,6 +374,7 @@ console.log(numberOfKittens);
           <p>In your JavaScript file, create a variable and give it a valid name and value. Then, display the value.</p>
         </section>
 
+        <!-- Data Types-->
         <section>
           <h3>Data Types</h3>
           <ul>
@@ -334,7 +396,6 @@ console.log(numberOfKittens);
           </ul>
         </section>
 
-      <!-- Variable Types and Operators-->
       <!-- Numbers-->
         <section>
           <h3>Numbers!</h3>
@@ -417,9 +478,9 @@ var numberOfAnimals = numberOfKittens + numberOfPuppies;
       <!-- Strings -->
         <section>
           <h3>Strings</h3>
-          <p>Variables can be strings, groups of characters. You put your string in single or double quotes.</p>
+          <p>Variables can be strings (groups of characters). You put your string in single or double quotes.</p>
 <pre><code class="javascript">var kittensName = 'Fluffy';</code></pre>
-          <p>If you want to use a quote in your string, you'll need to "escape" it with a backslash.</p>
+          <p>If you want to use a quote in your string, you'll need to <b>escape</b> it with a backslash.</p>
 <pre><code class="javascript">console.log('I\'d like to use an apostrophe');</code></pre>
         </section>
 
@@ -464,7 +525,7 @@ console.log(kittensName); // Outputs 'Admiral Snuggles'
 
         <section>
           <h3>Combining strings and numbers</h3>
-          <p>You can use the concatenate function to mix strings and numbers. When you do this, JavaScript will treat the number like a string.</p>
+          <p>You can use concatenation to mix strings and numbers. When you do this, JavaScript will treat the number like a string.</p>
 <pre><code class="javascript">var numberOfFruit = 6;
 var typeOfFruit = 'bananas';
 var allTheFruit = 'I have ' + numberOfFruit + ' ' + typeOfFruit + '!';
@@ -473,11 +534,12 @@ console.log(allTheFruit);
         </section>
         <section>
           <h3>Let's Develop It</h3>
-          <p>Create a program to calculate the tip at a restuarant. It should:</p>
+          <p>Create a program to calculate the tip at a restaurant. It should:</p>
           <ul>
-            <li>Have variables for the bill pre-tip and the tip percentage.</li>
+            <li>Have variables for the bill <b>pre-tip</b> and the <b>tip percentage</b>.</li>
             <li>Calculate the total bill.</li>
             <li>Output a sentence like "Your total bill, with tip, is $14.75".</li>
+            <li>Bonus: Use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed"><code>toFixed()</code></a> to round the bill total to 2 decimals.</li>
           </ul>
         </section>
 
