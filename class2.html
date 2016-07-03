@@ -162,7 +162,7 @@ addOne(numberOfPuppies);
 
 console.log(square(4));       // outputs '16'
 
-var squareOfFive = square(5); // squareOfFive now equals '25'
+var squareOfFive = square(5); // squareOfFive equals '25'
 </code></pre>
           <p><code>return</code> will immediately end a function.</p>
         </section>
@@ -182,7 +182,7 @@ var squareOfFive = square(5); // squareOfFive now equals '25'
 
         <section>
           <h3>Global Scope</h3>
-          <p>A variable declared outside a function has a <code>global scope</code> and can be accessed anywhere, even inside of functions.</p>
+          <p>A variable declared outside of a function has a <code>global scope</code> and can be accessed anywhere, even inside of functions.</p>
 <pre><code class="javascript">var awesomeGroup = 'Girl Develop It'; // Global scope
 
 function whatIsAwesome() {
@@ -220,7 +220,17 @@ console.log(awesomeGroup + ' is pretty awesome.'); // Won't work
 <pre><code class="javascript">var catsAreBest = true;
 var dogsRule = false;
 </code></pre>
-          <p>Some values are considered <code><a href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy">falsy</a></code> and will evaluate to <code>false</code> in a Boolean context. The number <code>0</code>, an empty string <code>''</code>, <code>undefined</code>, <code>null</code>, and <code>NaN</code> will evaluate to <code>false</code>, everything else evaluates as <code>true</code>.</p>
+        </section>
+        <section>
+          <h3>Boolean Variables</h3>
+          <p>Some values are considered <code><a href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy">falsy</a></code> and will evaluate to <code>false</code> in a Boolean context.</p>
+          <pre><code class="javascript">// the following variables will evaluate as false
+
+var myName = '';
+var numOfKids = 0;
+var isMarried;     // remember a variable with no value is undefined</code></pre>
+          <p><code>null</code> and <code>NaN</code> will also evaluate as <code>false</code>.</p>
+          <p>Everything else evaluates as <code>true</code>.</p>
           </section>
 
       <!--If/Then-->
@@ -237,10 +247,10 @@ var dogsRule = false;
   // statements to execute
 }
 </code></pre>
-<pre><code class="javascript">var bananas = 5;
+<pre><code class="javascript">var age = 30;
 
-if (bananas &gt; 0) {
-  console.log('You have some bananas!');
+if (age &gt; 18) {
+  console.log('You are an adult');
 }
 </code></pre>
         </section>
@@ -324,6 +334,7 @@ if (bananas &gt; 0) {
           <h3>The if/else statement</h3>
           <p>Use <code>else</code> to provide an alternate set of instructions.</p>
 <pre><code class="javascript">var age = 30;
+
 if (age &gt;= 16) {
   console.log('Yay, you can drive!');
 } else {
@@ -336,11 +347,11 @@ if (age &gt;= 16) {
         <section>
           <h3>The if/else statement</h3>
           <p>If you have multiple conditions, you can use <code>else if</code>.</p>
-<pre><code class="javascript">var age = 20;
+<pre><code class="javascript">var age = 30;
 
 if (age &gt;= 35) {
-  console.log('You can vote AND hold any place in government!');
-} else if (age &gt;= 25) {
+  console.log('You can vote AND run for President!');
+} else if (age &gt;= 30) {
   console.log('You can vote AND run for the Senate!');
 } else if (age &gt;= 18) {
   console.log('You can vote!');
@@ -395,14 +406,14 @@ if (age &gt;= 35) {
         <section>
           <h3>Using logical operators</h3>
           <p>You can use these operators to combine conditions.</p>
-<pre><code class="javascript">var bananas = 5;
+<pre><code class="javascript">var age = 30;
+var yearsAsCitizen = 30;
 
-if (bananas &gt;=2 &amp;&amp; bananas &lt;7) {
-  console.log('You have a reasonable number of bananas');
+if (age &gt;=30 &amp;&amp; yearsAsCitizen &gt; 9) {
+  console.log('You can run for the Senate!');
 } else {
-  console.log('Check your banana supply');
-}
-</code></pre>
+  console.log('You are not eligible to run for the Senate');
+}</code></pre>
         </section>
 
         <section>
