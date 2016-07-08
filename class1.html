@@ -174,7 +174,7 @@ document.write('Hello World!');
             <section>
 				<h3>Variable Values</h3>
                 <ul>
-                    <li>When you first create a variable, it does not have a value (it is null).</li>
+                    <li>When you first create a variable, it does not have a value (it is undefined).</li>
                     <li>You can set a value for a variable.</li>
                     <li>Variables can hold different types of information, like words, numbers, and collections of data.</li>
                     <li>The value of a variable can change over time.</li>
@@ -204,6 +204,18 @@ document.write('Hello World!');
 &lt;/script&gt;
 				</code></pre> 
 			</section>
+			
+			<section data-markdown>
+				<h3>ES2015 Declarations</h3>
+				<p>The ES2015 standard implemented in June 2015 added two additional declarations: </p><br>
+				<p>"let" keyword declares a block scoped variable (more on scope later)</p><br>
+				<p>"const" keyword declares a read-only named constant, and value must be assigned at declaration</p>
+```js
+let numberOfKittens = 5;
+const numberOfCats = 6;
+```
+			</section>
+			
             <section>
 				<h3>Using a Variable</h3>
                 <p>Once you have created a variable, you can use it in your code. Just type the name of the variable.</p>

@@ -91,6 +91,32 @@ whatIsAwesome();
 console.log (awesomeGroup + ' is pretty awesome.'); //Won't work
 				</code></pre>
             </section>
+			
+			<section data-markdown>
+				<h3>Block Scope</h3>
+				<p>"let" allows you to declare variables that are limited in scope to the block, statement, or expression on which it is used. 
+				This is unlike the var keyword, which defines a variable globally, or locally to an entire function regardless of block scope.</p>
+				<h5>Consider this example</h5>
+```js
+function varTest() {
+  var x = 1;
+  if (true) {
+    var x = 2;  // same variable!
+    console.log(x);  // 2
+  }
+  console.log(x);  // 2
+}
+
+function letTest() {
+  let x = 1;
+  if (true) {
+    let x = 2;  // different variable
+    console.log(x);  // 2
+  }
+  console.log(x);  // 1
+}
+```
+			</section>
 
             <section>
                 <h3>Boolean Variables</h3>
@@ -293,6 +319,25 @@ for (var i = 1; i &lt;= 10; i++) {
 }
 				</code></pre>
             </section>
+			
+			<section data-markdown>
+				<h3>Remember talking about block scope earlier?</h3>
+				<p>Let's try some science</p>
+				<pre><code>
+for (var i = 0; i < 10; i++) {
+	console.log(i);
+}
+
+console.log(i); /*What is the value of i??*/
+
+for (let i = 0; i <10; i++) {
+	console.log(i);
+}
+
+console.log(i); /*What is the value of i??*/
+</code></pre>
+			</section>
+			
             <section>
                 <h3>Loops and logic</h3>
                 <p>You can add other statements or logical operators inside the loops.</p>
@@ -370,7 +415,8 @@ var lastColor = rainbowColors[6];
                 <p>You can use bracket notation to change an item in an array</p>
                 <pre><code>
 var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
-myFavoriteThings[0] = 'Asparagus';            
+myFavoriteThings[0] = 'Asparagus';
+console.log(myFavoriteThings); //What is logged to the console?            
                 </code></pre>
             </section>
             <section>
@@ -378,12 +424,13 @@ myFavoriteThings[0] = 'Asparagus';
                 <p>Arrays do not have a fixed length. You can use "push" to add something to an array.</p>
                 <pre><code>
 var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
-myFavoriteThings.push('Dancing');              
+myFavoriteThings.push('Dancing');
+console.log(myFavoriteThings); //What is logged to the console?              
                 </code></pre>
             </section>
             <section>
 				<h3>Let's Develop It</h3>
-                <p>Create an array of your favorite foods. Echo a few values onto your screen.</p> 
+                <p>Create an array of your favorite foods. Log a few values in the console.</p> 
 			</section>
 
             <section>
