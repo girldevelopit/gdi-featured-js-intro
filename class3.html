@@ -63,7 +63,7 @@
 
           <section>
           <h3>While loops</h3>
-            <p><code>while</code> will repeat the same code over and over until some condition is met.</p>
+            <p><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while">while</a></code> will repeat the same code over and over until some condition is met.</p>
   <pre class="javascript"><code>var bottlesOfBeer = 99;
 
 while (bottlesOfBeer &gt; 0) {
@@ -81,7 +81,7 @@ while (bottlesOfBeer &gt; 0) {
 
           <section>
             <h3>For loops</h3>
-            <p><code>for</code> loops are very similar, but you declare a counter in the statement.</p>
+            <p><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a></code> loops are very similar, but you declare a counter in the statement.</p>
   <pre><code class="javascript">// will count 1 to 10
 for (var i = 1; i &lt;= 10; i++) {
   console.log(i);
@@ -108,7 +108,7 @@ for (var i = 1; i &lt;= 100; i++) {
 
           <section>
           <h3>Break</h3>
-            <p>To exit a loop, use the <code>break</code> statement.</p>
+            <p>To exit a loop, use the <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/break">break</a></code> statement.</p>
   <pre><code class="javascript">// Count from 100 to 200
 for (var i = 100; i &lt;= 200; i++) {
   console.log('Testing ' + i);
@@ -123,7 +123,7 @@ for (var i = 100; i &lt;= 200; i++) {
 
           <section>
           <h3>Let's Develop It</h3>
-          <p>Write a loop that gives you the 9's times table,<br /> from 9 x 1 = 9 to 9 x 12 = 108.</p>
+          <p>Write a loop that gives you the 9's times table,<br /> from <strong>9 x 1 = 9</strong> to <strong>9 x 12 = 108</strong>.</p><br />
           <p>Finish early? Try using a loop inside a loop to write all the times tables, from 1 to 12.</p>
           </section>
 
@@ -136,8 +136,8 @@ for (var i = 100; i &lt;= 200; i++) {
 
           <section>
             <h3>Arrays</h3>
-            <p>Arrays are ordered lists of values.</p>
-  <pre><code class="javascript">var arrayName = [element0, element1];</code></pre>
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Arrays</a> are ordered lists of values.</p>
+  <pre><code class="javascript">var arrayName = [value0, value1];</code></pre><br />
             <p>You can put different types of data into an array.</p>
   <pre><code class="javascript">var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
   'Blue', 'Indigo', 'Violet'];
@@ -149,7 +149,7 @@ var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];</code></pre>
 
           <section>
             <h3>Array Length</h3>
-            <p>The <code>length</code> property tells you how many things are in an array</p>
+            <p>The <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length">length</a></code> property tells you how many things are in an array.</p>
   <pre><code class="javascript">var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
 'Blue', 'Indigo', 'Violet'];
 
@@ -158,13 +158,13 @@ console.log(rainbowColors.length);</code></pre>
 
           <section>
             <h3>Using Arrays</h3>
-            <p>You can access items with "bracket notation" by using the position of the item you want.</p>
+            <p>You can access items with <strong>bracket notation</strong> by using the position of the item you want.</p>
   <pre><code class="javascript">var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
 'Blue', 'Indigo', 'Violet'];
 
 var firstColor = rainbowColors[0];
 var lastColor  = rainbowColors[6];</code></pre><br>
-  <p>JS arrays are "zero-indexed", so counting starts at 0.</p>
+  <p>JS arrays are <strong>zero-indexed</strong>, so counting starts at 0.</p>
           </section>
 
           <section>
@@ -177,7 +177,7 @@ myFavoriteThings[0] = 'Asparagus';</code></pre>
 
           <section>
             <h3>Expanding arrays</h3>
-            <p>Arrays do not have a fixed length. You can use <code>push</code> to add something to an array.</p>
+            <p>Arrays do not have a fixed length. You can use <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push">push</a></code> to add something to an array.</p>
   <pre><code class="javascript">var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
 
 myFavoriteThings.push('Dancing');</code></pre>
@@ -185,7 +185,7 @@ myFavoriteThings.push('Dancing');</code></pre>
 
           <section>
             <h3>Let's Develop It</h3>
-            <p>Create an array of your favorite foods. Print a few values onto your screen.</p>
+            <p>Create an array of your favorite foods. <br />Print a few values onto your screen.</p>
           </section>
 
         <!-- Arrays and loops-->
@@ -200,6 +200,7 @@ myFavoriteThings.push('Dancing');</code></pre>
             <p>Use a <code>for</code> loop to easily work with each item in an array.</p>
   <pre><code class="javascript">var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
   'Blue', 'Indigo', 'Violet'];
+
 for (var i = 0; i &lt; rainbowColors.length; i++) {
   console.log(rainbowColors[i]);
 }</code></pre>
@@ -207,7 +208,7 @@ for (var i = 0; i &lt; rainbowColors.length; i++) {
 
           <section>
             <h3>Let's Develop It</h3>
-            <p>Use a <code>for</code> loop to make a list of all your favorite foods.</p>
+            <p>Use a <code>for</code> loop to print a list of all your favorite foods.</p>
           </section>
 
       <!-- Objects -->
@@ -219,7 +220,7 @@ for (var i = 0; i &lt; rainbowColors.length; i++) {
 
         <section>
           <h3>Objects</h3>
-          <p>Objects let us store a collection of properties.</p>
+          <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects">Objects</a> let us store a collection of properties.</p>
 <pre><code class="javascript">var objectName = {
   propertyName: propertyValue,
   propertyName: propertyValue
@@ -235,14 +236,14 @@ for (var i = 0; i &lt; rainbowColors.length; i++) {
 
         <section>
           <h3>Accessing Objects</h3>
-          <p>You can retrieve values using "dot notation"</p>
+          <p>You can retrieve values using <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Dot_notation">dot notation</a></strong></p>
 <pre><code class="javascript">var user = {
   hometown: 'Atlanta, GA',
   hair: 'Auburn'
 };
 
 var usersHometown = user.hometown;</code></pre><br>
-          <p>Or using "bracket notation" (like arrays)</p>
+          <p>Or using <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Bracket_notation">bracket notation</a></strong> (like arrays)</p>
 <pre><code class="javascript">var usersHair = user['hair'];</code></pre>
         </section>
 
@@ -264,10 +265,10 @@ user.hair = 'blue';</code></pre><br>
 
         <section>
           <h3>Arrays of Objects</h3>
-          <p>Because arrays can hold any data type, they can also hold objects</p>
+          <p>Because arrays can hold any data type, they can also hold objects.</p>
 <pre><code class="javascript">var users = [
   {name: 'Jolene', age: 21},
-  {name: 'Alexa',   age: 18}
+  {name: 'Alexa',  age: 18}
 ];
 
 for (var i = 0; i &lt; users.length; i++) {
