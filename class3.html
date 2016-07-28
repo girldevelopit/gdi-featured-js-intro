@@ -273,7 +273,7 @@ user.hair = 'blue';</code></pre><br>
 
 for (var i = 0; i &lt; users.length; i++) {
   var user = users[i];
-  console.log(users.name + ' is ' + users.age + ' years old.');
+  console.log(user.name + ' is ' + user.age + ' years old.');
 }</code></pre>
         </section>
 
@@ -281,7 +281,7 @@ for (var i = 0; i &lt; users.length; i++) {
           <h3>Objects</h3>
           <p>Just like other data types, objects can be passed into functions:</p>
 <pre><code class="javascript">var jolene = {
-  age: 21
+  age: 21,
   hairColor: 'Auburn',
   likes: ['pizza', 'tacos'],
   birthday: {month: 3, day: 14, year: 1995}
@@ -289,7 +289,7 @@ for (var i = 0; i &lt; users.length; i++) {
 
 function describeUser(user) {
   console.log('You are ' + user.age + ' years old with '
-  + user.color + ' hair.');
+  + user.hairColor + ' hair.');
 }
 
 describeUser(jolene);</code></pre>
