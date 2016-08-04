@@ -61,7 +61,7 @@
           </section>
 
           <section>
-            <h3>Anatomy of a website</h3>
+            <h3>Anatomy of a Website</h3>
             <p><strong>Your Content</strong><br />
             <strong>+ HTML</strong>: Structure<br />
             <strong>+ CSS</strong>: Presentation<br />
@@ -121,7 +121,7 @@
 
           <section>
             <h3>The DOM Tree: Sample Model</h3>
-            <p>However, it is something much more than that. Any HTML document is a tree structure defined by the <strong>DOM (Document Object Model)</strong>.</p>
+            <p>However, it is something much more than that. Any HTML document is a tree structure defined by the <strong><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">DOM (Document Object Model)</a></strong>.</p>
             <img src="img/dom-tree.png" alt="Simple DOM Tree"/>
           </section>
 
@@ -177,7 +177,7 @@ for (var i = 0; i &lt; listItems.length; i++) {
 
           <section>
             <h3>DOM Access: HTML 5</h3>
-            <p>In newer browsers, you can use other methods too.</p><br>
+            <p>In newer browsers, you can use methods <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName">getElementsByClassName</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector">querySelector</a></code>, and <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll">querySelectorAll</a></code>.</p><br>
             <p>Available in <a href="http://caniuse.com/#search=getElementsByClassName">IE9+, FF3.6+, Chrome 17+, Safari 5+</a>:</p>
 <pre><code class="javascript">document.getElementsByClassName(className);
 </code></pre><br>
@@ -195,7 +195,7 @@ document.querySelectorAll(cssQuery);
           <p>Any method that starts with <code>getElements</code> will return an <strong>array</strong> of nodes. To modify a single node, you will need to use bracket notation to get the correct one.</p>
 <pre><code class="javascript">document.getElementsByTagName('p'); // returns multiple nodes
 
-var specficParagraph = document.getElementsByTagName('p')[2];
+var specificParagraph = document.getElementsByTagName('p')[2];
 </code></pre>
           </section>
 
@@ -224,7 +224,7 @@ imgKitten.src = 'http://placekitten.com/g/600/500';</code></pre>
 
           <section>
             <h3>DOM Nodes: Getting and Setting Attributes</h3>
-            <p>You can also use <code>getAttribute</code> or <code>setAttribute</code></p>
+            <p>You can also use <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute">getAttribute</a></code> or <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute">setAttribute</a></code></p>
 <pre><code class="html">&lt;img id="kittenPic" src="http://placekitten.com/g/200/300" alt="cat"/&gt;
 </code></pre>
           <p>We could change the src attribute this way:</p>
@@ -253,7 +253,7 @@ pageBody.style.color = 'red';</code></pre>
 
           <section>
             <h3>DOM Nodes: More Styles</h3>
-            <p>The rule of thumb in JavaScript is to change CSS styles with a "<code>-</code>" to camelCase.</p><br>
+            <p>The rule of thumb in JavaScript is to change CSS styles with a "<code>-</code>" to <a href="https://en.wikipedia.org/wiki/CamelCase">camelCase</a>.</p><br>
             <p>To make this CSS:</p>
 <pre><code class="css">body {
   background-color: pink;
@@ -278,7 +278,7 @@ pageBody.style.paddingTop = '10px';
         <!--Manipulating the DOM-->
           <section>
             <h3>DOM innerHTML</h3>
-            <p>Each DOM node has an <code>innerHTML</code> property with the HTML and content of its children. You can use the property to view or change the HTML of a node.</p><br>
+            <p>Each DOM node has an <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML">innerHTML</a></code> property with the HTML and content of its children. You can use the property to view or change the HTML of a node.</p><br>
             <p>For example, you can overwrite the entire body:</p>
   <pre><code class="javascript">var pageBody = document.getElementsByTagName('body')[0];
 
@@ -343,7 +343,7 @@ pageBody.appendChild(newParagraph);</code></pre>
 
         <section>
           <h3>Events</h3>
-          <p>An <strong>event</strong> is an object that is sent when actions take place on your webpage, most often when a user interacts with your webpage.</p><br>
+          <p>An <strong><a href="https://developer.mozilla.org/en-US/docs/Web/Events">event</a></strong> is an object that is sent when actions take place on your webpage, most often when a user interacts with your webpage.</p><br>
           <p>For example, JavaScript creates an event when a user clicks an element.</p>
 <pre><code class="javascript">element.addEventListener('click', function(event) {
   // code to be executed when user clicks
@@ -355,13 +355,13 @@ pageBody.appendChild(newParagraph);</code></pre>
           <h3>Types of Events</h3>
           <p>There are a <a href="https://developer.mozilla.org/en-US/docs/Web/Events">variety of events</a>. Some of the more common events are:</p>
           <ul>
-            <li><strong>click:</strong> Occurs when the user clicks on an element</li>
-            <li><strong>mouseover:</strong> Occurs when the pointer is moved onto an element</li>
-            <li><strong>mouseout:</strong> Occurs when the pointer is moved off an element</li>
-            <li><strong>keyup:</strong> Occurs when the user releases a key</li>
-            <li><strong>load:</strong> Occurs when a document has been loaded</li>
-            <li><strong>focus:</strong> Occurs when an element gets focus</li>
-            <li><strong>blur:</strong> Occurs when an element loses focus</li>
+            <li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/Events/click">click</a>:</strong> Occurs when the user clicks on an element</li>
+            <li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/Events/mouseover">mouseover</a>:</strong> Occurs when the pointer is moved onto an element</li>
+            <li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/Events/mouseout">mouseout</a>:</strong> Occurs when the pointer is moved off an element</li>
+            <li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/Events/keyup">keyup</a>:</strong> Occurs when the user releases a key</li>
+            <li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/Events/load_(ProgressEvent)">load</a>:</strong> Occurs when a document has been loaded</li>
+            <li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/Events/focus">focus</a>:</strong> Occurs when an element gets focus</li>
+            <li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/Events/blur">blur</a>:</strong> Occurs when an element loses focus</li>
           </ul>
         </section>
 
@@ -431,7 +431,7 @@ link.addEventListener("click", function(event) {
 
         <section>
           <h3>currentTarget</h3>
-          <p>The event's <code>currentTarget</code> references the element the event listener was attached to.</p>
+          <p>The event's <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/currentTarget">currentTarget</a></code> references the element the event listener was attached to.</p>
           <p>Our button in HTML:</p>
           <pre><code class="html">&lt;button id="myBtn"&gt;Click Me!&lt;/a&gt;</code></pre>
           <p>This code adds styles and text to our clicked button</p>
@@ -443,7 +443,7 @@ myButton.addEventListener("click", function(event) {
   btn.style.backgroundColor = 'red';
   btn.innerHTML = 'Clicked!';
 };</code></pre>
-<p>You may also see code that references the keyword <code>this</code> as the "target".
+<p>You may also see code that references the keyword <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this">this</a></code> as the "target".
         </section>
 
         <section>
@@ -510,7 +510,7 @@ submitButton.addEventListener("click", function(event) {
 
   var name = document.getElementById('firstName').value;
   console.log(name);
-}
+})
 </code></pre>
         </section>
 
