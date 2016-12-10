@@ -32,7 +32,7 @@ An overview of the history of JavaScript, what it is, and how it interacts with 
 Introduces functions, boolean variable, and if/then/else statements.
 
 ### Class 3: Loops, Arrays, and Objects
-Introduces more complex programing concepts, including loops, arrays, objects, and mthods.
+Introduces more complex programing concepts, including loops, arrays, objects, and methods.
 
 ### Class 4: Introduction to the DOM
-Introduces the Document Object Model (DOM) and how to use JavaScript to interact with it. Includes finding and modifying nodes, events, and listeing functions.
+Introduces the Document Object Model (DOM) and how to use JavaScript to interact with it. Includes finding and modifying nodes, events, and listening functions.
