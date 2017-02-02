@@ -1,5 +1,5 @@
 ##Intro to JavaScript
-Slides and materials are hosted at [http://roenok.github.io/gdi-intro-javascript/](http://roenok.github.io/gdi-intro-javascript/).
+Slides and materials are hosted at [http://jennifer-mann.github.io/gdi-intro-javascript/](http://jennifer-mann.github.io/gdi-intro-javascript/).
 
 This is the Girl Develop It Intro JavaScript course. Material based on original material by Sara Chipps, Pamela Fox, Alexis Goldstein, Izzy Johnston, Leo Newball, and Sylvia Pellicore.
 
@@ -20,6 +20,7 @@ You should have:
 This course is specifically for beginners and we advise experienced developers to not take this class
 
 ### Tech requirements:
+
  - Your laptop (Mac, PC, or Linux are all okay).
  - A modern web browser - either Chrome or Firefox with Firebug installed.
  - A text editor. We recommend Sublime Text 2 (free; available for Mac, PC, and Linux).

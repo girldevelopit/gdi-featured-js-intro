@@ -53,7 +53,7 @@
     </nav>
     <article id="main-content" tabindex="-1" class="span9">
       <section>
-        <p>Welcome! These are some bonus puzzles to accompany the Intro to JS class. Please take a look at the puzzles, and work on one that looks challenging but not completely overwhelming. You can always reference <a href="index.html">the slides</a> if you get stuck. Commit to spend at least 20 minutes trying to figure out a problem before you look at the answers. It helps you learn!</p>
+        <p>Welcome! These are some bonus puzzles to accompany the Intro to JavaScript class. Please take a look at the puzzles, and work on one that looks challenging but not completely overwhelming. You can always reference <a href="index.html">the slides</a> if you get stuck. Commit to spend at least 20 minutes trying to figure out a problem before you look at the answers. It helps you learn!</p>
       </section>
       <section>
         <h2 id="class1">Class 1</h2>
@@ -98,6 +98,7 @@ console.log('They are either ' + age + ' or ' + (age - 1));
         <h3>The Temperature Converter</h3>
         <p>Let's make a program to convert celsius tempatures to fahrenheit and vice versa, so we can complain about the weather with our friends oversees.</p>
         <p><strong>Reminder:</strong> To convert celsius to fahrenheit, multiply by 9, then divide by 5, then add 32. To convert fahrenheit to celsius, deduct 32, then multiply by 5, then divide by 9.</p>
+        <p><strong>Unicode Characters:</strong> To print the degrees symbol in JavaScript, we need to use the write <code>\u00B0</code> to represent the unicode character for the degress symbol.
         <ul>
           <li>Store a celsius temperature into a variable.</li>
           <li>Convert it to fahrenheit and output "NN°C is NN°F".</li>
@@ -109,16 +110,16 @@ console.log('They are either ' + age + ' or ' + (age - 1));
         <div class="codebox" id="example3Code">
 <pre>var inputCelsius  = 25;
 var outputFahrenheit = (inputCelsius * 9)/5 + 32;
-console.log (inputCelsius + '°C is ' + outputFahrenheit + '°F');
+console.log(inputCelsius + '\u00B0 Celsious is ' + outputFahrenheit + '\u00B0 Fahrenheit');
 
 var inputFahrenheit  = 73;
 var outputCelsius = (inputFahrenheit - 32)/9 * 5;
-console.log (inputFahrenheit + '°F is ' + outputCelsius + '°C.');
+console.log(inputFahrenheit + '\u00B0 Fahrenheit is ' + outputCelsius + '\u00B0 Celsious.');
 </pre>
         </div>
 
         <h3>Challenge Question: Using Math functions</h3>
-        <p>JavaScript has a built-in tool that can generate a random number between 0 and 1. This tools is called a <em>method</em>. We'll talk about methods more later in the class. For now, know if you type <code>Math.random()</code>, you'll get a random number between 0 and 1.</p>
+        <p>JavaScript has a built-in tool that can generate a random number between 0 and 1. This tool is called a <em>method</em>. We'll talk about methods more later in the class. For now, know if you type <code>Math.random()</code>, you'll get a random number between 0 and 1.</p>
 
         <p>Using this tool, update your fahrenheit to celsius tempature conversion program to do the following:</p>
         <ul>
@@ -130,7 +131,7 @@ console.log (inputFahrenheit + '°F is ' + outputCelsius + '°C.');
         <div class="codebox" id="example4Code">
 <pre>var inputFahrenheit  = Math.random()*100;
 var outputCelsius = (inputFahrenheit - 32)/9 * 5;
-console.log ('It is ' + inputFahrenheit + '°F today. That\'s ' + outputCelsius + '°C.');
+console.log('It is ' + inputFahrenheit + '\u00B0 Fahrenheit today. That\'s ' + outputCelsius + '\u00B0 Celsius.');
 </pre>
         </div>
       </section>
@@ -157,9 +158,9 @@ console.log ('It is ' + inputFahrenheit + '°F today. That\'s ' + outputCelsius 
   console.log(future);
 }
 
-tellFortune('bball player', 'spain', 'Shaq', 3);
-tellFortune('stunt double', 'Japan', 'Ryan Gosling', 3000);
-tellFortune('Elvis impersonator', 'Russia', 'The Oatmeal', 0);
+tellFortune('astronaut', 'Spain', 'Shaq', 3);
+tellFortune('stunt double', 'Japan', 'Bruce Wayne', 9);
+tellFortune('Elvis impersonator', 'Russia', 'Elon Musk', 0);
 </pre>
         </div>
 
@@ -171,22 +172,21 @@ tellFortune('Elvis impersonator', 'Russia', 'The Oatmeal', 0);
         <div class="codebox" id="example6Code">
 <pre>function greaterNum(num1, num2) {
   if (num1 === num2) {
-    console.log ('Those numbers are equal');
-    return num1;
+    console.log('Those numbers are equal');
   } else if (num1 &gt; num2) {
     return num1;
   } else if (num2 &gt; num1) {
     return num2;
   } else {
-    console.log ('Those are simply incomparable!');
+    console.log('Those are simply incomparable!');
     return undefined;
   }
 }
 
-console.log (greaterNum(3, 3));
-console.log (greaterNum(7, -2));
-console.log (greaterNum(5, 9));
-console.log (greaterNum(5, 'dog'));
+console.log(greaterNum(3, 3));
+console.log(greaterNum(7, -2));
+console.log(greaterNum(5, 9));
+console.log(greaterNum(5, 'dog'));
 </pre>
         </div>
 
@@ -297,8 +297,8 @@ mixUp('dog', 'dinner'): 'dig donner'
 function mixUp(string1, string2) {
   return string2.slice(0, 2) + string1.slice(2) + " " + string1.slice(0, 2) + string2.slice(2);
 }
-console.log (mixUp('mix', 'pod'));
-console.log (mixUp('dog', 'dinner'));
+console.log(mixUp('mix', 'pod'));
+console.log(mixUp('dog', 'dinner'));
 </pre>
         </div>
 
@@ -316,8 +316,8 @@ function fixStart(inputString) {
   var firstChar = inputString.charAt(0);
   return firstChar + inputString.slice(1).replace(new RegExp(firstChar, 'g'), '*');
 }
-console.log (fixStart('babble'));
-console.log (fixStart('turtle'));
+console.log(fixStart('babble'));
+console.log(fixStart('turtle'));
 </pre>
         </div>
       </section>
@@ -393,14 +393,17 @@ for (var i = 0; i &lt; choices.length; i++) {
         <div class="codebox" id="example13Code">
 <pre>
 var books = [
-  {title: 'The Design of EveryDay Things',
-  author: 'Don Norman',
-  alreadyRead: false
+  {
+    title: 'You Don'\t Know JS',
+    author: 'Kyle Simpson',
+    alreadyRead: false
   },
-  {title: 'The Most Human Human',
-  author: 'Brian Christian',
-  alreadyRead: true
-}];
+  {
+    title: 'Eloquent JavaScript',
+    author: 'Marijn Haverbeke',
+    alreadyRead: true
+  }
+];
 
 for (var i = 0; i &lt; books.length; i++) {
   var book = books[i];
@@ -419,6 +422,21 @@ for (var i = 0; i &lt; books.length; i++) {
 
       <section>
         <h2 id="class4">Class 4</h2>
+        <h3>Logo Hijack</h3>
+        <ul>
+          <li>Open up <a href="http://www.google.com">www.google.com</a> in Chrome or Firefox, and open up the console.</li>
+          <li>Find the Google logo and store it in a variable.</li>
+          <li>Modify the source of the logo IMG so that it's a Yahoo logo instead. (http://www.logostage.com/logos/yahoo.GIF)</li>
+        </ul>
+
+        <button onclick="showSolution(14)">Show/Hide Solution</button>
+        <div class="codebox" id="example14Code">
+<pre>var img = document.getElementById('hplogo');
+img.width = 400;
+img.src = 'http://www.logostage.com/logos/yahoo.GIF';
+</pre>
+        </div>
+
         <h3>About Me</h3>
         <p>Start with this HTML and save it as "aboutme.html":</p>
 <pre>&lt;!DOCTYPE html&gt;
@@ -431,9 +449,15 @@ for (var i = 0; i &lt; books.length; i++) {
   &lt;h1&gt;About Me&lt;/h1&gt;
 
   &lt;ul&gt;
-    &lt;li&gt;Nickname: &lt;span id="nickname"&gt;&lt;/span&gt;
-    &lt;li&gt;Favorites: &lt;span id="favorites"&gt;&lt;/span&gt;
-    &lt;li&gt;Hometown: &lt;span id="hometown"&gt;&lt;/span&gt;
+    &lt;li&gt;Nickname:
+      &lt;span id="nickname"&gt;&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Favorites:
+      &lt;span id="favorites"&gt;&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Hometown:
+      &lt;span id="hometown"&gt;&lt;/span&gt;
+    &lt;/li&gt;
    &lt;/ul&gt;
 
  &lt;/body&gt;
@@ -442,10 +466,10 @@ for (var i = 0; i &lt; books.length; i++) {
 
         <ul>
           <li>Add a script tag to the bottom.</li>
-          <li>(In JS) Change the body tag's style so it has a font-family of "Arial, sans-serif".</li>
-          <li>(In JS) Replace each of the spans (nickname, favorites, hometown) with your own information.</li>
-          <li>Iterate through each li and change the class to "listitem". Add a style tag that sets a rule for "listitem" to make the color red.</li>
-          <li>Create a new img element and set its src attribute to a picture of you. Append that element to the page.</li>
+          <li>(In JavaScript) Change the body tag's style so it has a font-family of "Arial, sans-serif".</li>
+          <li>(In JavaScript) Replace the content of each of the spans (nickname, favorites, hometown) with your own information.</li>
+          <li>Iterate through each li and add a class of "listitem". Add a style tag that sets a rule for "listitem" to make the color red.</li>
+          <li>Create a new img element and set its src attribute to a picture of you. Append that element to the body.</li>
         </ul>
 
 
@@ -466,23 +490,33 @@ for (var i = 0; i &lt; books.length; i++) {
   &lt;h1&gt;About Me&lt;/h1&gt;
 
   &lt;ul&gt;
-    &lt;li&gt;Nickname: &lt;span id="nickname"&gt;&lt;/span&gt;
-    &lt;li&gt;Favorites:  &lt;span id="favorites"&gt;&lt;/span&gt;
-    &lt;li&gt;Hometown: &lt;span id="hometown"&gt;&lt;/span&gt;
+    &lt;li&gt;Nickname:
+      &lt;span id="nickname"&gt;&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Favorites:
+      &lt;span id="favorites"&gt;&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Hometown:
+      &lt;span id="hometown"&gt;&lt;/span&gt;
+    &lt;/li&gt;
    &lt;/ul&gt;
 
   &lt;script&gt;
    document.body.style.fontFamily = 'Arial, sans-serif';
    document.getElementById('nickname').innerHTML = 'Ada Lovelace';
-   document.getElementById('favorites').innerHTML = '36';
+   document.getElementById('favorites').innerHTML = 'computers';
    document.getElementById('hometown').innerHTML = 'London, England';
+
    var items = document.getElementsByTagName('li');
+
    for (var i = 0; i &lt; items.length; i++) {
       items[i].className = 'listitem';
    }
 
     var myPic = document.createElement('img');
-    myPic.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ada_Lovelace_portrait.jpg/800px-Ada_Lovelace_portrait.jpg';
+
+    myPic.src = 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Ada_Lovelace_portrait.jpg';
+
     document.body.appendChild(myPic);
   &lt;/script&gt;
 &lt;/body&gt;
@@ -493,7 +527,7 @@ for (var i = 0; i &lt; books.length; i++) {
         <h3>The Reading List Part II</h3>
         <ul>
           <li>Create a webpage with an <code>h1</code> of "My Book List".</li>
-          <li>Add a script tag to the bottom of the page, where all your JS will go.</li>
+          <li>Add a script tag to the bottom of the page, where all your JavaScript will go.</li>
           <li>Copy the array of books from the previous exercise.</li>
           <li>Iterate through the array of books. For each book, create a <code>p</code> element with the book title and author and append it to the page.</li>
           <li><strong>Bonus</strong>: Use a <code>ul</code> and <code>li</code> to display the books.</li>
@@ -513,46 +547,57 @@ for (var i = 0; i &lt; books.length; i++) {
     &lt;h1&gt;My Book List&lt;/h1&gt;
     &lt;script&gt;
       var books = [
-        {title: 'The Design of EveryDay Things',
-        author: 'Don Norman',
-        alreadyRead: false
+        {
+          title: 'You Don'\t Know JS',
+          author: 'Kyle Simpson',
+          alreadyRead: false
         },
-        {title: 'The Most Human Human',
-        author: 'Brian Christian',
-        alreadyRead: true
-      }];
+        {
+          title: 'Eloquent JavaScript',
+          author: 'Marijn Haverbeke',
+          alreadyRead: true
+        }
+      ];
 
       for (var i = 0; i &lt; books.length; i++) {
         var bookP = document.createElement('p');
         var bookDescription = document.createTextNode(books[i].title + ' by ' + books[i].author);
+
         bookP.appendChild(bookDescription);
         document.body.appendChild(bookP);
       }
 
       // Or, with the bonuses:
       var books = [
-        {title: 'The Design of EveryDay Things',
-        img: 'http://ecx.images-amazon.com/images/I/41j2ODGkJDL._AA115_.jpg',
-        author: 'Don Norman',
-        alreadyRead: false
+        {
+          title: 'You Don'\t Know JS',
+          author: 'Kyle Simpson',
+          alreadyRead: false
         },
-        {title: 'The Most Human Human',
-        img: 'http://ecx.images-amazon.com/images/I/41Z56GwEv9L._AA115_.jpg',
-        author: 'Brian Christian',
-        alreadyRead: true
-      }];
+        {
+          title: 'Eloquent JavaScript',
+          author: 'Marijn Haverbeke',
+          alreadyRead: true
+        }
+      ];
 
       var bookList = document.createElement('ul');
+
       for (var i = 0; i &lt; books.length; i++) {
         var bookItem = document.createElement('li');
         var bookImg = document.createElement('img');
+
         bookImg.src = books[i].img;
         bookItem.appendChild(bookImg);
+
         var bookDescription = document.createTextNode(books[i].title + ' by ' + books[i].author);
+
         bookItem.appendChild(bookDescription);
+
         if (books[i].alreadyRead) {
           bookItem.style.color = 'grey';
         }
+
         bookList.appendChild(bookItem);
       }
       document.body.appendChild(bookList);
@@ -563,14 +608,15 @@ for (var i = 0; i &lt; books.length; i++) {
         </div>
 
         <h3>Challenge Question: The Counter</h3>
-        <p>Write a function that takes a certain type of tag and counts the number of elements with that tag. The function should return "There a X tags of type y on the page.For example:</p>
+        <p>Write a function that takes a certain type of tag and counts the number of elements with that tag. The function should return "There a X tags of type y on the page. For example:</p>
 <pre>countTags('p'): 'There are 3 tags of type p on the page'</pre>
 
         <button onclick="showSolution(17)">Show/Hide Solution</button>
         <div class="codebox" id="example17Code">
 <pre>function countTags (tagType) {
   var tagArray = document.getElementsByTagName(tagType);
-  console.log ('There are ' + tagArray.length + ' tags of type ' + tagType + ' on the page.');
+
+  console.log('There are ' + tagArray.length + ' tags of type ' + tagType + ' on the page.');
 }
 </pre>
         </div>
