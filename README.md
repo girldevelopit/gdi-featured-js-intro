@@ -1,9 +1,9 @@
 ##Intro to JavaScript
-Slides and materials are hosted at [http://girldevelopit.github.io/gdi-featured-js-intro/](http://girldevelopit.github.io/gdi-featured-js-intro).
+Slides and materials are hosted at [http://introjs.gdicincy.com](http://introjs.gdicincy.com).
 
-This is the Girl Develop It Intro JavaScript course. Material based on original material by Sara Chipps, Pamela Fox, Alexis Goldstein, Izzy Johnston, Leo Newball, and Sylvia Pellicore.
+This material is based off of the Girl Develop It Intro JavaScript course, and has been modified by the course instructor (Amanda Grossmann). Credit for the original material goes to Sara Chipps, Pamela Fox, Alexis Goldstein, Izzy Johnston, Leo Newball, and Sylvia Pellicore.
 
-The course is meant to be taught in 4 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.
+The course is meant to be taught in 4 two-hour sections.
 
 ## Course description
 JavaScript is the world's most popular programming language for a reason -- it's the primary way to build interaction on the web. Learning JavaScript is a logical next step once you've learned HTML/CSS.
@@ -14,10 +14,10 @@ In this class, we will be covering: basic development concepts, JavaScript, dyna
 
 ### Prerequisites:
 You should have:
-(a) taken Intro to HTML/CSS through Girl Develop It, or
+(a) taken Intro to HTML/CSS through Girl Develop It, or another online resource, OR
 (b) have a working knowledge of HTML
 
-This course is specifically for beginners and we advise experienced developers to not take this class
+This course is specifically for beginners and we advise experienced developers to not take this class.
 
 ### Tech requirements:
 
