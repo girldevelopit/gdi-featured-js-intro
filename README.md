@@ -1,7 +1,7 @@
-##Intro to JavaScript
+##Intro to JavaScript 2017
 Slides and materials are hosted at [http://introjs.gdicincy.com](http://introjs.gdicincy.com).
 
-This material is based off of the Girl Develop It Intro JavaScript course, and has been modified by the course instructor (Amanda Grossmann). Credit for the original material goes to Sara Chipps, Pamela Fox, Alexis Goldstein, Izzy Johnston, Leo Newball, and Sylvia Pellicore.
+This material is based off of the Girl Develop It Intro JavaScript course, and has been modified by the Cincinnati course instructor [Amanda Grossmann](http://amandagrossmann.com). Credit for the original material goes to Sara Chipps, Pamela Fox, Alexis Goldstein, Izzy Johnston, Leo Newball, and Sylvia Pellicore.
 
 The course is meant to be taught in 4 two-hour sections.
 
@@ -23,7 +23,7 @@ This course is specifically for beginners and we advise experienced developers t
 
  - Your laptop (Mac, PC, or Linux are all okay).
  - A modern web browser - either Chrome or Firefox with Firebug installed.
- - A text editor. We recommend Sublime Text 2 (free; available for Mac, PC, and Linux).
+ - A text editor. GDI recommends Sublime Text 2 (free; available for Mac, PC, and Linux), but Amanda likes [Atom](http://atom.io).
 
 ## Classes
 ### Class 1: Introduction to JavaScript and Basic Programming Concepts
@@ -37,3 +37,6 @@ Introduces more complex programing concepts, including loops, arrays, objects, a
 
 ### Class 4: Introduction to the DOM
 Introduces the Document Object Model (DOM) and how to use JavaScript to interact with it. Includes finding and modifying nodes, events, and listening functions.
+
+### Also
+If you're interested in coming to our next event or want to learn more about the Cincinnati Chapter of Girl Develop It, feel free to check out our [chapter information page](https://www.girldevelopit.com/chapters/cincinnati) or what events we have coming up on [Meetup](https://www.meetup.com/Girl-Develop-It-Cincinnati/).
