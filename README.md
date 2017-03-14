@@ -36,7 +36,7 @@ Introduces functions, boolean variable, and if/then/else statements.
 Introduces more complex programing concepts, including loops, arrays, objects, and methods.
 
 ### Class 4: Introduction to the DOM
-Introduces the Document Object Model (DOM) and how to use JavaScript to interact with it. Includes finding and modifying nodes, events, and listening functions.
+Dom, dom, dom, dom!  This class introduces the Document Object Model (DOM) and how to use JavaScript to interact with it. Includes finding and modifying nodes, events, and listening functions.
 
-### Also
+## Also
 If you're interested in coming to our next event or want to learn more about the Cincinnati Chapter of Girl Develop It, feel free to check out our [chapter information page](https://www.girldevelopit.com/chapters/cincinnati) or what events we have coming up on [Meetup](https://www.meetup.com/Girl-Develop-It-Cincinnati/).
