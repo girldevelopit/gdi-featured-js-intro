@@ -1,5 +1,5 @@
 ## Intro to JavaScript 2017
-Slides and materials are hosted at [http://introjs.gdicincy.com](http://introjs.gdicincy.com).
+Slides and materials are hosted at [http://js.gdicincy.com](http://js.gdicincy.com).
 
 This material is based off of the Girl Develop It Intro JavaScript course, and has been modified by the Cincinnati course instructor [Amanda Grossmann](http://amandagrossmann.com). Credit for the original material goes to Sara Chipps, Pamela Fox, Alexis Goldstein, Izzy Johnston, Leo Newball, and Sylvia Pellicore.
 
