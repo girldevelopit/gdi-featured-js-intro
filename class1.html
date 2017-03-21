@@ -54,16 +54,29 @@
         </section>
 
         <section>
-          <h3>Welcome!</h3>
+          <h3>About <b>GDI</b></h3>
           <div class = "left-align">
           <p><b>Girl Develop It</b> is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p><br>
-          <h4>Some "rules"</h4>
+          <h4>Some ground rules:</h4>
           <ul>
             <li>We are here for you!</li>
-            <li>Every question is important.</li>
-            <li>Help each other.</li>
-            <li>Have fun.</li>
+            <li>This is a respectful environment.</li>
+            <li>Be nice and help one another.</li>
+            <li>Most importantly, have fun.</li>
           </ul>
+          </div>
+        </section>
+
+        <section>
+          <h3><b>&#9995; &#x270B; Hi, I'm Amanda &#10024;</b></h3>
+          <div>
+          <h4>Things I think are cool:</h4>
+          <ul>
+            <li>Learning code and teaching myself different things</li>
+            <li>Working out and cooking yummy things at home</li>
+            <li>Playing around with my new GoPro</li>
+          </ul>
+          <img src="img/HERO5_Black_45.png" alt="go-pro"/>
           </div>
         </section>
 
@@ -75,7 +88,7 @@
                 <li>Who are you?</li>
                 <li>What do you hope to get out of the class?</li>
                 <!-- Feel free to change the icebreaker question! -->
-                <li>What's your favorite ice cream flavor?</li>
+                <li>What are you most looking forward to in the next few weeks or months?</li>
               </ul>
             </div>
         </section>
@@ -88,6 +101,12 @@
         </section>
 
         <section>
+          <h3>JavaScript works with <br>HTML & CSS</h3>
+          <img src="img/3_layers.png" alt="Web Layers"/>
+          <p class="credit">Photo credit: <a href="https://www.sitepoint.com/simply-javascript-2/">Sitepoint</a>
+        </section>
+
+        <section>
           <h3>JavaScript is the language of the web</h3>
           <img src="img/client-server.jpg" alt="Laptop and server connected via the internet"/>
           <p>
@@ -96,25 +115,20 @@
         </section>
 
         <section>
-          <h3>JavaScript works with HTML & CSS</h3>
-          <img src="img/triangle.jpg" alt="Triangle"/>
-          <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/ggunson/44539990/">Gillicious</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
-        </section>
-
-        <section>
-          <h3>JavaScript lets you reuse code</h3>
-          <img src="img/desert-landscape.jpg" alt="Desert landscape"/>
-          <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/philsnyder/4216356826/" target="_blank">Phil Synder</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+          <h3>JavaScript has lots of cool <br>libraries and frameworks</h3>  <!--Like with other languages and libraries, this means you can reuse code. -->
+          <img src="img/wheel.jpg" alt="Wheel"/>
+          <p class="credit">Photo credit: <a href="http://www.cruzetalk.com/forum/12-gen1-wheels-tires-brakes-suspension/47993-cruze-oem-wheel-options.html" target="_blank">CRUZETalk.com</a>
         </section>
 
         <section>
           <h3>What is JavaScript?</h3>
           <ul>
-            <li>Created by Brendan Eich as "LiveScript" in 1995, which got renamed to "JavaScript"</li>
-            <li>Standardized by the <b>ECMAScript</b> specifications. This class covers <a href="http://www.ecma-international.org/ecma-262/5.1/">ES5</a> (standardized in 2009)</li>
-            <li>A <b>client-side processing language</b>. A browser reads the code and runs it directly.</li>
             <li>Interfaces with <b>HTML</b> & <b>CSS</b>.</li>
+            <!--The kind of JS we're teaching you today is the client-side kind that -->
             <li>Lets you build dynamic webpages that respond to input from users.</li>
+            <li>When we say <b>client-side</b>, we mean that a browser reads the code and runs it directly.</li>
+            <li>Created by Brendan Eich as "LiveScript" in 1995, which then got renamed to "JavaScript"</li>
+            <li>Standardized by the <b>ECMAScript</b> specifications. This class covers <a href="http://www.ecma-international.org/ecma-262/5.1/">ES5</a> (standardized in 2009)</li>
           </ul>
         </section>
 
@@ -133,7 +147,7 @@
         <section>
           <h3>What can JavaScript do?</h3>
           <p>Keep track of users with <a href="https://en.wikipedia.org/wiki/HTTP_cookie">Cookies</a> or storing data with <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">local storage</a>.</p>
-          <a href="https://gyazo.com/56208a5722a6f7ab682c2baddbba8ce3"><img src="https://i.gyazo.com/56208a5722a6f7ab682c2baddbba8ce3.gif" alt="https://gyazo.com/56208a5722a6f7ab682c2baddbba8ce3"/></a>
+          <img src="img/cookie_nextweb.jpg" alt="Have a cookie"/>
         </section>
 
         <section>
@@ -151,23 +165,25 @@
         <section>
           <h3>What can JavaScript do?</h3>
           <p>
-            <a href="https://youtu.be/dvG9FgbzK9Y">Robots</a>
+            <a href="https://youtu.be/dvG9FgbzK9Y" target="_blank">Robots</a>
           </p>
         </section>
 
         <!-- Using JavaScript -->
         <section>
           <h3>Script Tags</h3>
-          <p>You can mix JavaScript and HTML. The <b>script tag</b> tells your browser the stuff inside is code, not content.</p>
+          <p>You can mix JavaScript and HTML. The <code>script tag</code> tells your browser the stuff inside is client-side code, not content.</p>
 <pre><code class="html">&lt;script&gt;
   CODE GOES HERE
 &lt;/script&gt;
 </code></pre>
+
         </section>
 
         <section>
           <h3>JavaScript Files</h3>
           <p>Just like CSS, you can split a long block of JavaScript into its own file. </p>
+          <!--This can be especially helpful if you have really long scripts or if you just want to organize your code into modules.-->
 <pre><code class="html">&lt;script src="path/to/file.js"&gt;&lt;/script&gt;
 </code></pre>
         </section>
@@ -175,7 +191,8 @@
         <section>
           <h3>Let's Develop It</h3>
           <ul>
-            <li>Make a folder called <code>gdi</code>.</li>
+            <li>Head to your <code>Desktop</code></li>
+            <li>Make a new folder called <code>gdi</code>.</li>
             <li>Inside, make a new page called <code>index.html</code>.</li>
             <li>Write this code inside.</li>
 <pre><code class="html">&lt;!DOCTYPE html&gt;
@@ -196,15 +213,25 @@
 
         <!-- Programming -->
         <section>
-          <h3>Computers need simple, clear instructions</h3>
+          <h3>Computers (like humans) need simple, clear <br><code>step by step<br></code> instructions</h3>
           <img src="img/confusedrobot.jpg" alt="Confused robot"/>
           <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/baboon/3946055/" target="_blank">baboon</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
         </section>
 
         <section>
-          <h3>Thinking like a programmer</h3>
+          <h3>Amelia Bedelia</h3>
+          <a href="https://www.amazon.com/Amelia-Bedelia-Goes-Camping-Level/dp/0060511060/ref=sr_1_1/168-8864112-1591818?ie=UTF8&qid=1489459492&sr=8-1&keywords=amelia+bedelia+goes+camping" target="_blank"><img src="img/Amelia_1.jpg"/ alt="Amazon"></a>
+          <a href="https://www.amazon.com/Amelia-Bedelia-Goes-Camping-Level/dp/0060511060/ref=sr_1_1/168-8864112-1591818?ie=UTF8&qid=1489459492&sr=8-1&keywords=amelia+bedelia+goes+camping" target="_blank"><img src="img/Amelia_2.jpg"/></a>
+          <p><a href="https://www.amazon.com/Amelia-Bedelia-Goes-Camping-Level/dp/0060511060/ref=sr_1_1/168-8864112-1591818?ie=UTF8&qid=1489459492&sr=8-1&keywords=amelia+bedelia+goes+camping" target="_blank">Buy on Amazon</a></p>
+          <p>When you write a program, you must break down every step into simple pieces.</p>
+        </section>
+
+        <section>
+          <h3>Just like Amelia Bedelia</h3>
           <p>Computers are great at <em>processing</em>. They are bad at <em>understanding</em>.</p>
           <p>When you write a program, you must break down every step into simple pieces.</p>
+          <br>
+          <h4>[Simple pieces that <i>cannot</i> be misunderstood.]</h4>
         </section>
 
         <section>
@@ -227,26 +254,22 @@
         </section>
 
         <section>
-          <h3>Basically, computers can be hard to work with!</h3>
+          <h3>Basically, communicating with computers can be challenging!</h3>
           <img src="img/computer-toddler.jpg" alt="Toddler using old word processor"/>
           <p class="credit">Photo credit: <a href="https://flic.kr/p/5Uvapm" target="_blank">Dan Hatton</a> <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/" target="_blank">cc</a></p>
+          <p>We just have to learn to speak to them in a way they can understand.</p>
 
-          <aside class="notes">Reassure the students! Coding is difficult, and it may take time to get good at it. Also, the natural state of code is broken. It's normal to have error messages, </aside>
+          <aside class="notes">Reassure the students! Coding is difficult, and it may take time to get good at it. Also, the natural state of code is broken. It's normal to have error messages.</aside>
         </section>
 
         <!-- JavaScript Basics -->
-        <section>
-          <h3>So what's up with JavaScript?</h3>
-          <img src="img/gears.jpg" alt="Gears"/>
-          <p class="credit">Photo credit: <a href="https://flic.kr/p/EEo4BV" target="_blank">Adam Foster</a> <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/" target="_blank">cc</a></p>
-        </section>
 
         <section>
-          <h3>How does JavaScript work?</h3>
+          <h3>Let's try something.</h3> <!-- At how JS works -->
           <div class="left-align">
             <ol>
-              <li>You visit a website with JavaScript code on it.</li>
-              <li>Your browser (e.g., Chrome) reads the code line-by-line.</li>
+              <li>Let's visit a website with JavaScript code on it.</li>
+              <li>Our browser (e.g., Chrome) reads the code line-by-line.</li>
               <li>The browser runs each line of code as it reads it.</li>
               <li>Based on these instructions, the browser performs calculations and changes the HTML and CSS on the page.</li>
               <li>If the browser finds code it doesn't understand, it stops running and creates an error message.</li>
@@ -354,7 +377,7 @@ console.log('Hello World!'); // Or make short comments here</code></pre>
             <li>The variable name is case-sensitive.</li>
             <li>A new variable should have a unique name.</li>
             <li>Variable names need to start with a letter, <code>$</code>, or <code>_</code>.</li>
-            <li>Avoid <a href="https://developer.mozilla.org/en/JavaScript/Reference/Reserved_Words">reserved words</a>.</li>
+            <li>Avoid <a href="https://developer.mozilla.org/en/JavaScript/Reference/Reserved_Words" target="_blank">reserved words</a>.</li>
             <li>Choose clarity and meaning for humans to read later.</li>
           </ul>
         </section>
@@ -523,7 +546,7 @@ console.log(kittensName); // Outputs 'Admiral Snuggles'
 
         <section>
           <h3>Combining strings and numbers</h3>
-          <p>You can use concatenation to mix strings and numbers. When you do this, JavaScript will treat the number like a string.</p>
+          <p>You can use concatenation to mix strings and numbers. Keep in mind, when you do this, JavaScript will treat the number like a string.</p>
 <pre><code class="javascript">var numberOfFruit = 6;
 var typeOfFruit = 'bananas';
 var allTheFruit = 'I have ' + numberOfFruit + ' ' + typeOfFruit + '!';
