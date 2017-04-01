@@ -1,0 +1,220 @@
+@import "../template/settings";
+@import "../template/theme.scss";
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+
+.reveal {
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: #53555C;
+   }
+
+::selection {
+  color: white;
+  background: rgba(11, 79, 81, 0.99);
+  text-shadow: none; }
+
+div.halfblock{
+  float: left;
+  width: 45%;
+  text-align: left;
+  margin-right: 5%;}
+
+div.left-align{
+  text-align: left;}
+
+.reveal strong {
+  font-weight: bold;
+}
+.reveal em {
+  font-style: italic;
+}
+
+.clear{
+  clear: both;
+}
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a:not(.image) {
+  color: $gdiPink;
+  text-decoration: none;
+  transition: color .15s ease; }
+
+.reveal a:not(.image):hover {
+  color: #f9b8bb;
+  border: none; }
+
+.reveal .roll span:after {
+  color: #fff;
+  background: #01a9b4; }
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+.reveal section img {
+  margin: 15px 0;
+  transition: all .2s linear;
+  max-height: 375px;
+  max-width: 80%;
+}
+
+.reveal a:hover img {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #01a9b4;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
+
+.reveal section img.noborder{
+  border-width: 0;
+  box-shadow: none;}
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls .navigate-left,
+.reveal .controls .navigate-left.enabled {
+  border-right-color: $navigationArrowColor;
+}
+
+.reveal .controls .navigate-right,
+.reveal .controls .navigate-right.enabled {
+  border-left-color: $navigationArrowColor;
+}
+
+.reveal .controls .navigate-up,
+.reveal .controls .navigate-up.enabled {
+  border-bottom-color: $navigationArrowColor;
+}
+
+.reveal .controls .navigate-down,
+.reveal .controls .navigate-down.enabled {
+  border-top-color: $navigationArrowColor;
+}
+
+.reveal .controls .navigate-left.enabled:hover {
+  border-right-color: $navigationArrowHover;
+}
+
+.reveal .controls .navigate-right.enabled:hover {
+  border-left-color: $navigationArrowHover;
+}
+
+.reveal .controls .navigate-up.enabled:hover {
+  border-bottom-color: $navigationArrowHover;
+}
+
+.reveal .controls .navigate-down.enabled:hover {
+  border-top-color: $navigationArrowHover;
+}
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2); }
+
+.reveal .progress span {
+  background: $gdiPink;
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+
+/*********************************************
+* GDI ADDITIONS
+**********************************************/
+.flex {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.flex .cta {
+  width: 40%;
+  margin: 10px 0;
+}
+.reveal .cta {
+  display: inline-block;
+  padding: 20px;
+  color: $gdiEarthYellow;
+  border-radius: 6px;
+  background-color: $lightBlue;
+  text-transform: uppercase;
+  font-size: .6em;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.reveal .cta.inactive {
+  background: $gdiDarkGray;
+}
+.reveal .inactive {
+  pointer-events: none;
+}
+.reveal .cta:not(.image) {
+  color: white;
+  transition: 1s ease background-color;
+}
+.reveal .cta:not(.image):hover {
+  background-color: $gdiDarkBlue;
+  color: white;
+}
+
+.blue {color:#00A9B4;}
+.green {color: #92BB44;}
+.orange {color: #EDAB23;}
+.left {float: left;}
+.right {float: right;}
+
+.reveal .activity {
+  color: $gdiPink;
+  &:after {
+    content: ' \1F4BB';
+  }
+}
+
+.reveal code {
+  font-family: "Courier New",Courier,"Lucida Sans Typewriter","Lucida Typewriter",monospace;
+  background: $gdiDarkGray;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.reveal ul, .reveal ol {
+  text-align: left;
+  display: inline-block;
+  margin: 0 0 0 1em;
+}
+
+
+/*********************************************
+ * Accessibility
+ *********************************************/
+/*
+* Hide only visually, but have it available for screenreaders: h5bp.com/v
+*/
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;}
+
+/*
+* Extends the .visuallyhidden class to allow the element to be focusable
+* when navigated to via the keyboard: h5bp.com/p
+*/
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;}

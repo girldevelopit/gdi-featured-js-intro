@@ -12,12 +12,11 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-    <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/simple.css" id="theme">
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="dist/css/reveal.css">
+    <link rel="stylesheet" href="dist/css/default.css" id="theme">
 
     <!-- For syntax highlighting -->
-    <!-- light editor --> <link rel="stylesheet" href="lib/css/light.css">
+    <!-- light editor --> <link rel="stylesheet" href="dist/css/light.css">
     <!-- dark editor <link rel="stylesheet" href="lib/css/dark.css">-->
     <!-- <link rel="stylesheet" href="lib/css/zenburn.css">-->
 
@@ -29,17 +28,17 @@
         var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = 'css/print/pdf.css';
+        link.href = 'dist/css/print/pdf.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
       }
     </script>
 
     <!-- If use the PDF print sheet so students can print slides-->
 
-    <link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
+    <link rel="stylesheet" href="dist/css/print/pdf.css" type="text/css" media="print">
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <!--[if lt IE 9]>
-    <script src="lib/js/html5shiv.js"></script>
+    <script src="dist/js/html5shiv.js"></script>
     <![endif]-->
   </head>
 
@@ -48,7 +47,7 @@
     <div class="reveal">
       <div class="slides">
         <section>
-          <img src="img/circle-gdi-logo.png" alt="BDI Logo" class="noborder" style="max-height:400px;">
+          <img src="dist/img/circle-gdi-logo.png" alt="GDI Logo" class="noborder" style="max-height:400px;">
           <h1>Introduction to JavaScript</h1>
           <h2>Class 2</h2>
         </section>
@@ -56,7 +55,7 @@
         <!-- Review -->
         <section>
         <h3>Let's Look Back</h3>
-        <img src="img/backwards-dance.jpg" alt="Woman looking backward as she dances"/>
+        <img src="dist/img/backwards-dance.jpg" alt="Woman looking backward as she dances"/>
         <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/zeepack/4398082292/" target="_blank">Deepak Bhatia</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
         </section>
 
@@ -78,7 +77,7 @@ console.log(receipt);
         <section>
           <h3>Functions</h3>
           <p>Functions are separable, reusable pieces of code.
-          <img src="img/legos.jpg" alt="Pile of legos"/>
+          <img src="dist/img/legos.jpg" alt="Pile of legos"/>
           <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/catzrule/9940388305/">Rick Payette</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
         </section>
 
@@ -176,7 +175,7 @@ var squareOfFive = square(5); // squareOfFive equals '25'
         <section>
           <h3>Variable Scope</h3>
           <p>The scope of a variable determines where it's value is accessible throughout your program.</p>
-          <img src="img/footprints.jpg" alt="Footprints being washed away"/>
+          <img src="dist/img/footprints.jpg" alt="Footprints being washed away"/>
           <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/heyvikram/187950111/" target="_blank">_vikram</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
         </section>
 
@@ -210,7 +209,7 @@ console.log(awesomeGroup + ' is pretty awesome.'); // Won't work
       <!-- Boolean -->
         <section>
           <h3>Boolean Variables</h3>
-          <img src="img/kitten-switch.jpg" alt="Kitten with light switch"/>
+          <img src="dist/img/kitten-switch.jpg" alt="Kitten with light switch"/>
           <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/elycefeliz/5726163170/" target="_blank">elycefeliz</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
         </section>
 
@@ -236,7 +235,7 @@ var isMarried;     // remember a variable with no value is undefined</code></pre
       <!--If/Then-->
         <section>
           <h3>Control Flow</h3>
-          <img src="img/fork-path.jpg" alt="Forked path"/>
+          <img src="dist/img/fork-path.jpg" alt="Forked path"/>
           <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/dennism2/1504087870/" target="_blank">DennisM2</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
         </section>
 
@@ -313,7 +312,7 @@ if (age &gt; 18) {
         <section>
           <h3>Watch out!</h3>
           <p>Don't mix up <code>=</code> and <code>==</code> and <code>===</code></p>
-          <img src="img/caution.jpg" alt="Caution Tape"/>
+          <img src="dist/img/caution.jpg" alt="Caution Tape"/>
           <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/pictureperfectpose/76138988/" target="_blank">Eugene Zemlyanskiy</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
         </section>
 
@@ -325,7 +324,7 @@ if (age &gt; 18) {
       <!--If/else -->
         <section>
           <h3>Even more control flow</h3>
-          <img src="img/toomanysigns.jpg" alt="Sign post with multiple signs"/>
+          <img src="dist/img/toomanysigns.jpg" alt="Sign post with multiple signs"/>
           <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/thomashawk/2402598275/" target="_blank">Thomas Hawk</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
         </section>
 
@@ -423,7 +422,7 @@ if (age &gt;=30 &amp;&amp; yearsAsCitizen &gt; 9) {
       <!-- Final slides-->
         <section>
           <h3>You did it!</h3>
-          <img src="img/kitten-yay.jpg" alt="Happy cat"/>
+          <img src="dist/img/kitten-yay.jpg" alt="Happy cat"/>
           <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/laura-kali/7399310732/" target="_blank">OnceAndFutureLaura</a> <a href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">cc</a></p>
         </section>
 
@@ -441,15 +440,15 @@ if (age &gt;=30 &amp;&amp; yearsAsCitizen &gt; 9) {
     </div>
     <footer>
       <div class="copyright">
-        Intro to JavaScript -- Girl Develop It --
+        Intro to JavaScript &mdash; Girl Develop It &mdash;
         <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
       </div>
     </footer>
   </div>
 
 
-    <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.min.js"></script>
+    <script src="dist/js/head.min.js"></script>
+    <script src="dist/js/reveal.min.js"></script>
 
     <script>
 
