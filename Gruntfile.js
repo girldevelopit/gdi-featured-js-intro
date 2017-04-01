@@ -33,6 +33,7 @@ module.exports = function(grunt) {
             main: {
                 files: {
                     'dist/css/reveal.css': 'src/css/theme/reveal.scss',
+                    'dist/css/homework.css': 'src/css/theme/source/homework.scss',
                     'dist/css/default.css': 'src/css/theme/source/default.scss',
                     'dist/css/gdicool.css': 'src/css/theme/source/gdicool.scss',
                     'dist/css/gdilight.css': 'src/css/theme/source/gdilight.scss',
