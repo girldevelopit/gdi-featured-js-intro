@@ -12,12 +12,11 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-    <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/simple.css" id="theme">
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="dist/css/reveal.css">
+    <link rel="stylesheet" href="dist/css/default.css" id="theme">
 
     <!-- For syntax highlighting -->
-    <!-- light editor --> <link rel="stylesheet" href="lib/css/light.css">
+    <!-- light editor --> <link rel="stylesheet" href="dist/css/light.css">
     <!-- dark editor <link rel="stylesheet" href="lib/css/dark.css">-->
     <!-- <link rel="stylesheet" href="lib/css/zenburn.css">-->
 
@@ -29,17 +28,17 @@
         var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = 'css/print/pdf.css';
+        link.href = 'dist/css/print/pdf.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
       }
     </script>
 
     <!-- If use the PDF print sheet so students can print slides-->
 
-    <link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
+    <link rel="stylesheet" href="dist/css/print/pdf.css" type="text/css" media="print">
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <!--[if lt IE 9]>
-    <script src="lib/js/html5shiv.js"></script>
+    <script src="dist/js/html5shiv.js"></script>
     <![endif]-->
   </head>
 
@@ -49,7 +48,7 @@
 
         <section>
           <h2>Introduction to JavaScript</h2>
-          <img src="img/circle-gdi-logo.png" alt="BDI Logo" class="noborder" style="max-height:400px;">
+          <img src="dist/img/circle-gdi-logo.png" alt="GDI Logo" class="noborder" style="max-height:400px;">
           <h2>Class 1</h2>
         </section>
 
@@ -83,13 +82,13 @@
         <!-- What is JavaScript-->
         <section>
           <h3>What is JavaScript?</h3>
-          <img src="img/not-java.png" alt="Java logo with a no symbol"/>
+          <img src="dist/img/not-java.png" alt="Java logo with a no symbol"/>
           <p>JavaScript is not Java</p>
         </section>
 
         <section>
           <h3>JavaScript is the language of the web</h3>
-          <img src="img/client-server.jpg" alt="Laptop and server connected via the internet"/>
+          <img src="dist/img/client-server.jpg" alt="Laptop and server connected via the internet"/>
           <p>
             <small class="credit">Photo credits: <a href="http://www.flickr.com/photos/papalars/5210226441/" target="_blank">Andrew E. Larson</a> and <a href="http://www.flickr.com/photos/johnseb/3425464/" target="_blank">John Seb Barber</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></small>
           </p>
@@ -97,13 +96,13 @@
 
         <section>
           <h3>JavaScript works with HTML & CSS</h3>
-          <img src="img/triangle.jpg" alt="Triangle"/>
+          <img src="dist/img/triangle.jpg" alt="Triangle"/>
           <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/ggunson/44539990/">Gillicious</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
         </section>
 
         <section>
           <h3>JavaScript lets you reuse code</h3>
-          <img src="img/desert-landscape.jpg" alt="Desert landscape"/>
+          <img src="dist/img/desert-landscape.jpg" alt="Desert landscape"/>
           <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/philsnyder/4216356826/" target="_blank">Phil Synder</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
         </section>
 
@@ -197,7 +196,7 @@
         <!-- Programming -->
         <section>
           <h3>Computers need simple, clear instructions</h3>
-          <img src="img/confusedrobot.jpg" alt="Confused robot"/>
+          <img src="dist/img/confusedrobot.jpg" alt="Confused robot"/>
           <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/baboon/3946055/" target="_blank">baboon</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
         </section>
 
@@ -228,7 +227,7 @@
 
         <section>
           <h3>Basically, computers can be hard to work with!</h3>
-          <img src="img/computer-toddler.jpg" alt="Toddler using old word processor"/>
+          <img src="dist/img/computer-toddler.jpg" alt="Toddler using old word processor"/>
           <p class="credit">Photo credit: <a href="https://flic.kr/p/5Uvapm" target="_blank">Dan Hatton</a> <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/" target="_blank">cc</a></p>
 
           <aside class="notes">Reassure the students! Coding is difficult, and it may take time to get good at it. Also, the natural state of code is broken. It's normal to have error messages, </aside>
@@ -237,7 +236,7 @@
         <!-- JavaScript Basics -->
         <section>
           <h3>So what's up with JavaScript?</h3>
-          <img src="img/gears.jpg" alt="Gears"/>
+          <img src="dist/img/gears.jpg" alt="Gears"/>
           <p class="credit">Photo credit: <a href="https://flic.kr/p/EEo4BV" target="_blank">Adam Foster</a> <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/" target="_blank">cc</a></p>
         </section>
 
@@ -257,7 +256,7 @@
         <section>
           <h3>Console</h3>
           <p>You can see what's going on in the <b>console</b>.</p>
-          <img src="img/console-panel.png">
+          <img src="dist/img/console-panel.png">
         </section>
 
         <section>
@@ -324,7 +323,7 @@ console.log('Hello World!'); // Or make short comments here</code></pre>
         <section>
           <h3>Variables</h3>
           <p>Just like 'x' in algebra, a variable is a named container for a value that can change.</p>
-          <img src="img/empty-glass.jpg" alt="Empty glass" class="noborder"/>
+          <img src="dist/img/empty-glass.jpg" alt="Empty glass" class="noborder"/>
           <p class="credit">
             <small>Photo credit: <a href="http://www.flickr.com/photos/giuliag/3570562404/" target="_blank">giulia gasparro</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></small>
           </p>
@@ -397,7 +396,7 @@ console.log(numberOfKittens);
       <!-- Numbers-->
         <section>
           <h3>Numbers!</h3>
-          <img src="img/kitten-basket.jpg" alt="Cats in a basket"/>
+          <img src="dist/img/kitten-basket.jpg" alt="Cats in a basket"/>
           <p class="credit">
             <small>Photo credit: <a href="http://www.flickr.com/photos/tom-poes/2159348460/" target="_blank">WJ van den Eijkhof</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></small>
           </p>
@@ -484,7 +483,7 @@ var numberOfAnimals = numberOfKittens + numberOfPuppies;
 
         <section>
           <h3>Playing with Strings</h3>
-          <img src="img/kitten-string.jpg" alt="Cat playing with string"/>
+          <img src="dist/img/kitten-string.jpg" alt="Cat playing with string"/>
           <p class="credit">
             <small>Photo credit: <a href="http://www.flickr.com/photos/dirtbikedba/5796961878/" target="_blank">Mike Lawson</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></small>
           </p>
@@ -510,7 +509,7 @@ console.log(kittensName); // Outputs 'Admiral Snuggles'
 
         <section>
           <h3>Concatenate!</h3>
-          <img src="img/concatenate.jpg" alt="Cat jumping on another cat."/>
+          <img src="dist/img/concatenate.jpg" alt="Cat jumping on another cat."/>
           <p class="credit">
             <small>Photo credit: <a href="http://www.flickr.com/photos/furlined/8191032061/" target="_blank">Matt</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></small>
           </p>
@@ -544,7 +543,7 @@ console.log(allTheFruit);
       <!-- Final slides-->
         <section>
           <h3>You did it!</h3>
-          <img src="img/celebration.jpg" alt="People celebrating"/>
+          <img src="dist/img/celebration.jpg" alt="People celebrating"/>
           <p class="credit">
             <small>Photo credit: <a href="http://www.flickr.com/photos/morphomir/2407451929/" target="_blank">Mircea</a> <a href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">cc</a></small>
           </p>
@@ -565,14 +564,14 @@ console.log(allTheFruit);
     </div>
     <footer>
       <div class="copyright">
-        Intro to JavaScript -- Girl Develop It --
+        Intro to JavaScript &mdash; Girl Develop It &mdash;
         <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
       </div>
     </footer>
   </div>
 
-    <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.min.js"></script>
+    <script src="dist/js/head.min.js"></script>
+    <script src="dist/js/reveal.min.js"></script>
 
     <script>
       // Full list of configuration options available here:

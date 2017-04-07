@@ -1,0 +1,57 @@
+// Base settings for all themes that can optionally be
+// overridden by the super-theme
+
+// Fonts
+@font-face {
+	font-family: 'Gotham-Round';
+	src: local('Gotham-Round'), url("../fonts/gothamrnd-light-webfont.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+// Background of the presentation
+$backgroundColor: #fff;
+
+// GDI brand colors
+$gdiPink: #f05b62;
+$gdiDarkBlue: #2a4758;
+$gdiEarthYellow: #d8ae64;
+$gdiMauve: #a05258;
+$gdiDarkGray: #333;
+
+// Primary/body text
+$mainFont: 'Gotham-Round', sans-serif;
+$mainFontSize: 30px;
+$mainColor: #eee;
+
+// Headings
+$headingMargin: 0 0 20px 0;
+$headingColor: $gdiPink;
+$headingLineHeight: 1;
+$headingLetterSpacing: 0.02em;
+$headingTextTransform: none;
+$step-size-heading: 0.33333;
+@mixin heading-size($size) {
+	font-size: $size * $step-size-heading + em;
+}
+
+// Links and actions
+$linkColor: #13DAEC;
+$linkColorHover: lighten( $linkColor, 20% );
+
+// Text selection
+$selectionBackgroundColor: #FF5E99;
+$selectionColor: #fff;
+
+// Progress Bar
+$lightBlue: #01a9b4;
+
+// Navigation
+$navigationArrowColor: $gdiPink;
+$navigationArrowHover: #53555C;
+
+// Generates the presentation background, can be overridden
+// to return a background image or gradient
+@mixin bodyBackground() {
+	background: $backgroundColor;
+}

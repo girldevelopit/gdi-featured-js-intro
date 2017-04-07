@@ -1,9 +1,8 @@
 {
-  "name": "reveal.js",
+  "name": "gdi-feature-js-intro",
   "version": "2.6.2",
-  "description": "The HTML Presentation Framework",
-  "homepage": "http://lab.hakim.se/reveal-js",
-  "subdomain": "revealjs",
+  "description": "Girl Develop It class for Intro to JavaScript. Forked from Hakim El Hattab's reveal.js",
+  "homepage": "http://girldevelopit.github.io/gdi-slides-template",
   "scripts": {
     "test": "grunt test",
     "start": ""
@@ -15,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/hakimel/reveal.js.git"
+    "url": "git://github.com/girldevelopit/gdi-featured-js-intro.git"
   },
   "engines": {
     "node": "~0.8.0"
@@ -27,15 +26,19 @@
     "socket.io": "~0.9.13"
   },
   "devDependencies": {
-    "grunt-contrib-qunit": "~0.2.2",
-    "grunt-contrib-jshint": "~0.6.4",
-    "grunt-contrib-cssmin": "~0.4.1",
-    "grunt-contrib-uglify": "~0.2.4",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-contrib-sass": "~0.5.0",
-    "grunt-contrib-connect": "~0.4.1",
-    "grunt-zip": "~0.7.0",
-    "grunt": "~0.4.0"
+    "autoprefixer": "^6.5.4",
+    "cssnano": "^3.9.1",
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-qunit": "^1.2.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-postcss": "^0.8.0",
+    "grunt-zip": "~0.7.0"
   },
   "licenses": [
     {
