@@ -5,7 +5,7 @@
   "homepage": "http://girldevelopit.github.io/gdi-slides-template",
   "scripts": {
     "test": "grunt test",
-    "start": ""
+    "start": "grunt"
   },
   "author": {
     "name": "Hakim El Hattab",
